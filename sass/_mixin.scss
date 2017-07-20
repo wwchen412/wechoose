@@ -1,0 +1,24 @@
+@mixin breakpoint($point) {
+    @if $point==pc {
+        @media only screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $point==pad {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==pad {
+        @media only screen and (max-width: 467px) {
+            @content;
+        }
+    }
+}
+
+@mixin custom_select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+}
