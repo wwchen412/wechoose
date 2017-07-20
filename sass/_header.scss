@@ -1,0 +1,29 @@
+div {
+    border: 1px solid #f00;
+}
+
+#header {
+    .top {
+        background: $maincolor;
+        height: 35px;
+    }
+    .sub {
+        overflow: auto;
+        padding: 20px 0;
+        .container {
+            .logo {
+                float: left;
+                width: 160px;
+            }
+            .menu {
+                float: right;
+                li {
+                    display: inline-block;
+                    a {
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
+    }
+}
