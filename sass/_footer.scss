@@ -1,0 +1,33 @@
+@import "_mixin.scss";
+@import "_color.scss";
+#footer {
+    .footer-menu {
+        box-shadow: rgba(180, 180, 180, 0.3) 0px 1px 10px 2px;
+        overflow: auto;
+        padding: 20px 0px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .logo {
+                width: 160px;
+            }
+            .menu {
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                    line-height: 150%;
+                    a {
+                        color: $maincolor;
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        padding: 10px 0;
+        background: $maincolor;
+        color: #fff;
+        text-align: center;
+    }
+}

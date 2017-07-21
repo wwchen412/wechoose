@@ -4,6 +4,7 @@
 @import "_layout.scss";
 @import "_header.scss";
 @import "_mixin.scss";
+@import "_footer.scss";
 // 首頁
 #content {
     margin: 40px 0;
@@ -17,8 +18,18 @@
             border: 0px solid;
             @include custom_select;
             margin-right: 5px;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 0;
+                height: 0;
+            }
         }
     }
+    // 商品列表
     .shop-list {
         margin-top: 20px;
         padding-top: 40px;
@@ -27,15 +38,14 @@
         display: flex;
         flex-wrap: wrap;
         ul {
-            // 瀑布流隔線
-            -ms-flex-direction: column;
-            -ms-flex-wrap: wrap;
-            -moz-column-count: 4;
-            -moz-column-gap: 10px;
-            -webkit-column-count: 4;
-            -webkit-column-gap: 10px;
-            column-count: 4;
-            column-gap: 10px;
+            // 瀑布流隔線 _mixin.scss
+            @include flex-colum(4);
+            @include breakpoint(pad) {
+                @include flex-colum(2);
+            }
+            @include breakpoint(mobile) {
+                @include flex-colum(1);
+            }
             li {
                 width: calc(100% - 10px);
                 display: inline-block;
@@ -55,7 +65,7 @@
                     width: 100%;
                     transition: .2s;
                     &:hover {
-                        opacity: .8;
+                        opacity: .6;
                     }
                 }
                 button {

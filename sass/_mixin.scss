@@ -9,7 +9,7 @@
             @content;
         }
     }
-    @else if $point==pad {
+    @else if $point==mobile {
         @media only screen and (max-width: 467px) {
             @content;
         }
@@ -21,4 +21,15 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     border: 0;
+}
+
+@mixin flex-colum($colum) {
+    -ms-flex-direction: column;
+    -ms-flex-wrap: wrap;
+    -moz-column-count: $colum;
+    -moz-column-gap: 10px;
+    -webkit-column-count: $colum;
+    -webkit-column-gap: 10px;
+    column-count: $colum;
+    column-gap: 10px;
 }

@@ -1,7 +1,9 @@
 @import "_mixin.scss";
 @import "_color.scss";
-* {
-    font-size: 16px;
+*,
+body,
+html {
+    font-size: 14px;
 }
 
 h1,
