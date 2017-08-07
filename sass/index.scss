@@ -5,6 +5,16 @@
 @import "_header.scss";
 @import "_mixin.scss";
 @import "_footer.scss";
+// icon
+%item-icon {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.2rem;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
 // 首頁
 #content {
     margin: 40px 0;
@@ -80,6 +90,25 @@
                         background-color: $maincolor;
                         color: #fff;
                     }
+                }
+            }
+        }
+        // 注目商品
+        .focus-item {
+            h3 {
+                &:before {
+                    @extend %item-icon;
+                    background: url('../img/icon_focus.svg')50% 50% no-repeat;
+                }
+            }
+        }
+        // 已達標商品
+        .ahead-item {
+            h3 {
+                color: #f00;
+                &:before {
+                    @extend %item-icon;
+                    background: url('../img/icon_ahead.svg')50% 50% no-repeat;
                 }
             }
         }
