@@ -8,18 +8,49 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            input {
-                border-radius: 20px;
-                @include custom_select;
-                padding-left: 20px;
-                color: rgba( $maincolor, .2);
+            .search {
+                position: relative;
+                i {
+                    position: absolute;
+                    top: 2px;
+                    left: 13px;
+                    color: #666;
+                }
+                input {
+                    border-radius: 20px;
+                    @include custom_select;
+                    padding-left: 30px;
+                    color: rgba( $maincolor, .2);
+                    @include breakpoint(mobile) {
+                        max-width: 135px;
+                    }
+                }
             }
             .member {
                 color: #fff;
                 li {
                     display: inline-block;
+                    padding: 0 10px;
+                    @include breakpoint(mobile) {
+                        padding: 0 5px;
+                    }
+                    &:first-child {
+                        border-right: 1px solid #fff;
+                    }
                     a {
-                        .buy {}
+                        color: #fff;
+                        span {
+                            display: inline-block;
+                            background: #f00;
+                            // padding: 5px;
+                            box-sizing: border-box;
+                            @include border-radius(50%);
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            font-size: .8rem;
+                        }
                     }
                 }
             }
@@ -39,8 +70,12 @@
             .menu {
                 li {
                     display: inline-block;
-                    margin: 0 10px;
+                    padding: 0 10px;
                     line-height: 150%;
+                    border-right: 1px solid #000;
+                    &:last-child {
+                        border: 0;
+                    }
                     a {
                         color: $maincolor;
                     }

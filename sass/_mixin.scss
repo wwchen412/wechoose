@@ -16,6 +16,7 @@
     }
 }
 
+// 客製化input
 @mixin custom_select {
     appearance: none;
     -moz-appearance: none;
@@ -23,6 +24,7 @@
     border: 0;
 }
 
+// 瀑布流隔線
 @mixin flex-colum($colum) {
     -ms-flex-direction: column;
     -ms-flex-wrap: wrap;
@@ -32,4 +34,15 @@
     -webkit-column-gap: 10px;
     column-count: $colum;
     column-gap: 10px;
+}
+
+@mixin triangle($t_width) {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: ($t_width) ($t_width) 0 ($t_width);
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    pointer-events: none;
 }

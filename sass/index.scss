@@ -18,35 +18,72 @@
 // 首頁
 #content {
     margin: 40px 0;
-    .area-select {
-        select {
-            color: white;
-            line-height: 200%;
-            padding: 5px 30px;
-            padding-right: 55px;
-            background-color: $secondcolor;
-            border: 0px solid;
-            @include custom_select;
-            margin-right: 5px;
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 0;
-                height: 0;
+    .select-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        .select-mode {
+            display: inline-block;
+            vertical-align: baseline;
+            @include breakpoint(mobile) {
+                align-self: center;
+            }
+            a {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                padding: 0 10px;
+                &:nth-child(1) {
+                    border-right: 2px solid $secondcolor;
+                }
+                @include breakpoint(mobile) {
+                    padding: 0 5px;
+                }
+            }
+        }
+        .select-content {
+            display: inline-block;
+            vertical-align: baseline;
+            .area-select {
+                .select-country,
+                .select-country-area {
+                    display: inline-block;
+                    position: relative;
+                    &:after {
+                        @include triangle(7px);
+                        right: 20px;
+                        top: 15px;
+                    }
+                }
+                select {
+                    color: white;
+                    line-height: 200%;
+                    padding: 5px 30px;
+                    padding-right: 55px;
+                    background-color: $secondcolor;
+                    border: 0px solid;
+                    @include custom_select;
+                    // margin-right: 5px;
+                }
+            }
+            @include breakpoint(mobile) {
+                margin-bottom: 10px;
             }
         }
     }
     // 商品列表
     .shop-list {
         margin-top: 20px;
-        padding-top: 40px;
+        padding-top: 20px;
         border-top: 2px dashed $themecolor;
         display: -ms-flexbox;
         display: flex;
         flex-wrap: wrap;
+        @include breakpoint(mobile) {
+            margin-top: 10px;
+            padding-top: 10px;
+        }
         ul {
             // 瀑布流隔線 _mixin.scss
             @include flex-colum(4);
@@ -57,7 +94,7 @@
                 @include flex-colum(1);
             }
             li {
-                width: calc(100% - 10px);
+                // width: calc(100% - 5px);
                 display: inline-block;
                 font-size: 12px;
                 overflow: hidden;

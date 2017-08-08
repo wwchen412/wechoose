@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>We choose</title>
     <link rel="stylesheet" href="Content/css/index.css">
-
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -16,16 +16,36 @@
         <div class="top">
             <div class="container">
                 <form action="" class="search">
-                    <input type="text" name="" value="">
+                    <i class="fa-search fa"></i>
+                    <input type="text" name="" value="" placeholder="Search">
                 </form>
+                <!--會員功能導覽  -->
                 <div class="member">
                     <ul>
                         <li>
-                            <a href="">
-                                <div class="buy"></div>
-                            </a>
+
+                            <div class="buy">
+                                <!--購物車內數量  -->
+                                <a href="#">
+                                    <span>3</span>
+                                </a>
+                                <!--結帳  -->
+                                <a href="#">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
                         </li>
-                        <li>Araon Lin</li>
+                        <li>
+
+                            <div class="login">
+                                <a href="#">
+                                    <span>90</span>
+                                </a>
+                                <a href="">Araon Lin</a>
+                            </div>
+
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -43,6 +63,7 @@
                         <li><a href="#">友善傢俱</a></li>
                         <li><a href="#">生鮮蔬果</a></li>
                         <li><a href="#">趣味食玩</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -56,20 +77,35 @@
         <div id="content">
             <!--分類篩選-->
             <div class="container">
-                <div class="select-content">
-                    <form class="area-select">
-                        <!--縣市-->
-                        <select>
-                            <option value="新北市">新北市</option>
-                            <option value="新北市">台北市</option>
-                        </select>
-                        <!--區域-->
-                        <select>
-                            <option value="三重區">三重區</option>
-                        </select>
-                    </form>
-                    <div class="index-type">
+                <div class="select-title">
+                    <div class="select-content">
+                        <form class="area-select">
+                            <!--縣市-->
+                            <div class="select-country">
+                                <select>
+                                <option value="新北市">新北市</option>
+                                <option value="新北市">台北市</option>
+                            </select>
 
+                            </div>
+                            <!--區域-->
+                            <div class="select-country-area">
+                                <select>
+                                <option value="三重區">三重區</option>
+                            </select>
+                            </div>
+                        </form>
+                        <div class="index-type">
+
+                        </div>
+                    </div>
+                    <div class="select-mode">
+                        <a href="">
+                            <img src="Content/img/icon_list.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="Content/img/icon_map.svg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -79,7 +115,7 @@
                     <ul>
                         <!--注目商品 focus-item 圖標為目標圖 -->
                         <li class="focus-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱1</h2>
                             <a href="#">
                                 <img src="http://lorempixel.com/640/880/food" alt="">
                             </a>
@@ -90,7 +126,7 @@
                         </li>
                         <!-- 普通商品  只顯示商品規格-->
                         <li class="normal-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱2</h2>
                             <a href="#">
                                 <img src="http://lorempixel.com/400/400/food" alt="">
                             </a>
@@ -99,9 +135,9 @@
                         </li>
                         <!--已達標商品-->
                         <li class="ahead-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱3</h2>
                             <a href="#">
-                                <img src="http://lorempixel.com/240/280/food" alt="">
+                                <img src="http://lorempixel.com/340/280/food" alt="">
                             </a>
                             <h3>平均單組</h3>
                             <p>剩餘組數</p>
@@ -110,9 +146,9 @@
                         </li>
                         <!--示範區域-->
                         <li class="ahead-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱4</h2>
                             <a href="#">
-                                <img src="http://lorempixel.com/240/280/food" alt="">
+                                <img src="http://lorempixel.com/340/280/food" alt="">
                             </a>
                             <h3>平均單組</h3>
                             <p>剩餘組數</p>
@@ -121,9 +157,9 @@
                         </li>
 
                         <li class="ahead-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱5</h2>
                             <a href="#">
-                                <img src="http://lorempixel.com/240/280/food" alt="">
+                                <img src="http://lorempixel.com/340/280/food" alt="">
                             </a>
                             <h3>平均單組</h3>
                             <p>剩餘組數</p>
@@ -131,7 +167,7 @@
                             <button type="button">加入購物車</button>
                         </li>
                         <li class="focus-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱6</h2>
                             <a href="#">
                                 <img src="http://lorempixel.com/640/880/food" alt="">
                             </a>
@@ -142,7 +178,7 @@
                         </li>
 
                         <li class="normal-item">
-                            <h2>商品名稱</h2>
+                            <h2>商品名稱7</h2>
                             <a href="#">
                                 <img src="http://lorempixel.com/400/400/food" alt="">
                             </a>
@@ -261,6 +297,7 @@
                 </div>
             </div>
         </div>
+        <!--底部 footer  -->
         <div id="footer">
             <div class="footer-menu">
                 <div class="container">
@@ -275,6 +312,8 @@
                             <li><a href="#">友善傢俱</a></li>
                             <li><a href="#">生鮮蔬果</a></li>
                             <li><a href="#">趣味食玩</a></li>
+                            <li><a href="#">常見問題</a></li>
+                            <li><a href="#">聯絡我們</a></li>
                         </ul>
                     </div>
                 </div>
@@ -284,7 +323,8 @@
             </div>
         </div>
     </div>
-
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </body>
 
 </html>

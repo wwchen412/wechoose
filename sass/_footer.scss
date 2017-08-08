@@ -15,8 +15,12 @@
             .menu {
                 li {
                     display: inline-block;
-                    margin: 0 10px;
+                    padding: 0 10px;
                     line-height: 150%;
+                    border-right: 1px solid #000;
+                    &:last-child {
+                        border: 0;
+                    }
                     a {
                         color: $maincolor;
                     }
