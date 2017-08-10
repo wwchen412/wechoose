@@ -1,0 +1,144 @@
+            // 精選商品頁面
+            .shop-block {
+                font-size: 0;
+                margin: 40px 0;
+                .shop-content {
+                    display: inline-block;
+                    vertical-align: top;
+                    // 商品左方區塊
+                    &.shop-content-left {
+                        width: calc(75% - 50px / 2);
+                        margin-right: 50px;
+                        @include breakpoint(pad) {
+                            width: 100%;
+                            margin-right: 0;
+                        }
+                        // 訂購商品
+                        .shop-order {
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 20px 0;
+                            justify-content: space-between;
+                            h4 {
+                                color: $gray;
+                            }
+                            a {
+                                color: #f00;
+                                text-decoration: underline;
+                            }
+                            label {
+                                margin-top: 5px;
+                                display: block;
+                                font-size: 1rem;
+                                color: #808080;
+                                margin-bottom: 10px;
+                                span {
+                                    color: $maincolor;
+                                    font-size: 110%;
+                                }
+                            }
+                            .right {
+                                padding: 0 20px;
+                                .main-btn {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        // 商品介紹及評價
+                        .shop-item-content {
+                            margin-top: 40px;
+                            .tab {
+                                border-bottom: 4px solid #808080;
+                                ul {
+                                    li {
+                                        display: inline-block;
+                                        padding: 0 20px;
+                                        h2 {
+                                            margin: 0;
+                                            color: $gray;
+                                            &.select {
+                                                color: $maincolor;
+                                            }
+                                        }
+                                        margin-bottom: 10px;
+                                    }
+                                    li:nth-child(1) {
+                                        padding-left: 0;
+                                        border-right: 1px solid $maincolor;
+                                    }
+                                }
+                            }
+                            .item-editor {
+                                margin: 40px 0;
+                            }
+                            .item-comment {
+                                .comments {
+                                    li {
+                                        padding: 20px 0;
+                                        vertical-align: top;
+                                        .user-img {
+                                            border-radius: 50%;
+                                            display: inline-block;
+                                            overflow: hidden;
+                                            vertical-align: top;
+                                            width: 10%;
+                                        }
+                                        .user-comments {
+                                            width: 90%;
+                                            display: inline-block;
+                                            vertical-align: top;
+                                            padding: 0 20px;
+                                            box-sizing: border-box;
+                                            p {
+                                                i {
+                                                    color: $maincolor;
+                                                    margin-right: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 相關商品
+                    &.shop-content-right {
+                        width: calc(25% - 50px / 2);
+                        @include breakpoint(pad) {
+                            width: 100%;
+                        }
+                        .relative-item-title {
+                            margin-top: 0;
+                            width: 100px;
+                            border-bottom: 4px solid $gray;
+                            padding-bottom: 10px;
+                            @include breakpoint(mobile) {
+                                width: 100%;
+                            }
+                        }
+                        .shop-list {
+                            border-top: 0;
+                            padding-top: 0;
+                            ul {
+                                @include flex-colum(1);
+                            }
+                        }
+                    }
+                    // 商品訂購資料
+                }
+                .thumbnail {
+                    margin-top: 5px;
+                    li {
+                        cursor: pointer;
+                        display: inline-block;
+                        width: calc(100% / 4 - 15px / 4);
+                        margin-right: 5px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+            }

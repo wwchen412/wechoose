@@ -52,6 +52,12 @@
                             font-size: .8rem;
                         }
                     }
+                    .login {
+                        span {
+                            background: url('../img/icon_message.svg') 50% 50% no-repeat;
+                            border-radius: 0;
+                        }
+                    }
                 }
             }
         }
@@ -68,11 +74,17 @@
                 width: 160px;
             }
             .menu {
+                @include breakpoint(mobile) {
+                    text-align: right;
+                }
                 li {
                     display: inline-block;
                     padding: 0 10px;
                     line-height: 150%;
                     border-right: 1px solid #000;
+                    @include breakpoint (mobile) {
+                        border: 0;
+                    }
                     &:last-child {
                         border: 0;
                     }
