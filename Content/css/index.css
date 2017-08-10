@@ -46,19 +46,19 @@ a { color: #000; }
 a:hover { color: gray; }
 
 /* line 41, ../../sass/_layout.scss */
-.container { max-width: 1140px; margin: 0 auto; position: relative; overflow: auto; padding: 5px 0; }
+.container { max-width: 1140px; margin: 0 auto; position: relative; box-sizing: border-box; }
 @media only screen and (max-width: 768px) { /* line 41, ../../sass/_layout.scss */
   .container { padding: 5px 20px; } }
 
-/* line 53, ../../sass/_layout.scss */
+/* line 52, ../../sass/_layout.scss */
 .page-num ul { text-align: center; }
-/* line 55, ../../sass/_layout.scss */
+/* line 54, ../../sass/_layout.scss */
 .page-num ul li { list-style: none; display: inline-block; margin: 0px 5px; vertical-align: bottom; }
-/* line 60, ../../sass/_layout.scss */
+/* line 59, ../../sass/_layout.scss */
 .page-num ul li a { line-height: 120%; }
-/* line 63, ../../sass/_layout.scss */
+/* line 62, ../../sass/_layout.scss */
 .page-num ul li .arrow-left { width: 0; height: 0; border-style: solid; border-width: 8px 16px 8px 0; border-color: transparent #000000 transparent transparent; font-size: 0; }
-/* line 71, ../../sass/_layout.scss */
+/* line 70, ../../sass/_layout.scss */
 .page-num ul li .arrow-right { width: 0; height: 0; border-style: solid; border-width: 8px 0 8px 16px; border-color: transparent transparent transparent #000000; font-size: 0; }
 
 /* line 4, ../../sass/_header.scss */

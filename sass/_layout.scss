@@ -42,8 +42,7 @@ a:hover {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
-    overflow: auto;
-    padding: 5px 0;
+    box-sizing: border-box;
     @include breakpoint(pad) {
         padding: 5px 20px;
     }
