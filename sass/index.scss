@@ -23,6 +23,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-end;
+        // 地圖或清單選擇鈕
         .select-mode {
             display: inline-block;
             vertical-align: baseline;
@@ -40,11 +41,24 @@
                 @include breakpoint(mobile) {
                     padding: 0 5px;
                 }
+                &:hover {
+                    svg.not-select .cls-1 {
+                        fill: $secondcolor;
+                    }
+                }
+                svg .cls-1 {
+                    fill: $secondcolor;
+                }
+                svg.not-select .cls-1 {
+                    fill: #999;
+                }
             }
         }
+        //篩選內容
         .select-content {
             display: inline-block;
             vertical-align: baseline;
+            // 地區篩選
             .area-select {
                 .select-country,
                 .select-country-area {
