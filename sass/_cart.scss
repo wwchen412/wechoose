@@ -10,14 +10,26 @@
     }
     .cart-list {
         ul {
-            li {
-                padding: 20px 0;
+            li.list-content {
+                padding: 30px 0;
+                border-bottom: 2px dashed $gray;
+                &:last-child {
+                    border-bottom: 0;
+                }
                 ul {
                     font-size: 0;
                     li {
                         font-size: 1rem;
                         display: inline-block;
                         padding: 0 10px;
+                        width: calc((100% - 50px) / 5);
+                        box-sizing: border-box;
+                        text-align: center;
+                        @include breakpoint(pad) {
+                            width: 100%;
+                            text-align: left;
+                            padding: 10px 0;
+                        }
                         .remove {
                             width: 1.2rem;
                             height: 1.2rem;
@@ -27,6 +39,17 @@
                             background-color: $maincolor;
                             @include border-radius(50%);
                             color: #fff;
+                            cursor: pointer;
+                        }
+                        &:nth-child(1) {
+                            width: 50px;
+                        }
+                        &:last-child {
+                            text-align: right;
+                            padding-right: 20px;
+                        }
+                        button {
+                            min-width: 120px;
                         }
                     }
                 }

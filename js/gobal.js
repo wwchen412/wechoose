@@ -37,5 +37,3 @@
         }
     }
 })();
-
-inputNumber($('.input-number'));
