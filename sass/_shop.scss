@@ -1,7 +1,10 @@
-            // 精選商品頁面
+            // 商品頁面
             .shop-block {
                 font-size: 0;
                 margin: 40px 0;
+                @include breakpoint(mobile) {
+                    margin: 20px 0;
+                }
                 .shop-content {
                     display: inline-block;
                     vertical-align: top;
@@ -37,12 +40,66 @@
                                     font-size: 110%;
                                 }
                             }
+                            .left {
+                                p {
+                                    span {
+                                        margin: 0 5px;
+                                    }
+                                }
+                            }
                             .right {
-                                padding: 0 20px;
                                 .main-btn {
                                     width: 100%;
                                 }
+                                // 團購商品
+                                h3 {
+                                    font-size: 1rem;
+                                    b {
+                                        margin: 0 10px;
+                                    }
+                                    &:before {
+                                        @extend %item-icon;
+                                        background: url('../img/icon_focus.svg')50% 50% no-repeat;
+                                    }
+                                }
+                                .input-number {
+                                    width: 20px;
+                                    padding: 0 5px;
+                                    vertical-align: baseline;
+                                    text-align: center;
+                                    outline: none;
+                                    pointer-events: none;
+                                    border: none;
+                                    @include custom_select;
+                                }
+                                .input-number,
+                                .input-number-decrement,
+                                .input-number-increment {
+                                    height: 30px;
+                                    user-select: none;
+                                }
+                                .input-number-decrement,
+                                .input-number-increment {
+                                    display: inline-block;
+                                    width: 30px;
+                                    line-height: 30px;
+                                    background: $maincolor;
+                                    color: #FFF;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    border-radius: 4px;
+                                    &:active {
+                                        background: #ddd;
+                                    }
+                                }
+                                span+button.main-btn {
+                                    width: auto;
+                                    margin-left: 20px;
+                                }
                             }
+                            // 團購商品距離目標
                         }
                         // 商品介紹及評價
                         .shop-item-content {
@@ -109,11 +166,15 @@
                         }
                         .relative-item-title {
                             margin-top: 0;
-                            width: 100px;
-                            border-bottom: 4px solid $gray;
+                            // width: 100px;
+                            // border-bottom: 4px solid $gray;
                             padding-bottom: 10px;
-                            @include breakpoint(mobile) {
-                                width: 100%;
+                            a {
+                                background-image: linear-gradient(to bottom, #999 0%, #999 100%);
+                                background-position: 0 1.7em;
+                                background-repeat: no-repeat;
+                                overflow: hidden;
+                                padding-bottom: 10px;
                             }
                         }
                         .shop-list {
@@ -121,6 +182,12 @@
                             padding-top: 0;
                             ul {
                                 @include flex-colum(1);
+                                @include breakpoint(pad) {
+                                    @include flex-colum(2);
+                                }
+                                @include breakpoint(mobile) {
+                                    @include flex-colum(1);
+                                }
                             }
                         }
                     }
@@ -139,6 +206,59 @@
                         &:hover {
                             opacity: .7;
                         }
+                    }
+                }
+                // 團購商品頁面
+                .master-info {
+                    h4 {
+                        display: inline-block;
+                        color: $gray;
+                        margin-right: 20px;
+                        margin-top: 0;
+                        i {
+                            margin: 0 10px;
+                            color: $maincolor;
+                            &+span {
+                                color: $maincolor;
+                            }
+                        }
+                        ul {
+                            display: inline-block;
+                            vertical-align: middle;
+                            li {
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                &:hover {
+                                    opacity: .5;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            float: right;
+                            margin-right: 0;
+                            @include breakpoint(mobile) {
+                                float: none;
+                            }
+                        }
+                    }
+                    clear: both;
+                }
+                .goal {
+                    padding: 10px 0;
+                    border-top: 2px dashed $themecolor;
+                    h3 {
+                        display: inline-block;
+                        margin-right: 30px;
+                    }
+                    button {
+                        @include custom_select;
+                        background-color: $secondcolor;
+                        color: #fff;
+                        border-radius: 5px;
+                        padding: 5px 15px;
+                        float: right;
+                        margin-top: 5px;
                     }
                 }
             }
