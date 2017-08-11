@@ -4,6 +4,7 @@
 body,
 html {
     font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
 
 h1,
@@ -57,6 +58,7 @@ a:hover {
     }
 }
 
+// 頁碼
 .page-num {
     ul {
         text-align: center;
@@ -88,7 +90,44 @@ a:hover {
     }
 }
 
+// rwd圖片
 .rwd-img {
     max-width: 100%;
     height: auto;
+}
+
+// 數量增加按鈕
+.input-number {
+    width: 20px;
+    padding: 0 5px;
+    vertical-align: baseline;
+    text-align: center;
+    outline: none;
+    pointer-events: none;
+    border: none;
+    @include custom_select;
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+    height: 30px;
+    user-select: none;
+}
+
+.input-number-decrement,
+.input-number-increment {
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    background: $maincolor;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    &:active {
+        background: #ddd;
+    }
 }

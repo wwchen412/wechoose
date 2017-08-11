@@ -62,38 +62,6 @@
                                         background: url('../img/icon_focus.svg')50% 50% no-repeat;
                                     }
                                 }
-                                .input-number {
-                                    width: 20px;
-                                    padding: 0 5px;
-                                    vertical-align: baseline;
-                                    text-align: center;
-                                    outline: none;
-                                    pointer-events: none;
-                                    border: none;
-                                    @include custom_select;
-                                }
-                                .input-number,
-                                .input-number-decrement,
-                                .input-number-increment {
-                                    height: 30px;
-                                    user-select: none;
-                                }
-                                .input-number-decrement,
-                                .input-number-increment {
-                                    display: inline-block;
-                                    width: 30px;
-                                    line-height: 30px;
-                                    background: $maincolor;
-                                    color: #FFF;
-                                    text-align: center;
-                                    font-weight: bold;
-                                    font-size: 16px;
-                                    cursor: pointer;
-                                    border-radius: 4px;
-                                    &:active {
-                                        background: #ddd;
-                                    }
-                                }
                                 span+button.main-btn {
                                     width: auto;
                                     margin-left: 20px;
