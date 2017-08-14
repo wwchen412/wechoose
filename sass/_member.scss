@@ -80,6 +80,10 @@
                     color: #E50000;
                     font-weight: 500;
                 }
+                h4 {
+                    color: $gray;
+                    font-weight: bolder;
+                }
             }
             .content {
                 padding: 10px 0;
@@ -110,6 +114,55 @@
                 }
                 @include breakpoint(mobile) {
                     width: 100%;
+                }
+            }
+        }
+    }
+    &.member-order-transport {
+        .percent50 {
+            width: calc((100% - 160px) / 2);
+            @include breakpoint(pad) {
+                width: 100%;
+            }
+            h4 {
+                ol {
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: $secondcolor;
+                    height: 8px;
+                    width: 150px;
+                    margin-right: 20px;
+                    @include breakpoint(mobile) {
+                        display: block;
+                        margin: 15px auto;
+                        +span {
+                            display: block;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    li {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        padding: 0;
+                        background-color: $secondcolor;
+                        margin-bottom: 0;
+                        transform: translateY(-5px);
+                        @include border-radius(50%);
+                        &:nth-child(1) {
+                            transform: translateX(-5px) translateY(-6px);
+                        }
+                        &:nth-child(2) {
+                            transform: translateX(20px) translateY(-6px);
+                        }
+                        &:nth-child(3) {
+                            transform: translateX(85px) translateY(-6px);
+                        }
+                        &.now {
+                            background-color: $themecolor;
+                        }
+                    }
                 }
             }
         }
