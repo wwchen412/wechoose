@@ -61,6 +61,22 @@ a:hover {
     }
 }
 
+// 麵包屑
+.bread {
+    li {
+        display: inline-block;
+        color: $gray;
+        &:after {
+            content: '/';
+            display: inline;
+            padding-left: 10px;
+        }
+        &:last-child:after {
+            content: '';
+        }
+    }
+}
+
 // 頁碼
 .page-num {
     ul {

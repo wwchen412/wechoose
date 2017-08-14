@@ -1,0 +1,117 @@
+// 會員功能切換ＴＡＢ
+.member-tab {
+    padding: 20px 0;
+    ul.tab {
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            background: $gray;
+            min-width: 100px;
+            text-align: center;
+            @include border-radius(5px);
+            @include box-sizing(border-box);
+            @include breakpoint(mobile) {
+                width: calc(100% / 2 - 10px);
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+            &:last-child {
+                margin: 0;
+            }
+            &.active,
+            &:hover {
+                background: $themecolor;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+    ul.sub-tab {
+        padding: 20px 0;
+        border-bottom: 2px dashed $themecolor;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            a {
+                span.redpoint {
+                    display: inline-block;
+                    background: #E50000;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    border-radius: 50%;
+                    color: #fff;
+                    margin-right: 5px;
+                }
+            }
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.member-order {
+    ul {
+        li {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            background: $opacitycolor;
+            color: $gray;
+            @include box-sizing(border-box);
+            @include border-radius(5px);
+            .title {
+                border-bottom: 2px dashed $themecolor;
+                padding-bottom: 10px;
+                font-size: 0;
+                >div {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                }
+                span.alert {
+                    color: #E50000;
+                    font-weight: 500;
+                }
+            }
+            .content {
+                padding: 10px 0;
+                >div {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    vertical-align: middle;
+                }
+            }
+            .date {
+                width: 150px;
+            }
+            .percent50 {
+                width: calc((100% - 300px) / 2);
+                @include breakpoint(pad) {
+                    width: 100%;
+                }
+            }
+            .share {
+                width: 150px;
+                .main-btn {
+                    width: 100%;
+                    box-sizing: border-box;
+                    &.fail {
+                        background: $secondcolor;
+                    }
+                }
+                @include breakpoint(mobile) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

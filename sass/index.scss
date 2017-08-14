@@ -9,6 +9,7 @@
 @import "_shop.scss";
 @import "_cart.scss";
 @import "_mystore.scss";
+@import "_member.scss";
 #content {
     margin: 40px 0;
 }
@@ -158,22 +159,6 @@
                 @extend %item-icon;
                 background: url('../img/icon_ahead.svg')50% 50% no-repeat;
             }
-        }
-    }
-}
-
-// 麵包屑
-.bread {
-    li {
-        display: inline-block;
-        color: $gray;
-        &:after {
-            content: '/';
-            display: inline;
-            padding-left: 10px;
-        }
-        &:last-child:after {
-            content: '';
         }
     }
 }
