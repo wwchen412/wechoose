@@ -1,0 +1,136 @@
+    // 個人商店資料頁
+    .mystore {
+        margin: 40px 0;
+        .container {
+            border-top: 2px dashed $themecolor;
+            .inner-container {
+                padding: 20px 0;
+                .info {
+                    font-size: 0;
+                    >img {
+                        width: 130px;
+                        height: 130px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    ul.info-content {
+                        vertical-align: middle;
+                        display: inline-block;
+                        width: calc(100% - 130px);
+                        >li {
+                            width: calc(100% / 3);
+                            display: inline-block;
+                            padding: 20px;
+                            justify-content: space-around;
+                            box-sizing: border-box;
+                            vertical-align: top;
+                            h4 {
+                                color: $gray;
+                                padding-bottom: 20px;
+                                i {
+                                    color: #000;
+                                    padding: 0 10px;
+                                    &+span {
+                                        color: #000;
+                                    }
+                                }
+                                ul {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    li {
+                                        width: 30px;
+                                        height: 30px;
+                                        display: inline-block;
+                                        &:hover {
+                                            opacity: .6;
+                                        }
+                                    }
+                                }
+                            }
+                            @include breakpoint(pad) {
+                                width: 100%;
+                                padding: 0 20px;
+                                h4 {
+                                    padding-bottom: 0;
+                                    ul {
+                                        margin-top: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .intro {
+                background: $opacitycolor;
+                min-height: 300px;
+            }
+        }
+        .my-store-list {
+            .inner-container {
+                >h2 {
+                    border-bottom: 5px solid $gray;
+                    padding-bottom: 20px;
+                }
+                .my-shop-list {
+                    ul {
+                        margin-top: 20px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        li {
+                            font-size: 12px;
+                            overflow: hidden;
+                            display: inline-block;
+                            padding: 20px;
+                            background: $backcolor;
+                            box-sizing: border-box;
+                            border-radius: 5px;
+                            transition: .2s;
+                            width: calc(100% / 4 - (10px * 3 / 4));
+                            margin: 0 10px 10px 0;
+                            @include breakpoint(pad) {
+                                width: calc(100% / 2 - (10px / 2));
+                                margin-bottom: 10px;
+                                &:nth-child(even) {
+                                    margin-right: 0;
+                                }
+                            }
+                            @include breakpoint(mobile) {
+                                width: calc(100%);
+                                margin: 0;
+                                margin-bottom: 10px;
+                            }
+                            &:hover {
+                                box-shadow: 0px 0px 8px 1px rgba(100, 100, 100, 0.3);
+                            }
+                            &:nth-child(4n) {
+                                margin-right: 0;
+                            }
+                            img {
+                                width: 100%;
+                                transition: .2s;
+                                &:hover {
+                                    opacity: .6;
+                                }
+                            }
+                            button {
+                                background-color: transparent;
+                                @include custom_select;
+                                border-radius: 3px;
+                                border: 1px solid #000;
+                                float: right;
+                                transition: .2s;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: $maincolor;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

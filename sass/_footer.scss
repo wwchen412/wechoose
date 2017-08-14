@@ -21,14 +21,12 @@
                     padding: 0 10px;
                     line-height: 150%;
                     border-right: 1px solid #000;
+                    font-weight: bold;
                     @include breakpoint (mobile) {
                         border: 0;
                     }
                     &:last-child {
                         border: 0;
-                    }
-                    a {
-                        color: $maincolor;
                     }
                 }
             }

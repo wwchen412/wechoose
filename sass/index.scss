@@ -8,16 +8,7 @@
 //  各頁css
 @import "_shop.scss";
 @import "_cart.scss";
-// icon
-%item-icon {
-    content: '';
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.2rem;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
+@import "_mystore.scss";
 #content {
     margin: 40px 0;
 }
@@ -106,16 +97,15 @@
     }
     ul {
         // 瀑布流隔線 _mixin.scss
-        @include flex-colum(4);
+        @include flex-colum(4, 10px);
         @include breakpoint(pad) {
-            @include flex-colum(2);
+            @include flex-colum(2, 10px);
         }
         @include breakpoint(mobile) {
-            @include flex-colum(1);
+            @include flex-colum(1, 10px);
         }
         li {
             // width: calc(100% - 5px);
-            display: inline-block;
             font-size: 12px;
             overflow: hidden;
             display: inline-block;

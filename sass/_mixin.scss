@@ -25,15 +25,11 @@
 }
 
 // 瀑布流隔線
-@mixin flex-colum($colum) {
+@mixin flex-colum($column, $gap) {
     -ms-flex-direction: column;
     -ms-flex-wrap: wrap;
-    -moz-column-count: $colum;
-    -moz-column-gap: 10px;
-    -webkit-column-count: $colum;
-    -webkit-column-gap: 10px;
-    column-count: $colum;
-    column-gap: 10px;
+    @include column-count($column);
+    @include column-gap($gap);
 }
 
 @mixin triangle($t_width) {
@@ -45,4 +41,14 @@
     border-color: #ffffff transparent transparent transparent;
     position: absolute;
     pointer-events: none;
+}
+
+// icon
+%item-icon {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.2rem;
+    vertical-align: middle;
+    margin-right: 5px;
 }

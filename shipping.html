@@ -85,13 +85,14 @@
                     </ol>
                 </div>
             </div>
+            <!-- 購物車頁面內容 -->
             <div id="shipping">
                 <div class="cart-title">
                     <div class="container">
                         <div class="back-to-shop">
-                            <button type="button" class="main-btn">
-                                     <i class="fa fa-chevron-left" aria-hidden="true"></i> 回到購物車
-                                 </button>
+                            <a href="cart.html" class="main-btn">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i> 回到購物車
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -117,6 +118,7 @@
                                          <input type="radio" name="transport" id="transport">
                                             711超商店到店
                                         </label>
+                                        <!-- 串711 ＡＰＩ -->
                                         <a href="" class="main-btn">門市選擇</a>
                                     </h5>
 
@@ -157,15 +159,39 @@
                                 </div>
                             </div>
                             <div class="right">
+                                <!-- 金額計算 -->
                                 <label for="discount">
                                        
                                     <input type="checkbox" name="discount" id="discount">
                                     使用購物金折抵<span>1299</span>點
                                     </label>
-                                <h4>金額：<span>2200元</span></h4>
-                                <h4>運費：<span>85</span></h4>
-                                <h4>總額：<span>1615</span></h4>
-                                <button type="button" class="main-btn">確認結帳</button>
+                                <h4>金額：<span>2200</span>元</h4>
+                                <h4>運費：<span>85</span>元</h4>
+                                <h4>總額：<span>1615</span>元</h4>
+
+                                <!-- 選擇結帳平台 -->
+                                <!-- 還沒確定 -->
+                                <form action="">
+                                    <ul>
+                                        <li>
+                                            <label for="">
+                                                <input type="radio" name="">
+                                                信用卡結帳
+                                             </label>
+                                        </li>
+                                        <li>
+                                            <label for="">
+                                                <input type="radio" name="">
+                                                Applepay
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" class="main-btn">前往結帳</button>
+
+                                </form>
+
+
                             </div>
                         </form>
                     </div>

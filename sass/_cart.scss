@@ -7,7 +7,7 @@
     @include breakpoint(mobile) {
         transform: translateY(-25px);
     }
-    button {
+    a {
         background-color: RGB(100, 164, 48);
         float: right;
     }
@@ -65,6 +65,7 @@
 // 結帳資料
 .shipping-content {
     padding: 30px 0;
+    min-height: 500px;
     @include breakpoint(pad) {
         padding-top: 0;
     }
@@ -104,6 +105,9 @@
                     li {
                         margin-bottom: 10px;
                     }
+                }
+                .main-btn {
+                    margin-left: 30px;
                 }
             }
             .right {

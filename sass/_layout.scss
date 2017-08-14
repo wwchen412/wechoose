@@ -46,6 +46,9 @@ a:hover {
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
+    &:hover {
+        color: #fff;
+    }
 }
 
 .container {
@@ -129,5 +132,15 @@ a:hover {
     border-radius: 4px;
     &:active {
         background: #ddd;
+    }
+}
+
+.inner-container {
+    max-width: 920px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    @include breakpoint(pad) {
+        padding: 5px 20px;
     }
 }
