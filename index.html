@@ -40,7 +40,7 @@
 
                             <div class="login">
                                 <!--訊息數量  -->
-                                <a href="#">
+                                <a href="javascript:void(0);" class="message-show">
                                     <span>90</span>
                                 </a>
                                 <a href="">Araon Lin</a>
@@ -69,6 +69,107 @@
                 </div>
             </div>
 
+        </div>
+        <div id="message">
+            <h2>我的訊息</h2>
+            <!-- 訊息內容 -->
+            <!-- 最多顯示六則 -->
+            <ul>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>王大明</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>王大明</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>王大明</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>王大明</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>王大明</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>系統管理員</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <a href="">
+                            <p>Araon Lin</p>
+                        </a>
+
+                    </div>
+                    <div class="message-content">
+                        <a href="">
+                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn-close">
+                X
+            </div>
         </div>
 
     </div>
@@ -328,6 +429,15 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $('.message-show').click(function() {
+            $('#message').toggleClass('active');
+
+        })
+        $('.btn-close').click(function() {
+            $('#message.active').removeClass('active');
+        })
+    </script>
 </body>
 
 </html>

@@ -39,6 +39,9 @@
             margin-bottom: 10px;
             font-weight: bolder;
             a {
+                span {
+                    display: none;
+                }
                 span.redpoint {
                     display: inline-block;
                     background: #E50000;
@@ -58,8 +61,10 @@
     }
 }
 
+// 會員訂單共同區域
 .member-order {
     ul {
+        margin: 20px 0;
         li {
             padding: 10px 20px;
             margin-bottom: 10px;
@@ -69,7 +74,7 @@
             @include border-radius(5px);
             .title {
                 border-bottom: 2px dashed $themecolor;
-                padding-bottom: 10px;
+                // padding-bottom: 10px;
                 font-size: 0;
                 >div {
                     display: inline-block;
@@ -87,24 +92,38 @@
             }
             .content {
                 padding: 10px 0;
+                font-size: 0;
                 >div {
                     display: inline-block;
                     padding: 5px 10px;
                     box-sizing: border-box;
                     vertical-align: middle;
                 }
+                .date {
+                    height: 150px;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                h4 {
+                    i {
+                        color: $secondcolor;
+                    }
+                }
             }
             .date {
                 width: 150px;
             }
             .percent50 {
-                width: calc((100% - 300px) / 2);
+                width: calc((100% - 330px) / 2);
                 @include breakpoint(pad) {
                     width: 100%;
                 }
             }
             .share {
-                width: 150px;
+                width: 180px;
                 .main-btn {
                     width: 100%;
                     box-sizing: border-box;
@@ -118,6 +137,7 @@
             }
         }
     }
+    // 運送中class
     &.member-order-transport {
         .percent50 {
             width: calc((100% - 160px) / 2);
@@ -163,6 +183,95 @@
                             background-color: $themecolor;
                         }
                     }
+                }
+            }
+        }
+    }
+    // 評論頁class
+    &.member-order-comment {
+        .date {
+            @include breakpoint(pad) {
+                width: 100%;
+            }
+            img {
+                @include breakpoint(pad) {
+                    width: 150px !important;
+                    height: 150px !important;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+        .comment-form {
+            width: calc(100% - 150px);
+            @include breakpoint(pad) {
+                width: 100%;
+            }
+            >div {
+                display: inline-block;
+            }
+            .percent50 {
+                width: 50%;
+                @include breakpoint(pad) {
+                    width: 100%;
+                }
+                b {
+                    font-weight: bolder;
+                }
+                i {}
+            }
+            .my-comment {
+                width: calc(100% - 180px);
+                padding-right: 25px;
+                box-sizing: border-box;
+                @include breakpoint(pad) {
+                    width: 100%;
+                    padding-right: 0;
+                    margin-bottom: 10px;
+                }
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    @include border-radius(5px);
+                    @include custom_select;
+                    border: 1px solid $secondcolor;
+                    color: $secondcolor;
+                }
+            }
+        }
+    }
+    &.member-order-history {
+        li {
+            position: relative;
+            .title {
+                border: 0;
+                &.active {
+                    border-bottom: 2px dashed $themecolor;
+                    .toggle {
+                        h4 {
+                            background: url('../img/toggle.svg')0px -30px no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+            }
+            .content {
+                display: none;
+            }
+            .toggle {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+                &:hover {
+                    opacity: .6;
+                }
+                h4 {
+                    width: 30px;
+                    height: 30px;
+                    background: url('../img/toggle.svg')0px 0px no-repeat;
+                    background-size: cover;
                 }
             }
         }
