@@ -96,6 +96,9 @@ a:hover { color: gray; }
 @media only screen and (max-width: 768px) { /* line 154, ../../sass/_layout.scss */
   .inner-container { padding: 5px 20px; } }
 
+/* line 165, ../../sass/_layout.scss */
+a.send-msg img { width: 20px; vertical-align: middle; }
+
 /* line 3, ../../sass/_header.scss */
 #header { position: relative; }
 /* line 5, ../../sass/_header.scss */
