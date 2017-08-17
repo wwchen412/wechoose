@@ -564,36 +564,36 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 /* line 376, ../../sass/_member.scss */
 .member-store .my-settings .percent50 li input[type="checkbox"] { width: 20px; height: 20px; display: inline-block; vertical-align: middle; position: relative; }
 /* line 383, ../../sass/_member.scss */
-.member-store .my-settings .percent50 li input[type="checkbox"]:checked:before { content: '✓'; text-align: center; display: block; position: absolute; top: 0; right: 0; left: 0; bottom: 0; }
-/* line 395, ../../sass/_member.scss */
+.member-store .my-settings .percent50 li input[type="checkbox"]:checked:before { content: '✓'; text-align: center; display: block; position: absolute; top: 0; right: 0; left: 0; bottom: 0; font-family: Arial, Helvetica, sans-serif; }
+/* line 396, ../../sass/_member.scss */
 .member-store .my-settings .percent50 li input { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; box-sizing: border-box; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; vertical-align: middle; }
-/* line 402, ../../sass/_member.scss */
+/* line 403, ../../sass/_member.scss */
 .member-store .my-settings .percent50 li input[type="text"] { padding: 5px; box-sizing: border-box; margin-left: 10px; }
-/* line 411, ../../sass/_member.scss */
+/* line 412, ../../sass/_member.scss */
 .member-store .my-store-list { padding: 20px 0; }
-/* line 413, ../../sass/_member.scss */
+/* line 414, ../../sass/_member.scss */
 .member-store .my-store-list .title { font-weight: bold; padding-bottom: 5px; border-bottom: 4px solid #999; }
-/* line 418, ../../sass/_member.scss */
+/* line 419, ../../sass/_member.scss */
 .member-store .my-store-list .item-card { display: flex; flex-wrap: wrap; justify-content: flex-start; }
-/* line 422, ../../sass/_member.scss */
+/* line 423, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li { width: calc(100% / 4 - 10px * 3 / 4); margin-right: 10px; margin-bottom: 10px; background: rgba(170, 170, 170, 0.2); padding: 10px; box-sizing: border-box; position: relative; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-/* line 431, ../../sass/_member.scss */
+/* line 432, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li:nth-child(4n) { margin-right: 0; }
-@media only screen and (max-width: 768px) { /* line 422, ../../sass/_member.scss */
+@media only screen and (max-width: 768px) { /* line 423, ../../sass/_member.scss */
   .member-store .my-store-list .item-card li { width: calc(100% / 2 - 10px / 2); }
-  /* line 436, ../../sass/_member.scss */
+  /* line 437, ../../sass/_member.scss */
   .member-store .my-store-list .item-card li:nth-child(even) { margin-right: 0; } }
-@media only screen and (max-width: 467px) { /* line 422, ../../sass/_member.scss */
+@media only screen and (max-width: 467px) { /* line 423, ../../sass/_member.scss */
   .member-store .my-store-list .item-card li { width: 100%; margin-right: 0; } }
-/* line 444, ../../sass/_member.scss */
+/* line 445, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li button { margin-top: 10px; width: 100%; }
-/* line 448, ../../sass/_member.scss */
+/* line 449, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li .remove { position: absolute; right: 10px; top: 10px; }
-/* line 454, ../../sass/_member.scss */
+/* line 455, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li.add { background-color: transparent; }
-/* line 456, ../../sass/_member.scss */
+/* line 457, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li.add button { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 100%; height: 100%; background-color: RGB(139, 175, 53); margin-top: 0; color: #fff; }
-/* line 464, ../../sass/_member.scss */
+/* line 465, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li.add button i { display: block; margin: 0 auto; }
 
 /* line 13, ../../sass/index.scss */
