@@ -378,18 +378,14 @@
                     height: 20px;
                     display: inline-block;
                     vertical-align: middle;
-                    position: relative;
                     &:checked {
                         &:before {
                             content: '✓';
                             text-align: center;
                             display: block;
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            left: 0;
-                            bottom: 0;
                             font-family: Arial, Helvetica, sans-serif;
+                            font-size: 18px;
+                            line-height: 20px
                         }
                     }
                 }
