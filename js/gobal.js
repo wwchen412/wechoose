@@ -1,3 +1,15 @@
+// 商品thumbnail
+$(function() {
+    $('.thumbnail-sub').click(function() {
+        var _src_thumbnail = $(this).attr('src');
+        console.log(_src_thumbnail);
+        $(this).parents().find('ul').siblings('img').attr('src', _src_thumbnail);
+    })
+
+});
+
+
+//數字input
 (function() {
 
     window.inputNumber = function(el) {

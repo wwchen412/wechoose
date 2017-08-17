@@ -458,9 +458,13 @@
                         background-color: RGB(139, 175, 53);
                         margin-top: 0;
                         color: #fff;
+                        cursor: pointer;
                         i {
                             display: block;
                             margin: 0 auto;
+                        }
+                        &:hover {
+                            background-color: RGB(159, 200, 72);
                         }
                     }
                 }

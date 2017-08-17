@@ -11,7 +11,7 @@
 @import "_mystore.scss";
 @import "_member.scss";
 #content {
-    margin: 40px 0;
+    padding: 40px 0;
 }
 
 // 首頁
@@ -161,4 +161,16 @@
             }
         }
     }
+}
+
+//地圖
+.map-shop-list {
+    border-top: 2px dashed RGB(229, 178, 61);
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
 }

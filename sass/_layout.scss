@@ -39,6 +39,7 @@ a:hover {
     color: lighten($maincolor, 50%);
 }
 
+// 主要按鈕
 .main-btn {
     @include custom_select;
     @include border-radius(5px);
@@ -48,6 +49,7 @@ a:hover {
     cursor: pointer;
     &:hover {
         color: #fff;
+        background: $themecolor;
     }
 }
 
