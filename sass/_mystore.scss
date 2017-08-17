@@ -3,58 +3,61 @@
         margin: 40px 0;
         .container {
             border-top: 2px dashed $themecolor;
-            .inner-container {
-                padding: 20px 0;
-                .info {
-                    font-size: 0;
-                    >img {
-                        width: 130px;
-                        height: 130px;
-                        border-radius: 50%;
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                    ul.info-content {
-                        vertical-align: middle;
-                        display: inline-block;
-                        width: calc(100% - 130px);
-                        >li {
-                            width: calc(100% / 3);
+            .my-info {
+                .inner-container {
+                    padding: 20px 0;
+                    .info {
+                        font-size: 0;
+                        padding: 10px 0;
+                        box-sizing: border-box;
+                        >img {
+                            width: 130px;
+                            height: 130px;
+                            border-radius: 50%;
                             display: inline-block;
-                            padding: 20px;
-                            justify-content: space-around;
-                            box-sizing: border-box;
-                            vertical-align: top;
-                            h4 {
-                                color: $gray;
-                                padding-bottom: 20px;
-                                i {
-                                    color: #000;
-                                    padding: 0 10px;
-                                    &+span {
+                            vertical-align: middle;
+                        }
+                        ul.info-content {
+                            vertical-align: middle;
+                            display: inline-block;
+                            width: calc(100% - 130px);
+                            >li {
+                                width: calc(100% / 3);
+                                display: inline-block;
+                                padding: 5px 20px;
+                                justify-content: space-around;
+                                box-sizing: border-box;
+                                vertical-align: top;
+                                h4 {
+                                    color: $gray;
+                                    i {
                                         color: #000;
+                                        padding: 0 10px;
+                                        &+span {
+                                            color: #000;
+                                        }
                                     }
-                                }
-                                ul {
-                                    display: inline-block;
-                                    vertical-align: middle;
-                                    li {
-                                        width: 30px;
-                                        height: 30px;
+                                    ul {
                                         display: inline-block;
-                                        &:hover {
-                                            opacity: .6;
+                                        vertical-align: middle;
+                                        li {
+                                            width: 30px;
+                                            height: 30px;
+                                            display: inline-block;
+                                            &:hover {
+                                                opacity: .6;
+                                            }
                                         }
                                     }
                                 }
-                            }
-                            @include breakpoint(pad) {
-                                width: 100%;
-                                padding: 0 20px;
-                                h4 {
-                                    padding-bottom: 0;
-                                    ul {
-                                        margin-top: 10px;
+                                @include breakpoint(pad) {
+                                    width: 100%;
+                                    padding: 0 20px;
+                                    h4 {
+                                        padding-bottom: 0;
+                                        ul {
+                                            margin-top: 10px;
+                                        }
                                     }
                                 }
                             }

@@ -36,15 +36,7 @@
                         padding: 10px 0;
                     }
                     .remove {
-                        width: 1.2rem;
-                        height: 1.2rem;
-                        line-height: 1.2rem;
-                        padding: 5px;
-                        text-align: center;
-                        background-color: $maincolor;
-                        @include border-radius(50%);
-                        color: #fff;
-                        cursor: pointer;
+                        @extend %remove;
                     }
                     &:nth-child(1) {
                         width: 50px;
