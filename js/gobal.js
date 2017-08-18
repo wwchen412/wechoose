@@ -1,11 +1,29 @@
 // 商品thumbnail
 $(function() {
+    // 商品頁相簿
     $('.thumbnail-sub').click(function() {
-        var _src_thumbnail = $(this).attr('src');
-        console.log(_src_thumbnail);
-        $(this).parents().find('ul').siblings('img').attr('src', _src_thumbnail);
+            var _src_thumbnail = $(this).attr('src');
+            console.log(_src_thumbnail);
+            $(this).parents().find('ul').siblings('img').attr('src', _src_thumbnail);
+        })
+        // 
+    $('#additem').click(function() {
+        $('.member-sotre-lightbox').addClass('active');
+        $('body').addClass('active');
+        $('html').addClass('active');
+        $('#wrap').addClass('active');
     })
 
+    $('.member-sotre-lightbox').click(function() {
+        $(this).removeClass('active');
+        $('body').removeClass('active');
+        $('html').removeClass('active');
+        $('#wrap').removeClass('active');
+
+    })
+    $('.list').click(function() {
+        event.stopPropagation();
+    })
 });
 
 
