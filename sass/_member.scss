@@ -400,6 +400,8 @@
                     padding: 5px;
                     box-sizing: border-box;
                     margin-left: 10px;
+                    width: 60%;
+                    display: none;
                 }
             }
         }
@@ -473,6 +475,7 @@
     }
 }
 
+// 新增商品光箱
 .member-sotre-lightbox {
     position: fixed;
     top: 0;
@@ -569,6 +572,14 @@
                 box-sizing: border-box;
                 @include border-radius(5px);
                 vertical-align: middle;
+            }
+            &.selected {
+                img {
+                    opacity: .5;
+                }
+                input {
+                    display: none;
+                }
             }
         }
     }

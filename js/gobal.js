@@ -7,23 +7,7 @@ $(function() {
             $(this).parents().find('ul').siblings('img').attr('src', _src_thumbnail);
         })
         // 
-    $('#additem').click(function() {
-        $('.member-sotre-lightbox').addClass('active');
-        $('body').addClass('active');
-        $('html').addClass('active');
-        $('#wrap').addClass('active');
-    })
 
-    $('.member-sotre-lightbox').click(function() {
-        $(this).removeClass('active');
-        $('body').removeClass('active');
-        $('html').removeClass('active');
-        $('#wrap').removeClass('active');
-
-    })
-    $('.list').click(function() {
-        event.stopPropagation();
-    })
 });
 
 
@@ -67,3 +51,40 @@ $(function() {
         }
     }
 })();
+
+
+// 個人友善商店
+$(function() {
+    // 個人友善商店
+
+    // 選擇時段勾選後 才出現填寫時間
+    $('.my-settings ul li input[type="checkbox"]').change(function() {
+        if (this.checked) {
+            $(this).parents('li').find('input[type="text"]').css('display', 'inline-block');
+        } else {
+            $(this).parents('li').find('input[type="text"]').css('display', 'none');
+        }
+
+    });
+    // 新增商品按鈕
+    $('#additem').click(function() {
+            $('.member-sotre-lightbox').addClass('active');
+            $('body').addClass('active');
+            $('html').addClass('active');
+            $('#wrap').addClass('active');
+        })
+        // 新增商品光箱
+    $('.member-sotre-lightbox').click(function() {
+            $(this).removeClass('active');
+            $('body').removeClass('active');
+            $('html').removeClass('active');
+            $('#wrap').removeClass('active');
+
+        })
+        // 防止內容關閉光箱
+    $('.list').click(function() {
+        event.stopPropagation();
+    })
+
+
+});
