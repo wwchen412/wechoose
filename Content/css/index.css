@@ -32,7 +32,7 @@ a { text-decoration: none; }
 .shop-block .shop-content.shop-content-left .shop-order .right h3:before, .shop-list .focus-item h3:before, .shop-list .ahead-item h3:before { content: ''; display: inline-block; width: 1.5rem; height: 1.2rem; vertical-align: middle; margin-right: 5px; }
 
 /* line 57, ../../sass/_mixin.scss */
-.cart-list ul li.list-content ul li .remove, .member-store .my-store-list .item-card li .remove { width: 1.2rem; height: 1.2rem; line-height: 1.2rem; padding: 5px; text-align: center; background-color: #000; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; color: #fff; cursor: pointer; }
+.cart-list ul li.list-content ul li .remove, .member-store .my-store-list .item-card li .remove, .member-sotre-lightbox .item-card li .remove { width: 1.2rem; height: 1.2rem; line-height: 1.2rem; padding: 5px; text-align: center; background-color: #000; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; color: #fff; cursor: pointer; }
 
 /* line 3, ../../sass/_layout.scss */
 *, body, html { font-size: 16px; font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif; }
@@ -599,6 +599,35 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 .member-store .my-store-list .item-card li.add button i { display: block; margin: 0 auto; }
 /* line 466, ../../sass/_member.scss */
 .member-store .my-store-list .item-card li.add button:hover { background-color: RGB(159, 200, 72); }
+
+/* line 476, ../../sass/_member.scss */
+.member-sotre-lightbox { position: fixed; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; z-index: 1000; }
+/* line 484, ../../sass/_member.scss */
+.member-sotre-lightbox .list { padding: 20px; background-color: #fff; margin-top: 20px; height: 100%; overflow: scroll; }
+/* line 491, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card { display: flex; flex-wrap: wrap; justify-content: flex-start; }
+/* line 495, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li { width: calc(100% / 4 - 10px * 3 / 4); margin-right: 10px; margin-bottom: 10px; background: rgba(170, 170, 170, 0.2); padding: 10px; box-sizing: border-box; position: relative; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+/* line 504, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li:nth-child(4n) { margin-right: 0; }
+@media only screen and (max-width: 768px) { /* line 495, ../../sass/_member.scss */
+  .member-sotre-lightbox .item-card li { width: calc(100% / 2 - 10px / 2); }
+  /* line 509, ../../sass/_member.scss */
+  .member-sotre-lightbox .item-card li:nth-child(even) { margin-right: 0; } }
+@media only screen and (max-width: 467px) { /* line 495, ../../sass/_member.scss */
+  .member-sotre-lightbox .item-card li { width: 100%; margin-right: 0; } }
+/* line 517, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li button { margin-top: 10px; width: 100%; }
+/* line 521, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li .remove { position: absolute; right: 10px; top: 10px; }
+/* line 527, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li.add { background-color: transparent; }
+/* line 529, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li.add button { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 100%; height: 100%; background-color: RGB(139, 175, 53); margin-top: 0; color: #fff; cursor: pointer; }
+/* line 538, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li.add button i { display: block; margin: 0 auto; }
+/* line 542, ../../sass/_member.scss */
+.member-sotre-lightbox .item-card li.add button:hover { background-color: RGB(159, 200, 72); }
 
 /* line 13, ../../sass/index.scss */
 #content { padding: 40px 0; }
