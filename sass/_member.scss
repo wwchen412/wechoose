@@ -491,9 +491,10 @@
     .list {
         padding: 20px;
         background-color: #fff;
-        margin-top: 20px;
-        height: 100%;
         overflow: hidden;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         @include border-radius(5px);
         h2 {
             text-align: center;
@@ -587,8 +588,11 @@
 
 //  光箱點選以後的active
 body.active,
-html.active {
+html.active,
+.container.active,
+.inner-container.active {
     height: 100%;
+    width: 100%;
 }
 
 #wrap.active {

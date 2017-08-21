@@ -605,52 +605,52 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 /* line 488, ../../sass/_member.scss */
 .member-sotre-lightbox.active { display: block; }
 /* line 491, ../../sass/_member.scss */
-.member-sotre-lightbox .list { padding: 20px; background-color: #fff; margin-top: 20px; height: 100%; overflow: hidden; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-/* line 498, ../../sass/_member.scss */
+.member-sotre-lightbox .list { padding: 20px; background-color: #fff; overflow: hidden; position: absolute; top: 50%; transform: translateY(-50%); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+/* line 499, ../../sass/_member.scss */
 .member-sotre-lightbox .list h2 { text-align: center; }
-/* line 501, ../../sass/_member.scss */
+/* line 502, ../../sass/_member.scss */
 .member-sotre-lightbox .list h2 + ul { text-align: center; margin: 10px 0 20px; }
-/* line 504, ../../sass/_member.scss */
+/* line 505, ../../sass/_member.scss */
 .member-sotre-lightbox .list h2 + ul li { display: inline-block; padding: 5px 10px; border-right: 1px solid RGB(51, 51, 51); }
-/* line 508, ../../sass/_member.scss */
+/* line 509, ../../sass/_member.scss */
 .member-sotre-lightbox .list h2 + ul li:last-child { border: 0; }
-/* line 513, ../../sass/_member.scss */
+/* line 514, ../../sass/_member.scss */
 .member-sotre-lightbox .list .main-btn { margin: 10px auto; display: block; }
-/* line 518, ../../sass/_member.scss */
+/* line 519, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card { display: flex; flex-wrap: wrap; justify-content: flex-start; max-height: 55vh; overflow: scroll; }
-/* line 524, ../../sass/_member.scss */
+/* line 525, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li { width: calc(100% / 4 - 10px * 3 / 4); margin-right: 10px; margin-bottom: 10px; background: rgba(170, 170, 170, 0.2); padding: 10px; box-sizing: border-box; position: relative; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-/* line 533, ../../sass/_member.scss */
+/* line 534, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li:nth-child(4n) { margin-right: 0; }
-@media only screen and (max-width: 768px) { /* line 524, ../../sass/_member.scss */
+@media only screen and (max-width: 768px) { /* line 525, ../../sass/_member.scss */
   .member-sotre-lightbox .item-card li { width: calc(100% / 2 - 10px / 2); }
-  /* line 538, ../../sass/_member.scss */
+  /* line 539, ../../sass/_member.scss */
   .member-sotre-lightbox .item-card li:nth-child(even) { margin-right: 0; } }
-@media only screen and (max-width: 467px) { /* line 524, ../../sass/_member.scss */
+@media only screen and (max-width: 467px) { /* line 525, ../../sass/_member.scss */
   .member-sotre-lightbox .item-card li { width: 100%; margin-right: 0; } }
-/* line 546, ../../sass/_member.scss */
+/* line 547, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li button { margin-top: 10px; width: 100%; }
-/* line 550, ../../sass/_member.scss */
+/* line 551, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li h4 { display: inline-block; }
-/* line 553, ../../sass/_member.scss */
+/* line 554, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li input[type="checkbox"] { width: 20px; height: 20px; display: inline-block; vertical-align: middle; }
-/* line 559, ../../sass/_member.scss */
+/* line 560, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li input[type="checkbox"]:checked:before { content: '✓'; text-align: center; display: block; font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; }
-/* line 569, ../../sass/_member.scss */
+/* line 570, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li input { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; box-sizing: border-box; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; vertical-align: middle; }
-/* line 577, ../../sass/_member.scss */
+/* line 578, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li.selected img { opacity: .5; }
-/* line 580, ../../sass/_member.scss */
+/* line 581, ../../sass/_member.scss */
 .member-sotre-lightbox .item-card li.selected input { display: none; }
 
-/* line 589, ../../sass/_member.scss */
-body.active, html.active { height: 100%; }
+/* line 590, ../../sass/_member.scss */
+body.active, html.active, .container.active, .inner-container.active { height: 100%; width: 100%; }
 
-/* line 594, ../../sass/_member.scss */
+/* line 598, ../../sass/_member.scss */
 #wrap.active { height: 100%; overflow: auto; }
 
 /* line 13, ../../sass/index.scss */
-#content { padding: 40px 0; }
+#content { padding: 40px 0 0; }
 
 /* line 18, ../../sass/index.scss */
 .select-title { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; }
