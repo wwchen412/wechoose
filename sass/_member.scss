@@ -276,6 +276,41 @@
                 }
             }
         }
+        // 會員個人商店 訂單管理
+        &.member-shop-order {
+            .num,
+            .name {
+                width: 200px;
+            }
+            .percent50 {
+                width: calc(100% - 760px);
+                min-width: 200px;
+                @include breakpoint(pad) {
+                    width: 100%;
+                }
+            }
+            .form-info {
+                font-size: 0;
+                width: calc(100% - 150px);
+                .percent50 {
+                    width: calc(100% / 2);
+                    min-width: 200px;
+                    display: inline-block;
+                    @include breakpoint(pad) {
+                        width: 100%;
+                    }
+                }
+                h5 {
+                    label {
+                        color: $secondcolor;
+                        @include breakpoint(mobile) {
+                            display: block;
+                        }
+                    }
+                    display: inline-block;
+                }
+            }
+        }
     }
     
     // 個人友善商店
