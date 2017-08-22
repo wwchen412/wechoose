@@ -153,47 +153,7 @@
                 @include breakpoint(pad) {
                     width: 100%;
                 }
-                h4 {
-                    ol {
-                        display: inline-block;
-                        vertical-align: middle;
-                        background: $secondcolor;
-                        height: 8px;
-                        width: 150px;
-                        margin-right: 20px;
-                        @include breakpoint(mobile) {
-                            display: block;
-                            margin: 15px auto;
-                            +span {
-                                display: block;
-                                width: 100%;
-                                text-align: center;
-                            }
-                        }
-                        li {
-                            display: inline-block;
-                            width: 20px;
-                            height: 20px;
-                            padding: 0;
-                            background-color: $secondcolor;
-                            margin-bottom: 0;
-                            transform: translateY(-5px);
-                            @include border-radius(50%);
-                            &:nth-child(1) {
-                                transform: translateX(-5px) translateY(-6px);
-                            }
-                            &:nth-child(2) {
-                                transform: translateX(20px) translateY(-6px);
-                            }
-                            &:nth-child(3) {
-                                transform: translateX(85px) translateY(-6px);
-                            }
-                            &.now {
-                                background-color: $themecolor;
-                            }
-                        }
-                    }
-                }
+                h4 {}
             }
         }
         // 評論頁class
@@ -249,6 +209,7 @@
                 }
             }
         }
+        // 個人訂單記錄
         &.member-order-history {
             li {
                 position: relative;
@@ -284,7 +245,7 @@
                 }
             }
         }
-        // 會員個人友善商店 訂單管理
+        // 團主 訂單管理
         &.member-shop-order {
             ul {
                 li {
@@ -408,6 +369,136 @@
                         .title .share button {
                             background: $themecolor;
                         }
+                    }
+                }
+            }
+        }
+        // 團主收貨
+        &.member-shop-order-transport {
+            .disable {
+                background: $gray;
+            }
+            ul {
+                li {
+                    .content {
+                        &>div {
+                            vertical-align: top;
+                            &.date {
+                                @include breakpoint(mobile) {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+                        .form-info {
+                            width: calc(100% - 150px);
+                            @include breakpoint(mobile) {
+                                display: block;
+                                width: 100%;
+                            }
+                            .percent50 {
+                                padding: 0 10px;
+                                box-sizing: border-box;
+                                width: 50%;
+                                display: inline-block;
+                                vertical-align: top;
+                                @include breakpoint(mobile) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .group-list {
+                            background: #fff;
+                            .group-list-title {
+                                padding: 5px 20px;
+                                box-sizing: border-box;
+                                background-color: $thirdcolor;
+                                color: #fff;
+                                @include border-radius(5px);
+                                i {
+                                    float: right;
+                                    line-height: 2rem;
+                                    cursor: pointer;
+                                }
+                            }
+                            .group-list-content {
+                                display: none;
+                                ul {
+                                    max-height: 400px;
+                                    overflow: scroll;
+                                    margin: 0;
+                                    li {
+                                        background: #fff;
+                                        @include border-radius(0);
+                                        margin-bottom: 0;
+                                        border-bottom: 1px solid $opacitycolor;
+                                        p {
+                                            span {
+                                                display: inline-block;
+                                                width: calc(15%);
+                                                &.ways {
+                                                    width: calc(20%);
+                                                }
+                                                &.note {
+                                                    width: calc(33%);
+                                                }
+                                                @include breakpoint(pad) {
+                                                    width: 100%;
+                                                    &.ways {
+                                                        width: 100%;
+                                                    }
+                                                    &.note {
+                                                        width: 100%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 運送中bar class
+        .schedulebar {
+            ol {
+                display: inline-block;
+                vertical-align: middle;
+                background: $secondcolor;
+                height: 8px;
+                width: 150px;
+                margin-right: 20px;
+                @include breakpoint(mobile) {
+                    display: block;
+                    margin: 15px auto;
+                    +span {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                li {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    padding: 0;
+                    background-color: $secondcolor;
+                    margin-bottom: 0;
+                    transform: translateY(-5px);
+                    @include border-radius(50%);
+                    &:nth-child(1) {
+                        transform: translateX(-5px) translateY(-6px);
+                    }
+                    &:nth-child(2) {
+                        transform: translateX(20px) translateY(-6px);
+                    }
+                    &:nth-child(3) {
+                        transform: translateX(85px) translateY(-6px);
+                    }
+                    &.now {
+                        background-color: $themecolor;
                     }
                 }
             }
