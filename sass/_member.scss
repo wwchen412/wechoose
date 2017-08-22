@@ -61,6 +61,10 @@
         }
     }
     
+    .member {
+        padding: 20px 0;
+    }
+    
     // 會員訂單共同區域
     .member-order {
         ul {
@@ -88,6 +92,11 @@
                     h4 {
                         color: $gray;
                         font-weight: bolder;
+                        &.alert {
+                            .days {
+                                color: #E50000;
+                            }
+                        }
                     }
                 }
                 .content {
@@ -315,17 +324,27 @@
                                     width: 100%;
                                 }
                                 .goal {
+                                    span:before {
+                                        content: '';
+                                        display: inline-block;
+                                        width: 1.2rem;
+                                        height: 1.2rem;
+                                        vertical-align: middle;
+                                        margin-right: 15px;
+                                    }
                                     &.focus {
                                         span {
                                             &:before {
-                                                content: '';
-                                                display: inline-block;
-                                                width: 1.2rem;
-                                                height: 1.2rem;
-                                                vertical-align: middle;
                                                 background: url('../img/icon_focus.svg') 50% 50% no-repeat;
-                                                margin-right: 15px;
                                                 opacity: .5;
+                                            }
+                                        }
+                                    }
+                                    &.ahead {
+                                        color: #E50000;
+                                        span {
+                                            &:before {
+                                                background: url('../img/icon_ahead.svg') 50% 50% no-repeat;
                                             }
                                         }
                                     }
@@ -356,6 +375,18 @@
                                     }
                                 }
                             }
+                            .edit-store-order {
+                                display: block;
+                                float: right;
+                                width: 30px;
+                                height: 30px;
+                                transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                                cursor: pointer;
+                                &:hover {
+                                    opacity: .6;
+                                    transform: rotate(540deg);
+                                }
+                            }
                             @include breakpoint(mobile) {
                                 width: 100%;
                             }
@@ -371,6 +402,11 @@
                             .close-num {
                                 display: block;
                             }
+                        }
+                    }
+                    &.fail {
+                        .title .share button {
+                            background: $themecolor;
                         }
                     }
                 }
