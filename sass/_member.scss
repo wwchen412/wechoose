@@ -450,6 +450,7 @@
                                             span {
                                                 display: inline-block;
                                                 width: calc(15%);
+                                                vertical-align: top;
                                                 &.ways {
                                                     width: calc(20%);
                                                 }
@@ -472,6 +473,39 @@
                             }
                         }
                     }
+                }
+            }
+        }
+        // 團主寄出
+        &.member-shop-order-pick {
+            ul li .content .group-list .group-list-content ul li p span {
+                &.note {
+                    width: calc(20%);
+                    @include breakpoint(pad) {
+                        width: 100%;
+                    }
+                }
+                &.status {
+                    width: calc(10%);
+                    text-align: center;
+                    @include breakpoint(pad) {
+                        width: 100%;
+                        text-align: left;
+                    }
+                    button {
+                        @include custom_select;
+                        border-radius: 20px;
+                        background: $themecolor;
+                        color: #fff;
+                        width: 100%;
+                    }
+                    i {
+                        padding-left: 5px;
+                        cursor: pointer;
+                    }
+                }
+                &.none {
+                    color: #ee0000;
                 }
             }
         }

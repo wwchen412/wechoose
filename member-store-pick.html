@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>We choose</title>
+    <link rel="stylesheet" href="Content/css/index.css">
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- 導覽列-->
+        <div id="header">
+            <div class="top">
+                <div class="container">
+                    <form action="" class="search">
+                        <i class="fa-search fa"></i>
+                        <input type="text" name="" value="" placeholder="Search">
+                    </form>
+                    <!--會員功能導覽  -->
+                    <div class="member">
+                        <ul>
+                            <li>
+
+                                <div class="buy">
+                                    <!--購物車內數量  -->
+                                    <a href="#">
+                                        <span>3</span>
+                                    </a>
+                                    <!--結帳  -->
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="login">
+                                    <!--訊息數量  -->
+                                    <a href="#">
+                                        <span>90</span>
+                                    </a>
+                                    <a href="">Araon Lin</a>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sub">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="Content/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">農業食材</a></li>
+                            <li><a href="#">友善傢俱</a></li>
+                            <li><a href="#">生鮮蔬果</a></li>
+                            <li><a href="#">趣味食玩</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="content">
+            <div class="bread">
+                <!--麵包屑  -->
+                <div class="container">
+                    <ol>
+                        <li><a href="">首頁</a></li>
+                        <li><a href="">XXX的個人商店</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="member">
+                <div class="member-tab">
+                    <div class="container">
+                        <ul class="tab">
+                            <li>
+                                <a href="#">
+                                會員資料管理
+                                 </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                個人友善商店
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                訂單管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                購物金管理
+                                 </a>
+                            </li>
+                        </ul>
+                        <ul class="sub-tab">
+                            <!-- 當前頁面ＴＡＢ加底線 class="active" -->
+                            <li>
+                                <a href="member-store.html">我的商店</a>
+                            </li>
+                            <li>
+                                <a href="member-stotr-order.html">開團中</a>
+                            </li>
+                            <li class="active">
+                                <!-- span裡的數量代表未讀的數量 不是筆數 -->
+                                <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
+                                <a href="member-order-transport.html">出貨中</a>
+                            </li>
+                            <li>
+                                <a href="member-order-pick.html"><span class="redpoint">4</span>待取貨</a>
+                            </li>
+                            <li>
+                                <a href="member-order-comment.html"><span class="redpoint">5</span>待評分</a>
+                            </li>
+                            <li>
+                                <a href="member-order-history.html">訂單記錄</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="member-order member-shop-order-transport member-shop-order-pick">
+                    <div class="container">
+                        <h5>廠商到貨後 請點選確認取貨 以進入取貨狀態來通知團友喔！</h5>
+                        <ul>
+                            <!-- 訂單確認狀態 -->
+                            <li>
+                                <div class="title">
+                                    <div class="num">
+                                        <h4>訂單編號：<span>01324343</span></h4>
+                                    </div>
+                                    <div class="date">
+                                        <h4>2017-07-01</h4>
+                                    </div>
+                                    <div class="name">
+                                        <h4>團購名稱：<span>XXXXXXXX</span></h4>
+                                    </div>
+
+                                    <div class="share">
+                                        <h4 style="color:#f00;text-align:right;">尚有<span>5<span>人未確認取貨</h4>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="date">
+                                        <!-- 點擊連結要連到團購或商品頁面 -->
+                                        <a href="">
+                                            <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                                        </a>
+                                    </div>
+                                    <div class="form-info">
+                                        <div class="percent50">
+                                            <h4>商品名稱：<span>XXX</span> &nbsp;&nbsp;團購組數：
+                                            <span>12</span>
+                                        </h4>
+                                        <h4>
+
+                                            提供取件方式：<span>7-11店到店</span><span>面交</span><span>全家店到店</span>
+                                        </h4>
+                                    </div>
+                                    <div class="percent50">
+
+                                        <h4>訂單總額：<span>20000</span></h4>
+                                        <h4>收件地址：<span>新北市三重區三和路四段16號18樓-3</span></h4>
+
+                                    </div>
+                                    <div class="group-list">
+                                        <div class="group-list-title">
+                                            <h3>觀看團購版友名單
+                                                <i class="fa fa-plus toggle" aria-hidden="true"></i>
+                                            </h3>
+
+                                        </div>
+                                        <div class="group-list-content">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        <!-- 點擊姓名連結到個人主頁 -->
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>7-11店到店</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>7-11店到店</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞約在麥當勞約在麥當勞約在麥當勞約在麥當勞</em>
+                                                            
+                                                        </span>
+                                                        <span class="status none">未取貨</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+                            <!-- 訂單確認狀態 -->
+                            <li>
+                                <div class="title">
+                                    <div class="num">
+                                        <h4>訂單編號：<span>01324343</span></h4>
+                                    </div>
+                                    <div class="date">
+                                        <h4>2017-07-01</h4>
+                                    </div>
+                                    <div class="name">
+                                        <h4>團購名稱：<span>XXXXXXXX</span></h4>
+                                    </div>
+
+                                    <div class="share">
+                                        <h4 style="color:#f00;text-align:right;">尚有<span>5<span>人未確認取貨</h4>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="date">
+                                        <!-- 點擊連結要連到團購或商品頁面 -->
+                                        <a href="">
+                                            <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                                        </a>
+                                    </div>
+                                    <div class="form-info">
+                                        <div class="percent50">
+                                            <h4>商品名稱：<span>XXX</span> &nbsp;&nbsp;團購組數：
+                                            <span>12</span>
+                                        </h4>
+                                        <h4>
+
+                                            提供取件方式：<span>7-11店到店</span><span>面交</span><span>全家店到店</span>
+                                        </h4>
+                                    </div>
+                                    <div class="percent50">
+
+                                        <h4>訂單總額：<span>20000</span></h4>
+                                        <h4>收件地址：<span>新北市三重區三和路四段16號18樓-3</span></h4>
+
+                                    </div>
+                                    <div class="group-list">
+                                        <div class="group-list-title">
+                                            <h3>觀看團購版友名單
+                                                <i class="fa fa-plus toggle" aria-hidden="true"></i>
+                                            </h3>
+
+                                        </div>
+                                        <div class="group-list-content">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        <!-- 點擊姓名連結到個人主頁 -->
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>7-11店到店</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>7-11店到店</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞約在麥當勞約在麥當勞約在麥當勞約在麥當勞</em>
+                                                            
+                                                        </span>
+                                                        <span class="status none">未取貨</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+                            <!-- 訂單確認狀態 -->
+                            <li>
+                                <div class="title">
+                                    <div class="num">
+                                        <h4>訂單編號：<span>01324343</span></h4>
+                                    </div>
+                                    <div class="date">
+                                        <h4>2017-07-01</h4>
+                                    </div>
+                                    <div class="name">
+                                        <h4>團購名稱：<span>XXXXXXXX</span></h4>
+                                    </div>
+
+                                    <div class="share">
+                                        <h4 style="color:#f00;text-align:right;">尚有<span>5<span>人未確認取貨</h4>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="date">
+                                        <!-- 點擊連結要連到團購或商品頁面 -->
+                                        <a href="">
+                                            <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                                        </a>
+                                    </div>
+                                    <div class="form-info">
+                                        <div class="percent50">
+                                            <h4>商品名稱：<span>XXX</span> &nbsp;&nbsp;團購組數：
+                                            <span>12</span>
+                                        </h4>
+                                        <h4>
+
+                                            提供取件方式：<span>7-11店到店</span><span>面交</span><span>全家店到店</span>
+                                        </h4>
+                                    </div>
+                                    <div class="percent50">
+
+                                        <h4>訂單總額：<span>20000</span></h4>
+                                        <h4>收件地址：<span>新北市三重區三和路四段16號18樓-3</span></h4>
+
+                                    </div>
+                                    <div class="group-list">
+                                        <div class="group-list-title">
+                                            <h3>觀看團購版友名單
+                                                <i class="fa fa-plus toggle" aria-hidden="true"></i>
+                                            </h3>
+
+                                        </div>
+                                        <div class="group-list-content">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        <!-- 點擊姓名連結到個人主頁 -->
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>7-11店到店</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status"><button type="button">確認出貨</button></span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>面交-早</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞</em></span>
+                                                        <span class="status">已完成</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href=""><span>王小明</span></a>
+                                                        <span>0970707070</span>
+                                                        <span>認購數量：<em>6</em></span>
+                                                        <span class="ways">取貨方式：<em>7-11店到店</em></span>
+                                                        <span class="note">備註：<em>約在麥當勞約在麥當勞約在麥當勞約在麥當勞約在麥當勞</em>
+                                                            
+                                                        </span>
+                                                        <span class="status none">未取貨</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--底部 footer  -->
+    <div id="footer">
+        <div class="footer-menu">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="Content/img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">農業食材</a></li>
+                        <li><a href="#">友善傢俱</a></li>
+                        <li><a href="#">生鮮蔬果</a></li>
+                        <li><a href="#">趣味食玩</a></li>
+                        <li><a href="#">常見問題</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            copyright © 2017. All rights reserved.
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/gobal.js">
+    </script>
+
+</body>
+
+</html>
