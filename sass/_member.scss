@@ -80,10 +80,26 @@
                     border-bottom: 2px dashed $themecolor;
                     // padding-bottom: 10px;
                     font-size: 0;
+                    overflow: auto;
                     >div {
                         display: inline-block;
                         padding: 5px 10px;
                         box-sizing: border-box;
+                    }
+                    .share {
+                        width: 180px;
+                        padding: 5px;
+                        float: right;
+                        .main-btn {
+                            width: 100%;
+                            box-sizing: border-box;
+                            &.fail {
+                                background: $secondcolor;
+                            }
+                        }
+                        @include breakpoint(mobile) {
+                            width: 100%;
+                        }
                     }
                     span.alert {
                         color: #E50000;
@@ -128,19 +144,6 @@
                 .percent50 {
                     width: calc((100% - 330px) / 2);
                     @include breakpoint(pad) {
-                        width: 100%;
-                    }
-                }
-                .share {
-                    width: 180px;
-                    .main-btn {
-                        width: 100%;
-                        box-sizing: border-box;
-                        &.fail {
-                            background: $secondcolor;
-                        }
-                    }
-                    @include breakpoint(mobile) {
                         width: 100%;
                     }
                 }
@@ -377,6 +380,7 @@
         &.member-shop-order-transport {
             .disable {
                 background: $gray;
+                pointer-events: none;
             }
             ul {
                 li {
@@ -409,12 +413,14 @@
                         }
                         .group-list {
                             background: #fff;
+                            border: 2px solid $thirdcolor;
+                            width: 100%;
+                            @include border-radius(5px);
                             .group-list-title {
                                 padding: 5px 20px;
                                 box-sizing: border-box;
                                 background-color: $thirdcolor;
                                 color: #fff;
-                                @include border-radius(5px);
                                 i {
                                     float: right;
                                     line-height: 2rem;
@@ -423,9 +429,11 @@
                             }
                             .group-list-content {
                                 display: none;
+                                max-height: 400px;
+                                overflow: scroll;
+                                margin: 0;
+                                @include border-radius(5px);
                                 ul {
-                                    max-height: 400px;
-                                    overflow: scroll;
                                     margin: 0;
                                     li {
                                         background: #fff;
@@ -433,6 +441,12 @@
                                         margin-bottom: 0;
                                         border-bottom: 1px solid $opacitycolor;
                                         p {
+                                            a {
+                                                color: gray;
+                                                &:hover {
+                                                    color: $maincolor;
+                                                }
+                                            }
                                             span {
                                                 display: inline-block;
                                                 width: calc(15%);
