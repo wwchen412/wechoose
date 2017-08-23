@@ -542,6 +542,33 @@
                 }
             }
         }
+        &.member-shop-order-comment {
+            form {
+                .feedback {
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    color: $secondcolor;
+                    label {
+                        display: block;
+                        input,
+                        p {
+                            display: inline-block;
+                            color: $secondcolor;
+                        }
+                    }
+                }
+                .percent50 {
+                    p,
+                    label {
+                        display: inline-block;
+                        font-size: 1rem;
+                    }
+                    label {
+                        color: $thirdcolor;
+                    }
+                }
+            }
+        }
         // 運送中bar class
         .schedulebar {
             ol {

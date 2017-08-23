@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>We choose</title>
+    <link rel="stylesheet" href="Content/css/index.css">
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- 導覽列-->
+        <div id="header">
+            <div class="top">
+                <div class="container">
+                    <form action="" class="search">
+                        <i class="fa-search fa"></i>
+                        <input type="text" name="" value="" placeholder="Search">
+                    </form>
+                    <!--會員功能導覽  -->
+                    <div class="member">
+                        <ul>
+                            <li>
+
+                                <div class="buy">
+                                    <!--購物車內數量  -->
+                                    <a href="#">
+                                        <span>3</span>
+                                    </a>
+                                    <!--結帳  -->
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="login">
+                                    <!--訊息數量  -->
+                                    <a href="#">
+                                        <span>90</span>
+                                    </a>
+                                    <a href="">Araon Lin</a>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sub">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="Content/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">農業食材</a></li>
+                            <li><a href="#">友善傢俱</a></li>
+                            <li><a href="#">生鮮蔬果</a></li>
+                            <li><a href="#">趣味食玩</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="content">
+            <div class="bread">
+                <!--麵包屑  -->
+                <div class="container">
+                    <ol>
+                        <li><a href="">首頁</a></li>
+                        <li><a href="">XXX的個人商店</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="member">
+                <div class="member-tab">
+                    <div class="container">
+                        <ul class="tab">
+                            <li>
+                                <a href="#">
+                                會員資料管理
+                                 </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                個人友善商店
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                訂單管理
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                購物金管理
+                                 </a>
+                            </li>
+                        </ul>
+                        <ul class="sub-tab">
+                            <!-- 當前頁面ＴＡＢ加底線 class="active" -->
+                            <li>
+                                <a href="member-store.html">我的商店</a>
+                            </li>
+                            <li>
+                                <a href="member-stotr-order.html">開團中</a>
+                            </li>
+                            <li class="active">
+                                <!-- span裡的數量代表未讀的數量 不是筆數 -->
+                                <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
+                                <a href="member-order-transport.html">出貨中</a>
+                            </li>
+                            <li>
+                                <a href="member-order-pick.html"><span class="redpoint">4</span>待取貨</a>
+                            </li>
+                            <li>
+                                <a href="member-order-comment.html"><span class="redpoint">5</span>待評分</a>
+                            </li>
+                            <li>
+                                <a href="member-order-history.html">訂單記錄</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="member-order member-shop-order-transport member-shop-order-comment">
+                    <div class="container">
+                        <h5>廠商到貨後 請點選確認取貨 以進入取貨狀態來通知團友喔！</h5>
+                        <ul>
+                            <!-- 訂單確認狀態 -->
+                            <li>
+                                <div class="title">
+                                    <div class="num">
+                                        <h4>訂單編號：<span>01324343</span></h4>
+                                    </div>
+                                    <div class="date">
+                                        <h4>2017-07-01</h4>
+                                    </div>
+                                    <div class="name">
+                                        <h4>團購名稱：<span>XXXXXXXX</span></h4>
+                                    </div>
+
+                                </div>
+                                <div class="content">
+                                    <div class="date">
+                                        <!-- 點擊連結要連到團購或商品頁面 -->
+                                        <a href="">
+                                            <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                                        </a>
+                                    </div>
+                                    <div class="form-info">
+                                        <form action="">
+                                            <div class="feedback">
+                                                <h3>已完成訂單！感謝您為台灣新創盡一份心力！總金額為20000元WEChoose提撥總額3％ 600元</h3>
+                                                <label for="">
+                                                        <input type="radio" value="1" name="feedback">
+                                                        <p>捐獻XX新創產業基金會為台灣新創盡一份心力</p>
+                                                </label>
+                                                <label for="">
+                                                        <input type="radio" value="1" name="feedback">
+                                                        <p>保留累積本次訂單回饋金額 </p>
+                                                </label>
+                                                <label for="">
+                                                        <input type="radio" value="1" name="feedback">
+                                                        <p>轉為購物金</p>
+                                                </label>
+                                            </div>
+                                            <div class="comment-group-list">
+                                                <div class="percent50">
+
+                                                    <p>給予團員<span>@團員名字</span>評價：</p>
+                                                    <label for="">
+                                                                                                               <input type="radio" name="comment">
+                                                                                                               <i class="fa fa-thumbs-up"></i>
+                                                            
+                                                                                                           </label>
+                                                    <label for="">
+                                                                                                                <input type="radio" name="comment">
+                                                                                                                <i class="fa fa-thumbs-down"></i>
+                                                                                                            </label>
+                                                </div>
+                                                <div class="percent50">
+
+                                                    <p>給予團員<span>@團員名字</span>評價：</p>
+                                                    <label for="">
+                                                                                                              <input type="radio" name="comment">
+                                                                                                              <i class="fa fa-thumbs-up"></i>
+                                                                                                               </label>
+                                                    <label for="">
+                                                                                                             <input type="radio" name="comment">
+                                                                                                            <i class="fa fa-thumbs-down"></i>
+                                                                                                            </label>
+                                                </div>
+                                                <div class="percent50">
+
+                                                    <p>給予團員<span>@團員名字</span>評價：</p>
+                                                    <label for="">
+                                                                                                           <input type="radio" name="comment">
+                                                                                                           <i class="fa fa-thumbs-up"></i>
+                                                        
+                                                                                                       </label>
+                                                    <label for="">
+                                                                                                            <input type="radio" name="comment">
+                                                                                                            <i class="fa fa-thumbs-down"></i>
+                                                                                                        </label>
+                                                </div>
+                                                <div class="percent50">
+
+                                                    <p>給予團員<span>@團員名字</span>評價：</p>
+                                                    <label for="">
+                                                                                                          <input type="radio" name="comment">
+                                                                                                          <i class="fa fa-thumbs-up"></i>
+                                                                                                           </label>
+                                                    <label for="">
+                                                                                                         <input type="radio" name="comment">
+                                                                                                        <i class="fa fa-thumbs-down"></i>
+                                                                                                        </label>
+                                                </div>
+                                                <div class="percent50">
+
+                                                    <p>給予團員<span>@團員名字</span>評價：</p>
+                                                    <label for="">
+                                                                                                           <input type="radio" name="comment">
+                                                                                                           <i class="fa fa-thumbs-up"></i>
+                                                        
+                                                                                                       </label>
+                                                    <label for="">
+                                                                                                            <input type="radio" name="comment">
+                                                                                                            <i class="fa fa-thumbs-down"></i>
+                                                                                                        </label>
+                                                </div>
+                                                <div class="percent50">
+
+                                                    <p>給予團員<span>@團員名字</span>評價：</p>
+                                                    <label for="">
+                                                                                                          <input type="radio" name="comment">
+                                                                                                          <i class="fa fa-thumbs-up"></i>
+                                                                                                           </label>
+                                                    <label for="">
+                                                                                                         <input type="radio" name="comment">
+                                                                                                        <i class="fa fa-thumbs-down"></i>
+                                                                                                        </label>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                        </form>
+                                    </div>
+
+
+                            </li>
+
+
+
+
+                        </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--底部 footer  -->
+        <div id="footer">
+            <div class="footer-menu">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="Content/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">農業食材</a></li>
+                            <li><a href="#">友善傢俱</a></li>
+                            <li><a href="#">生鮮蔬果</a></li>
+                            <li><a href="#">趣味食玩</a></li>
+                            <li><a href="#">常見問題</a></li>
+                            <li><a href="#">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                copyright © 2017. All rights reserved.
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/gobal.js">
+        </script>
+
+</body>
+
+</html>
