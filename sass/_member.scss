@@ -156,7 +156,6 @@
                 @include breakpoint(pad) {
                     width: 100%;
                 }
-                h4 {}
             }
         }
         // 評論頁class
@@ -542,6 +541,7 @@
                 }
             }
         }
+        // 團主評價
         &.member-shop-order-comment {
             form {
                 .feedback {
@@ -557,7 +557,8 @@
                         }
                     }
                 }
-                .percent50 {
+                .comment-group-list,
+                .comment-group-item {
                     p,
                     label {
                         display: inline-block;
@@ -565,6 +566,34 @@
                     }
                     label {
                         color: $thirdcolor;
+                    }
+                    .percent50 {
+                        @include breakpoint(pad) {
+                            width: 100% !important;
+                        }
+                    }
+                }
+                .comment-group-item {
+                    padding: 0 10px;
+                    input[type="text"] {
+                        @include custom_select;
+                        display: inline-block;
+                        width: calc(100% - 115px);
+                        padding: 5px;
+                        border: 1px solid $thirdcolor;
+                        margin-right: 5px;
+                        box-sizing: border-box;
+                        @include breakpoint(mobile) {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                        &+button {
+                            padding: 5px 20px;
+                            @include breakpoint(mobile) {
+                                margin: 0 auto;
+                                display: block;
+                            }
+                        }
                     }
                 }
             }

@@ -119,7 +119,7 @@
                             <li>
                                 <a href="member-stotr-order.html">開團中</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <!-- span裡的數量代表未讀的數量 不是筆數 -->
                                 <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
                                 <a href="member-order-transport.html">出貨中</a>
@@ -127,7 +127,7 @@
                             <li>
                                 <a href="member-order-pick.html"><span class="redpoint">4</span>待取貨</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="member-order-comment.html"><span class="redpoint">5</span>待評分</a>
                             </li>
                             <li>
@@ -139,9 +139,9 @@
                 </div>
                 <div class="member-order member-shop-order-transport member-shop-order-comment">
                     <div class="container">
-                        <h5>廠商到貨後 請點選確認取貨 以進入取貨狀態來通知團友喔！</h5>
+                        <h5>感謝您的訂購！給這次的商品與團員一個評分來完成訂單吧！</h5>
                         <ul>
-                            <!-- 訂單確認狀態 -->
+                            <!-- 評分填寫狀態 -->
                             <li>
                                 <div class="title">
                                     <div class="num">
@@ -164,11 +164,12 @@
                                     </div>
                                     <div class="form-info">
                                         <form action="">
+                                            <!-- 選擇回饋金使用方式 -->
                                             <div class="feedback">
-                                                <h3>已完成訂單！感謝您為台灣新創盡一份心力！總金額為20000元WEChoose提撥總額3％ 600元</h3>
+                                                <h3>已完成訂單！感謝您為台灣新創盡一份心力！總金額為<span>20000</span>元WEChoose提撥總額3％<span>600</span>元</h3>
                                                 <label for="">
                                                         <input type="radio" value="1" name="feedback">
-                                                        <p>捐獻XX新創產業基金會為台灣新創盡一份心力</p>
+                                                        <p>捐獻XX新創產業基金會為台灣農業盡一份心力</p>
                                                 </label>
                                                 <label for="">
                                                         <input type="radio" value="1" name="feedback">
@@ -179,6 +180,7 @@
                                                         <p>轉為購物金</p>
                                                 </label>
                                             </div>
+                                            <!-- 給予團員評價 -->
                                             <div class="comment-group-list">
                                                 <div class="percent50">
 
@@ -209,56 +211,66 @@
 
                                                     <p>給予團員<span>@團員名字</span>評價：</p>
                                                     <label for="">
-                                                                                                           <input type="radio" name="comment">
-                                                                                                           <i class="fa fa-thumbs-up"></i>
-                                                        
-                                                                                                       </label>
+                                                     <input type="radio" name="comment">
+                                                    <i class="fa fa-thumbs-up"></i>
+                                                     </label>
                                                     <label for="">
-                                                                                                            <input type="radio" name="comment">
-                                                                                                            <i class="fa fa-thumbs-down"></i>
-                                                                                                        </label>
+                                                    <input type="radio" name="comment">
+                                                     <i class="fa fa-thumbs-down"></i>
+                                                     </label>
                                                 </div>
                                                 <div class="percent50">
 
                                                     <p>給予團員<span>@團員名字</span>評價：</p>
                                                     <label for="">
-                                                                                                          <input type="radio" name="comment">
-                                                                                                          <i class="fa fa-thumbs-up"></i>
-                                                                                                           </label>
+                                                        <input type="radio" name="comment">
+                                                        <i class="fa fa-thumbs-up"></i>
+                                                    </label>
                                                     <label for="">
-                                                                                                         <input type="radio" name="comment">
-                                                                                                        <i class="fa fa-thumbs-down"></i>
-                                                                                                        </label>
+                                                        <input type="radio" name="comment">
+                                                        <i class="fa fa-thumbs-down"></i>
+                                                    </label>
                                                 </div>
                                                 <div class="percent50">
 
                                                     <p>給予團員<span>@團員名字</span>評價：</p>
                                                     <label for="">
-                                                                                                           <input type="radio" name="comment">
-                                                                                                           <i class="fa fa-thumbs-up"></i>
-                                                        
-                                                                                                       </label>
+                                                        <input type="radio" name="comment">
+                                                        <i class="fa fa-thumbs-up"></i>
+                                                    </label>
                                                     <label for="">
-                                                                                                            <input type="radio" name="comment">
-                                                                                                            <i class="fa fa-thumbs-down"></i>
-                                                                                                        </label>
+                                                        <input type="radio" name="comment">
+                                                        <i class="fa fa-thumbs-down"></i>
+                                                    </label>
                                                 </div>
                                                 <div class="percent50">
 
                                                     <p>給予團員<span>@團員名字</span>評價：</p>
                                                     <label for="">
-                                                                                                          <input type="radio" name="comment">
-                                                                                                          <i class="fa fa-thumbs-up"></i>
-                                                                                                           </label>
+                                                     <input type="radio" name="comment">
+                                                     <i class="fa fa-thumbs-up"></i>
+                                                     </label>
                                                     <label for="">
-                                                                                                         <input type="radio" name="comment">
-                                                                                                        <i class="fa fa-thumbs-down"></i>
-                                                                                                        </label>
+                                                    <input type="radio" name="comment">
+                                                    <i class="fa fa-thumbs-down"></i>
+                                                     </label>
                                                 </div>
                                             </div>
+                                            <!--給予商品評價  -->
+                                            <div class="comment-group-item">
+                                                <p>給予<span>@商品名字</span>評價：</p>
+                                                <label for="">
+                                                   <input type="radio" name="comment">
+                                                   <i class="fa fa-thumbs-up"></i>
+                                                </label>
+                                                <label for="">
+                                                        <input type="radio" name="comment">
+                                                        <i class="fa fa-thumbs-down"></i>
+                                                     </label>
 
-
-
+                                                <input type="text" placeholder="請輸入您對商品的評價">
+                                                <button type="button" class="main-btn">完成評分</button>
+                                            </div>
 
 
                                         </form>
