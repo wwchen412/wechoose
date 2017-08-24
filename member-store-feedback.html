@@ -144,11 +144,13 @@
                         <!--  當前回饋金 -->
                         <div class="current-feed">
                             <h2>目前回饋額累積：<span>29999</span></h2>
-                            <button class="main-btn" type="button">領出回饋</button>
-                            <button class="main-btn" type="button">捐贈回饋</button>
+
+                            <button class="main-btn receive open-lightbox" type="button">領出回饋</button>
+                            <button class="main-btn donate open-lightbox" type="button">捐贈回饋</button>
                         </div>
                         <div class="feedback-form">
                             <!-- if 完全沒有紀錄 -->
+                            <!-- <h3>您尚未有任何紀錄。</h3> -->
                             <!-- 記錄表格 -->
                             <div class='rg-container'>
                                 <div class='rg-content'>
@@ -304,35 +306,80 @@
 
 
             </div>
-            <!--底部 footer  -->
-            <div id="footer">
-                <div class="footer-menu">
-                    <div class="container">
-                        <div class="logo">
-                            <a href="#">
-                                <img src="Content/img/logo.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <ul>
-                                <li><a href="#">農業食材</a></li>
-                                <li><a href="#">友善傢俱</a></li>
-                                <li><a href="#">生鮮蔬果</a></li>
-                                <li><a href="#">趣味食玩</a></li>
-                                <li><a href="#">常見問題</a></li>
-                                <li><a href="#">聯絡我們</a></li>
-                            </ul>
-                        </div>
+        </div>
+
+        <!--底部 footer  -->
+        <div id="footer">
+            <div class="footer-menu">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="Content/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">農業食材</a></li>
+                            <li><a href="#">友善傢俱</a></li>
+                            <li><a href="#">生鮮蔬果</a></li>
+                            <li><a href="#">趣味食玩</a></li>
+                            <li><a href="#">常見問題</a></li>
+                            <li><a href="#">聯絡我們</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="bottom">
-                    copyright © 2017. All rights reserved.
-                </div>
             </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="js/gobal.js">
-            </script>
+            <div class="bottom">
+                copyright © 2017. All rights reserved.
+            </div>
+        </div>
+    </div>
+    <div class="member-sotre-lightbox donate">
+        <div class="lightbox-inner">
+            <h3>
+                捐贈回饋
+            </h3>
+            <h4>WEChoose感謝您為台灣新創盡一份心力！<br> (再看要打什麼)
+            </h4>
+            <input type="text" placeholder="輸入回饋額數目">
+            <button type="button" class="main-btn">確定捐贈</button>
+        </div>
 
+
+    </div>
+    <div class="member-sotre-lightbox receive">
+        <div class="lightbox-inner">
+            <h3>
+                捐贈回饋
+            </h3>
+            <h4>領出的回饋金將匯入指定帳戶<br> (再看要打什麼)
+            </h4>
+            <label for="">
+                   <p>戶名</p> 
+                <input type="text" placeholder="">
+            </label>
+            <label for="">
+                <p>匯款帳戶</p>
+                <input type="text" placeholder="">
+            </label>
+            <input type="text" placeholder="輸入回饋金額">
+            <button type="button" class="main-btn">確定捐贈</button>
+        </div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/gobal.js">
+    </script>
+    <script>
+        // var btn_receive = document.querySelector('.main-btn.receive');
+        // var body = document.querySelector('body');
+        // var receivestr = '<div class="member-sotre-lightbox receive"><div class="lightbox-inner"><h3>捐贈回饋</h3><h4>領出的回饋金將匯入指定帳戶<br> (再看要打什麼)</h4><label for=""><p>戶名</p> <input type="text" placeholder=""></label><label for=""><p>匯款帳戶</p><input type="text" placeholder=""></label><input type="text" placeholder="輸入回饋金額"><button type="submit" class="main-btn">確定捐贈</button></div</div>';
+
+        // btn_receive.addEventListener('click', function() {
+        //     body.insertAdjacentHTML('beforeend', receivestr);
+        // }, false);
+    </script>
 </body>
 
 </html>

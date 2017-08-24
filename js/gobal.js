@@ -53,7 +53,7 @@ $(function() {
 })();
 
 
-// 個人友善商店
+
 $(function() {
     // 個人友善商店
 
@@ -66,27 +66,24 @@ $(function() {
         }
 
     });
-    // 新增商品按鈕
-    $('#additem').click(function() {
-            $('.member-sotre-lightbox').addClass('active');
-            $('body').addClass('active');
-            $('html').addClass('active');
-            $('#wrap').addClass('active');
-            $('.member-sotre-lightbox.active').find('.container').addClass('active');
-            $('.member-sotre-lightbox.active').find('.inner-container').addClass('active');
-        })
-        // 新增商品光箱
-    $('.member-sotre-lightbox').click(function() {
-            $(this).removeClass('active');
-            $('body').removeClass('active');
-            $('html').removeClass('active');
-            $('#wrap').removeClass('active');
-            $('.member-sotre-lightbox.active').find('.container').removeClass('active');
-            $('.member-sotre-lightbox.active').find('.inner-container').removeClass('active');
+    // 點開光箱
+    $('.open-lightbox.receive').click(function() {
+        $('.member-sotre-lightbox.receive').addClass('active');
+    });
+    $('.open-lightbox.donate').click(function() {
+        $('.member-sotre-lightbox.donate').addClass('active');
+    });
+    $('.open-lightbox.additem').click(function() {
+        $('.member-sotre-lightbox.additem').addClass('active');
+    });
 
-        })
-        // 防止內容關閉光箱
-    $('.list').click(function() {
+    // 關閉商品光箱
+    $('.member-sotre-lightbox').click(function() {
+        $(this).removeClass('active');
+
+    });
+    // 防止內容關閉光箱
+    $('.lightbox-inner').click(function() {
         event.stopPropagation();
     })
 
