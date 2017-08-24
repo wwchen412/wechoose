@@ -7,6 +7,16 @@ html {
     font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
 
+body,
+html {
+    height: 100%;
+}
+
+#wrap {
+    height: 100%;
+    overflow: auto;
+}
+
 h1,
 h2,
 h3,
