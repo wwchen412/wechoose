@@ -598,6 +598,153 @@
                 }
             }
         }
+        // 團主回饋金管理
+        &.member-shop-feedback {
+            .current-feed {
+                overflow: auto;
+                h2 {
+                    display: inline;
+                    @include breakpoint(mobile) {
+                        display: block;
+                    }
+                }
+                button {
+                    float: right;
+                    margin-left: 10px;
+                    padding: 5px 20px;
+                }
+            }
+            .rg-container {
+                line-height: 200%;
+                margin: 0;
+                margin: 20px 0;
+            }
+            .rg-header {
+                margin-bottom: 1em;
+                text-align: left;
+            }
+            .rg-header>* {
+                display: block;
+            }
+            .rg-hed {
+                font-weight: bold;
+                font-size: 1.4em;
+            }
+            .rg-dek {
+                font-size: 1em;
+            }
+            .rg-source {
+                margin: 0;
+                font-size: 0.75em;
+                text-align: right;
+            }
+            .rg-source .pre-colon {
+                text-transform: uppercase;
+            }
+            .rg-source .post-colon {
+                font-weight: bold;
+            }
+            /* table */
+            table.rg-table {
+                width: 100%;
+                margin-bottom: 0.5em;
+                font-size: 1em;
+                border-collapse: collapse;
+                border-spacing: 0;
+                tr {
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    text-align: left;
+                    color: #333;
+                }
+                thead {
+                    background: $gray;
+                    tr {
+                        color: #fff;
+                    }
+                }
+                tr:nth-child(even) {
+                    background-color: #f6f6f6;
+                }
+                th {
+                    font-weight: bold;
+                    padding: 0.35em;
+                    font-size: 0.9em;
+                }
+                td {
+                    padding: 0.35em;
+                    font-size: 0.9em;
+                }
+            }
+            /* media queries */
+            @media screen and (max-width: 600px) {
+                .rg-container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                table.rg-table {
+                    width: 100%;
+                }
+                table.rg-table tr.hide-mobile,
+                table.rg-table th.hide-mobile,
+                table.rg-table td.hide-mobile {
+                    display: none;
+                }
+                table.rg-table thead {
+                    display: none;
+                }
+                table.rg-table tbody {
+                    width: 100%;
+                }
+                table.rg-table tr,
+                table.rg-table th,
+                table.rg-table td {
+                    display: block;
+                    padding: 0;
+                }
+                table.rg-table tr {
+                    border-bottom: none;
+                    padding: 0.5em;
+                }
+                table.rg-table.zebra tr:nth-child(even) {
+                    background-color: none;
+                }
+                table.rg-table.zebra td:nth-child(even) {
+                    background-color: #f6f6f6;
+                }
+                table.rg-table tr:nth-child(even) {
+                    background-color: none;
+                }
+                table.rg-table td {
+                    text-align: right;
+                }
+                table.rg-table td[data-title]:before {
+                    content: attr(data-title);
+                    font-weight: bold;
+                    display: inline-block;
+                    content: attr(data-title);
+                    float: left;
+                    margin-right: 0.5em;
+                    font-size: 0.95em;
+                }
+                table.rg-table td:last-child {
+                    padding-right: 0;
+                }
+                table.rg-table td:empty {
+                    display: none;
+                }
+                table.rg-table .highlight td {
+                    background-color: inherit;
+                    font-weight: normal;
+                }
+            }
+        }
         // 運送中bar class
         .schedulebar {
             ol {
