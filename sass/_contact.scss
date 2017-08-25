@@ -1,0 +1,79 @@
+// 聯絡我們
+#contact-form {
+    padding: 20px 0;
+    form {
+        padding: 20px;
+        box-sizing: border-box;
+        .form-tag-half {
+            display: inline-block;
+            width: calc(100% / 2 - 15px / 2);
+            &:nth-child(2) {
+                margin-left: 10px;
+            }
+            @include breakpoint(mobile) {
+                width: 100%;
+                &:nth-child(2) {
+                    margin-left: 0px;
+                }
+            }
+        }
+        .form-tag {
+            margin-bottom: 13px;
+            // 輸入匡樣式
+            .input-wrap {
+                border: 1px solid $gray;
+                padding: 20px;
+                box-sizing: border-box;
+                width: 100%;
+                display: block;
+                @include border-radius(5px);
+                label {
+                    margin-bottom: 20px;
+                    display: block;
+                }
+                input[type="text"],
+                textarea {
+                    width: 100%;
+                    @include custom_select;
+                    padding: 10px 0;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .check-control {
+                    display: inline-block;
+                    width: calc(100% / 5 - 4px);
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 勾選input
+input[type="checkbox"] {
+    @include custom_select;
+    border: 1px solid $gray;
+    box-sizing: border-box;
+    @include border-radius(5px);
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    &:checked {
+        &:before {
+            content: '✓';
+            text-align: center;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 20px
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
