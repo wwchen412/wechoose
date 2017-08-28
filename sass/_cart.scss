@@ -10,6 +10,9 @@
     a {
         background-color: RGB(100, 164, 48);
         float: right;
+        &:hover {
+            background-color: RGB(100, 164, 48);
+        }
     }
 }
 

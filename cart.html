@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="Content/css/index.css">
     <link rel="stylesheet" href="Content/css/font-awesome.min.css">
 
-    <script src="js/gobal.js"></script>
 </head>
 
 <body>
@@ -28,11 +27,11 @@
 
                             <div class="buy">
                                 <!--購物車內數量  -->
-                                <a href="#">
+                                <a href="cart.html">
                                     <span>3</span>
                                 </a>
                                 <!--結帳  -->
-                                <a href="#">
+                                <a href="cart.html">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -109,7 +108,7 @@
                                     <li>團購名稱: <span>12344</span></li>
                                     <li>商品名稱：全佑動物福利蛋</li>
                                     <li>購買組數：
-                                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
+                                        <span class="input-number-decrement">–</span><input class="input-number addnum0" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
                                     </li>
                                     <li>金額總數：<span>2200</span></li>
                                     <li>
@@ -125,7 +124,8 @@
                                     <li>團購名稱: <span>12344</span></li>
                                     <li>商品名稱：全佑動物福利蛋</li>
                                     <li>購買組數：
-                                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
+                                        <!-- addnum$變數設定input -->
+                                        <span class="input-number-decrement">–</span><input class="input-number addnum1" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
                                     </li>
                                     <li>金額總數：<span>2200</span></li>
                                     <li>
@@ -141,7 +141,7 @@
                                     <li>團購名稱: <span>12344</span></li>
                                     <li>商品名稱：全佑動物福利蛋</li>
                                     <li>購買組數：
-                                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
+                                        <span class="input-number-decrement">–</span><input class="input-number addnum2" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
                                     </li>
                                     <li>金額總數：<span>2200</span></li>
                                     <li>
@@ -157,7 +157,7 @@
                                     <li>團購名稱: <span>12344</span></li>
                                     <li>商品名稱：全佑動物福利蛋</li>
                                     <li>購買組數：
-                                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
+                                        <span class="input-number-decrement">–</span><input class="input-number addnum3" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
                                     </li>
                                     <li>金額總數：<span>2200</span></li>
                                     <li>
@@ -173,7 +173,7 @@
                                     <li>團購名稱: <span>12344</span></li>
                                     <li>商品名稱：全佑動物福利蛋</li>
                                     <li>購買組數：
-                                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
+                                        <span class="input-number-decrement">–</span><input class="input-number addnum4" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span> 組
                                     </li>
                                     <li>金額總數：<span>2200</span></li>
                                     <li>
@@ -216,8 +216,12 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/gobal.js"></script>
     <script>
-        inputNumber($('.input-number'));
+        var input_num = document.querySelectorAll('.input-number').length;
+        for (i = 0; i < input_num; i++) {
+            inputNumber($('.addnum' + i));
+        }
     </script>
 </body>
 

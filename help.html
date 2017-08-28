@@ -82,45 +82,80 @@
                 <div class="container">
                     <ol>
                         <li><a href="">首頁</a></li>
-                        <li><a href="">聯絡我們</a></li>
+                        <li><a href="">常見問題</a></li>
                     </ol>
                 </div>
 
             </div>
 
-            <div id="contact-form">
-                <div class="inner-container">
-                    <h3 style="text-align:center;">(聲明或其他聯絡方式等)</h3>
-                    <form action="">
-                        <div class="form-tag form-tag-half">
-                            <label for="name" class="input-wrap">
-                                <label for="name">稱謂</label>
-                            <input type="text" placeholder="先生/小姐" id="name">
-                            </label>
-                        </div>
-                        <div class="form-tag form-tag-half">
-                            <label for="email" class="input-wrap">
-                             <label for="email">電子郵件</label>
-                            <input type="text" placeholder="name@service.com" id="email">
-                            </label>
-                        </div>
-                        <div class="form-tag">
-                            <label for="service" class="input-wrap">
-                            <label for="service">需求項目(可複選)</label>
-                            <label for="service1" class="check-control"><input type="checkbox" id="service1" >項目1</label>
-                            <label for="service2" class="check-control"><input type="checkbox" id="service2" >項目2</label>
-                            <label for="service3" class="check-control"><input type="checkbox" id="service3" >項目3</label>
-                            <label for="service4" class="check-control"><input type="checkbox" id="service4" >項目4</label>
-                            <label for="service5" class="check-control"><input type="checkbox" id="service5" >其他</label>
-                            </label>
-                        </div>
-                        <div class="form-tag">
-                            <label for="textarea" class="input-wrap">
-                            <textarea name="" id="textarea" cols="30" rows="10" placeholder="其他需求或疑問"></textarea>
-                            </label>
-                        </div>
-                        <button type="button" class="main-btn">送出表單</button>
-                    </form>
+            <!-- 問與答 -->
+            <div class="container">
+                <div id="help">
+                    <!-- 問題類型分類 -->
+                    <div class="help-type">
+                        <ul>
+                            <li class="active">
+                                <a href="#">
+                                問題類別A
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                問題類別B
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                問題類別C
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                問題類別D
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-list">
+                        <ul>
+                            <!--  單一問題 -->
+                            <li>
+                                <div class="help-list-title">
+                                    問題標題
+                                    <i class="fa fa-plus" aria-hidden="ture"></i>
+                                </div>
+                                <div class="help-list-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam maxime odit dolor nesciunt iste dolorum sint blanditiis enim pariatur, assumenda adipisci, exercitationem, ex illo suscipit quibusdam inventore necessitatibus
+                                        sapiente qui!</p>
+
+                                </div>
+                            </li>
+                            <!--  單一問題 -->
+                            <li>
+                                <div class="help-list-title">
+                                    問題標題
+                                    <i class="fa fa-plus" aria-hidden="ture"></i>
+                                </div>
+                                <div class="help-list-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam maxime odit dolor nesciunt iste dolorum sint blanditiis enim pariatur, assumenda adipisci, exercitationem, ex illo suscipit quibusdam inventore necessitatibus
+                                        sapiente qui!</p>
+
+                                </div>
+                            </li>
+                            <!--  單一問題 -->
+                            <li>
+                                <div class="help-list-title">
+                                    問題標題
+                                    <i class="fa fa-plus" aria-hidden="ture"></i>
+                                </div>
+                                <div class="help-list-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam maxime odit dolor nesciunt iste dolorum sint blanditiis enim pariatur, assumenda adipisci, exercitationem, ex illo suscipit quibusdam inventore necessitatibus
+                                        sapiente qui!</p>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -151,27 +186,10 @@
                 copyright © 2017. All rights reserved.
             </div>
         </div>
+
         <!-- jQuery JS 1.12.4 -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/gobal.js"></script>
-        <script>
-            $(function() {
-                // 姓名信箱表單
-                $('.form-tag-half input').on('focus', function() {
-                    $(this).parents('.input-wrap').addClass('onfocus');
-                })
-                $('.form-tag-half input').on('blur', function() {
-                        $(this).parents('.input-wrap').removeClass('onfocus');
-                    })
-                    // 輸入內容
-                $('.form-tag textarea').on('focus', function() {
-                    $(this).parents('.input-wrap').addClass('onfocus');
-                })
-                $('.form-tag textarea').on('blur', function() {
-                    $(this).parents('.input-wrap').removeClass('onfocus');
-                })
-            })
-        </script>
 </body>
 
 </html>

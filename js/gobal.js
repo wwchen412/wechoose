@@ -2,14 +2,46 @@
 $(function() {
     // 商品頁相簿
     $('.thumbnail-sub').click(function() {
-            var _src_thumbnail = $(this).attr('src');
-            console.log(_src_thumbnail);
-            $(this).parents().find('ul').siblings('img').attr('src', _src_thumbnail);
-        })
-        // 
+        var _src_thumbnail = $(this).attr('src');
+        console.log(_src_thumbnail);
+        $(this).parents().find('ul').siblings('img').attr('src', _src_thumbnail);
+    });
+    // 商品說明tab 切換
+
+    var tab_i = $('.shop-item-content .tab ul li');
+    $(tab_i).click(function() {
+        var i = $(this).index();
+        $(this).children('h2').css('color', '#000');
+        $(this).siblings('li').children('h2').css('color', '#999');
+        if (i == 0) {
+            $('.item-editor').addClass('displayblock');
+            $('.item-comment').removeClass('displayblock')
+        } else {
+            $('.item-editor').removeClass('displayblock');
+            $('.item-comment').addClass('displayblock')
+        }
+    })
+
 
 });
+// 問與答頁面
+//  問題展開
+$(function() {
 
+    $('.help-list-title').each(function() {
+        $(this).click(function() {
+            var fa_item = $(this).find('i');
+            if ($(fa_item).hasClass('fa-plus')) {
+                $(fa_item).addClass('fa-minus').removeClass('fa-plus');
+            } else {
+                $(fa_item).addClass('fa-plus').removeClass('fa-minus');
+            }
+
+            $(fa_item).parents('.help-list-title').siblings('.help-list-content').slideToggle();
+        })
+    })
+
+});
 
 //數字input
 (function() {

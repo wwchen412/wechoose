@@ -137,12 +137,12 @@
                         <!--商品圖片區域  -->
 
                         <div id="main-img">
-                            <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                            <img src="Content/img/big-item.png" alt="" class="rwd-img thumbnail-main">
                             <ul class="thumbnail">
-                                <li><img src="Content/img/item1.png" alt="" class="rwd-img"></li>
-                                <li><img src="Content/img/item2.png" alt="" class="rwd-img"></li>
-                                <li><img src="Content/img/item3.png" alt="" class="rwd-img"></li>
-                                <li><img src="Content/img/item4.png" alt="" class="rwd-img"></li>
+                                <li><img src="Content/img/big-item.png" alt="" class="rwd-img thumbnail-sub"></li>
+                                <li><img src="Content/img/item2.png" alt="" class="rwd-img thumbnail-sub"></li>
+                                <li><img src="Content/img/item3.png" alt="" class="rwd-img thumbnail-sub"></li>
+                                <li><img src="Content/img/item4.png" alt="" class="rwd-img thumbnail-sub"></li>
                             </ul>
                         </div>
                         <!--圖片區域end  -->
@@ -159,7 +159,7 @@
                                     <b><span>50</span>盒</b> <b>平均單盒<span>75</span>元</b>
                                 </h3>
                                 <form action="">
-                                    <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+                                    <span class="input-number-decrement">–</span><input class="input-number addnum1" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
                                     <button type="button" class="main-btn">加入購物車</button>
                                 </form>
 
@@ -187,7 +187,7 @@
                                 </ul>
                             </div>
                             <!-- 編輯器內容 -->
-                            <div class="item-editor">
+                            <div class="item-editor displayblock">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta delectus voluptates ducimus aspernatur mollitia quaerat, consequatur, laborum distinctio id maiores facilis natus aliquid quasi placeat porro maxime cum ab
                                     cumque.
                                 </p>
@@ -337,8 +337,10 @@
     </div>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/gobal.js">
+    </script>
     <script>
-        inputNumber($('.input-number'));
+        inputNumber($('.addnum1'));
     </script>
 </body>
 

@@ -1,0 +1,65 @@
+#help {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed RGB(229, 178, 61);
+    font-size: 0;
+    &>div {
+        display: inline-block;
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 1rem;
+        &.help-type {
+            width: calc(20% - 20px / 2);
+            &>ul li {
+                margin-bottom: 20px;
+                text-align: center;
+                &.active {
+                    color: $secondcolor;
+                    font-weight: bold;
+                    a {
+                        color: $secondcolor;
+                    }
+                }
+                a {
+                    color: $gray;
+                }
+            }
+            @include breakpoint(mobile) {
+                width: 100%;
+                &>ul li {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &.help-list {
+            margin-left: 20px;
+            width: calc(80% - 20px / 2);
+            &>ul li {
+                overflow: hidden;
+                @include border-radius(5px);
+                margin-bottom: 10px;
+                .help-list-title {
+                    background: $themecolor;
+                    color: #fff;
+                    padding: 10px 20px;
+                    box-sizing: border-box;
+                    overflow: auto;
+                    i {
+                        float: right;
+                        cursor: pointer;
+                    }
+                }
+                .help-list-content {
+                    display: none;
+                    padding: 10px 20px;
+                    background-color: $opacitycolor;
+                }
+            }
+            @include breakpoint(mobile) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}

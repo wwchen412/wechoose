@@ -649,30 +649,6 @@
                 <script src="js/gobal.js">
                 </script>
                 <script>
-                    //  訂單管理 出貨中
-                    $(function() {
-                        // 團友名單展開
-                        $('.group-list-title i').each(function() {
-                                $(this).click(function() {
-                                    if ($(this).hasClass('fa-plus')) {
-                                        $(this).addClass('fa-minus').removeClass('fa-plus');
-                                    } else {
-                                        $(this).addClass('fa-plus').removeClass('fa-minus');
-                                    }
-
-                                    $(this).parents('.group-list-title').siblings('.group-list-content').slideToggle();
-                                })
-                            })
-                            // 如果進度是已到貨 則button可以使用
-                        $('.checkarrived').each(function() {
-                            var schedulebar = $(this).parents('.share').siblings('.percent50').find('ol li:last-child');
-                            if (schedulebar.hasClass('now')) {
-                                $(this).removeClass('disable').css('background', 'RGB(153, 195, 85)');
-                            }
-                        })
-
-
-                    });
                 </script>
 </body>
 
