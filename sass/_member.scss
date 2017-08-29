@@ -1,983 +1,473 @@
-    // 會員功能切換ＴＡＢ
-    .member-tab {
+// 會員功能切換ＴＡＢ
+.member-tab {
+    padding: 20px 0;
+    ul.tab {
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            background: $gray;
+            min-width: 100px;
+            text-align: center;
+            @include border-radius(5px);
+            @include box-sizing(border-box);
+            @include breakpoint(mobile) {
+                width: calc(100% / 2 - 10px);
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+            &:last-child {
+                margin: 0;
+            }
+            &.active,
+            &:hover {
+                background: $themecolor;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+    ul.sub-tab {
         padding: 20px 0;
-        ul.tab {
-            li {
-                display: inline-block;
-                margin-right: 10px;
-                margin-bottom: 10px;
-                padding: 10px 20px;
-                background: $gray;
-                min-width: 100px;
-                text-align: center;
-                @include border-radius(5px);
-                @include box-sizing(border-box);
-                @include breakpoint(mobile) {
-                    width: calc(100% / 2 - 10px);
-                    &:nth-child(even) {
-                        margin-right: 0;
-                    }
+        border-bottom: 2px dashed $themecolor;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            a {
+                span {
+                    display: none;
                 }
-                &:last-child {
-                    margin: 0;
-                }
-                &.active,
-                &:hover {
-                    background: $themecolor;
-                }
-                a {
+                span.redpoint {
+                    display: inline-block;
+                    background: #E50000;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 20px;
+                    border-radius: 50%;
                     color: #fff;
+                    margin-right: 5px;
                 }
             }
-        }
-        ul.sub-tab {
-            padding: 20px 0;
-            border-bottom: 2px dashed $themecolor;
-            li {
-                display: inline-block;
-                margin-right: 20px;
-                margin-bottom: 10px;
-                font-weight: bolder;
-                a {
-                    span {
-                        display: none;
-                    }
-                    span.redpoint {
-                        display: inline-block;
-                        background: #E50000;
-                        width: 20px;
-                        height: 20px;
-                        text-align: center;
-                        line-height: 20px;
-                        border-radius: 50%;
-                        color: #fff;
-                        margin-right: 5px;
-                    }
-                }
-                &.active {
-                    text-decoration: underline;
-                }
+            &.active {
+                text-decoration: underline;
             }
         }
     }
-    
-    .member {
-        padding: 20px 0;
-    }
-    
-    // 會員訂單共同區域
-    .member-order {
-        ul {
-            margin: 20px 0;
-            li {
-                padding: 10px 20px;
-                margin-bottom: 10px;
-                background: $opacitycolor;
-                color: $gray;
-                @include box-sizing(border-box);
-                @include border-radius(5px);
-                .title {
-                    border-bottom: 2px dashed $themecolor;
-                    // padding-bottom: 10px;
-                    font-size: 0;
-                    overflow: auto;
-                    >div {
-                        display: inline-block;
-                        padding: 5px 10px;
-                        box-sizing: border-box;
-                    }
-                    .share {
-                        width: 180px;
-                        padding: 5px;
-                        float: right;
-                        .main-btn {
-                            width: 100%;
-                            box-sizing: border-box;
-                            &.fail {
-                                background: $secondcolor;
-                            }
-                        }
-                        @include breakpoint(mobile) {
-                            width: 100%;
-                        }
-                    }
-                    span.alert {
-                        color: #E50000;
-                        font-weight: 500;
-                    }
-                    h4 {
-                        color: $gray;
-                        font-weight: bolder;
-                        &.alert {
-                            .days {
-                                color: #E50000;
-                            }
-                        }
-                    }
-                }
-                .content {
-                    padding: 10px 0;
-                    font-size: 0;
-                    >div {
-                        display: inline-block;
-                        padding: 5px 10px;
-                        box-sizing: border-box;
-                        vertical-align: middle;
-                    }
-                    .date {
-                        height: 150px;
-                        img {
-                            object-fit: cover;
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    h4 {
-                        i {
-                            color: $secondcolor;
-                        }
-                    }
-                }
-                .date {
-                    width: 150px;
-                }
-                .percent50 {
-                    width: calc((100% - 330px) / 2);
-                    @include breakpoint(pad) {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        // 運送中class
-        &.member-order-transport {
-            .percent50 {
-                width: calc((100% - 160px) / 2);
-                @include breakpoint(pad) {
-                    width: 100%;
-                }
-            }
-        }
-        // 評論頁class
-        &.member-order-comment {
-            .date {
-                @include breakpoint(pad) {
-                    width: 100%;
-                }
-                img {
-                    @include breakpoint(pad) {
-                        width: 150px !important;
-                        height: 150px !important;
-                        margin: 0 auto;
-                        display: block;
-                    }
-                }
-            }
-            .comment-form {
-                width: calc(100% - 150px);
-                @include breakpoint(pad) {
-                    width: 100%;
-                }
+}
+
+.member {
+    padding: 20px 0;
+}
+
+// 會員訂單共同區域
+.member-order {
+    ul {
+        margin: 20px 0;
+        li {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            background: $opacitycolor;
+            color: $gray;
+            @include box-sizing(border-box);
+            @include border-radius(5px);
+            .title {
+                border-bottom: 2px dashed $themecolor;
+                // padding-bottom: 10px;
+                font-size: 0;
+                overflow: auto;
                 >div {
                     display: inline-block;
-                }
-                .percent50 {
-                    width: 50%;
-                    @include breakpoint(pad) {
-                        width: 100%;
-                    }
-                    b {
-                        font-weight: bolder;
-                    }
-                }
-                .my-comment {
-                    width: calc(100% - 180px);
-                    padding-right: 25px;
+                    padding: 5px 10px;
                     box-sizing: border-box;
-                    @include breakpoint(pad) {
+                }
+                .share {
+                    width: 180px;
+                    padding: 5px;
+                    float: right;
+                    .main-btn {
                         width: 100%;
-                        padding-right: 0;
-                        margin-bottom: 10px;
-                    }
-                    input {
-                        width: 100%;
-                        padding: 10px;
                         box-sizing: border-box;
-                        @include border-radius(5px);
-                        @include custom_select;
-                        border: 1px solid $secondcolor;
+                        &.fail {
+                            background: $secondcolor;
+                        }
+                    }
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                    }
+                }
+                span.alert {
+                    color: #E50000;
+                    font-weight: 500;
+                }
+                h4 {
+                    color: $gray;
+                    font-weight: bolder;
+                    &.alert {
+                        .days {
+                            color: #E50000;
+                        }
+                    }
+                }
+            }
+            .content {
+                padding: 10px 0;
+                font-size: 0;
+                >div {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    vertical-align: middle;
+                }
+                .date {
+                    height: 150px;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                h4 {
+                    i {
                         color: $secondcolor;
                     }
                 }
             }
-        }
-        // 個人訂單記錄
-        &.member-order-history {
-            li {
-                position: relative;
-                .title {
-                    border: 0;
-                    &.active {
-                        border-bottom: 2px dashed $themecolor;
-                        .toggle {
-                            h4 {
-                                background: url('../img/toggle.svg')0px -30px no-repeat;
-                                background-size: cover;
-                            }
-                        }
-                    }
-                }
-                .content {
-                    display: none;
-                }
-                .toggle {
-                    position: absolute;
-                    right: 10px;
-                    top: 10px;
-                    cursor: pointer;
-                    &:hover {
-                        opacity: .6;
-                    }
-                    h4 {
-                        width: 30px;
-                        height: 30px;
-                        background: url('../img/toggle.svg')0px 0px no-repeat;
-                        background-size: cover;
-                    }
-                }
-            }
-        }
-        // 團主 訂單管理
-        &.member-shop-order {
-            ul {
-                li {
-                    .title {
-                        .num,
-                        .name {
-                            width: 200px;
-                        }
-                        .percent50 {
-                            width: calc(100% - 730px);
-                            min-width: 200px;
-                            @include breakpoint(pad) {
-                                width: 100%;
-                            }
-                        }
-                        .share {
-                            button {
-                                background: $secondcolor;
-                            }
-                        }
-                    }
-                    .date {
-                        @include breakpoint (mobile) {
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    .content {
-                        .form-info {
-                            font-size: 0;
-                            width: calc(100% - 150px);
-                            .percent50 {
-                                width: calc(100% / 2);
-                                min-width: 200px;
-                                display: inline-block;
-                                @include breakpoint(pad) {
-                                    width: 100%;
-                                }
-                                .goal {
-                                    span:before {
-                                        content: '';
-                                        display: inline-block;
-                                        width: 1.2rem;
-                                        height: 1.2rem;
-                                        vertical-align: middle;
-                                        margin-right: 15px;
-                                    }
-                                    &.focus {
-                                        span {
-                                            &:before {
-                                                background: url('../img/icon_focus.svg') 50% 50% no-repeat;
-                                                opacity: .5;
-                                            }
-                                        }
-                                    }
-                                    &.ahead {
-                                        color: #E50000;
-                                        span {
-                                            &:before {
-                                                background: url('../img/icon_ahead.svg') 50% 50% no-repeat;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            h5 {
-                                label {
-                                    color: $secondcolor;
-                                    @include breakpoint(mobile) {
-                                        display: block;
-                                    }
-                                }
-                                input[type="number"] {
-                                    display: inline-block;
-                                }
-                            }
-                            .save {
-                                float: right;
-                                @include breakpoint(pc) {
-                                    margin-top: -42px;
-                                }
-                            }
-                            .close-num {
-                                display: none;
-                                label {
-                                    @include breakpoint(mobile) {
-                                        display: inline-block;
-                                    }
-                                }
-                            }
-                            .edit-store-order {
-                                display: block;
-                                float: right;
-                                width: 30px;
-                                height: 30px;
-                                transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-                                cursor: pointer;
-                                &:hover {
-                                    opacity: .6;
-                                    transform: rotate(540deg);
-                                }
-                            }
-                            @include breakpoint(mobile) {
-                                width: 100%;
-                            }
-                        }
-                    }
-                    &.edit {
-                        .title {
-                            .share {
-                                display: none;
-                            }
-                        }
-                        .content {
-                            .close-num {
-                                display: block;
-                            }
-                        }
-                    }
-                    &.fail {
-                        .title .share button {
-                            background: $themecolor;
-                        }
-                    }
-                }
-            }
-        }
-        // 團主收貨
-        &.member-shop-order-transport {
-            .disable {
-                background: $gray;
-                pointer-events: none;
-            }
-            ul {
-                li {
-                    .content {
-                        &>div {
-                            vertical-align: top;
-                            &.date {
-                                @include breakpoint(mobile) {
-                                    width: 100%;
-                                    height: auto;
-                                }
-                            }
-                        }
-                        .form-info {
-                            width: calc(100% - 150px);
-                            @include breakpoint(mobile) {
-                                display: block;
-                                width: 100%;
-                            }
-                            .percent50 {
-                                padding: 0 10px;
-                                box-sizing: border-box;
-                                width: 50%;
-                                display: inline-block;
-                                vertical-align: top;
-                                @include breakpoint(mobile) {
-                                    width: 100%;
-                                }
-                            }
-                        }
-                        .group-list {
-                            background: #fff;
-                            border: 2px solid $thirdcolor;
-                            width: 100%;
-                            @include border-radius(5px);
-                            .group-list-title {
-                                padding: 5px 20px;
-                                box-sizing: border-box;
-                                background-color: $thirdcolor;
-                                color: #fff;
-                                i {
-                                    float: right;
-                                    line-height: 2rem;
-                                    cursor: pointer;
-                                }
-                            }
-                            .group-list-content {
-                                display: none;
-                                max-height: 400px;
-                                overflow: scroll;
-                                margin: 0;
-                                @include border-radius(5px);
-                                ul {
-                                    margin: 0;
-                                    li {
-                                        background: #fff;
-                                        @include border-radius(0);
-                                        margin-bottom: 0;
-                                        border-bottom: 1px solid $opacitycolor;
-                                        p {
-                                            a {
-                                                color: gray;
-                                                &:hover {
-                                                    color: $maincolor;
-                                                }
-                                            }
-                                            span {
-                                                display: inline-block;
-                                                width: calc(15%);
-                                                vertical-align: top;
-                                                &.ways {
-                                                    width: calc(20%);
-                                                }
-                                                &.note {
-                                                    width: calc(33%);
-                                                }
-                                                @include breakpoint(pad) {
-                                                    width: 100%;
-                                                    &.ways {
-                                                        width: 100%;
-                                                    }
-                                                    &.note {
-                                                        width: 100%;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        // 團主寄出
-        &.member-shop-order-pick {
-            ul li .content .group-list .group-list-content ul li p span {
-                &.note {
-                    width: calc(20%);
-                    @include breakpoint(pad) {
-                        width: 100%;
-                    }
-                }
-                &.status {
-                    width: calc(10%);
-                    text-align: center;
-                    @include breakpoint(pad) {
-                        width: 100%;
-                        text-align: left;
-                    }
-                    button {
-                        @include custom_select;
-                        border-radius: 20px;
-                        background: $themecolor;
-                        color: #fff;
-                        width: 100%;
-                    }
-                    i {
-                        padding-left: 5px;
-                        cursor: pointer;
-                    }
-                }
-                &.none {
-                    color: #ee0000;
-                }
-            }
-        }
-        // 團主訂單記錄
-        &.member-shop-order-history {
-            ul li .content .group-list .group-list-content ul li p span {
-                &.note {
-                    width: calc(18%);
-                    @include breakpoint(pad) {
-                        width: 100%;
-                    }
-                }
-                &.get-comment {
-                    width: calc(12%);
-                    text-align: center;
-                    @include breakpoint(pad) {
-                        width: 100%;
-                        text-align: left;
-                    }
-                    button {
-                        @include custom_select;
-                        border-radius: 20px;
-                        background: $themecolor;
-                        color: #fff;
-                        width: 100%;
-                    }
-                    i {
-                        padding-left: 5px;
-                        cursor: pointer;
-                    }
-                }
-                &.none {
-                    color: #ee0000;
-                }
-            }
-        }
-        // 團主評價
-        &.member-shop-order-comment {
-            form {
-                .feedback {
-                    padding: 0 10px;
-                    box-sizing: border-box;
-                    color: $secondcolor;
-                    label {
-                        display: block;
-                        input,
-                        p {
-                            display: inline-block;
-                            color: $secondcolor;
-                        }
-                    }
-                }
-                .comment-group-list,
-                .comment-group-item {
-                    p,
-                    label {
-                        display: inline-block;
-                        font-size: 1rem;
-                    }
-                    label {
-                        color: $thirdcolor;
-                    }
-                    .percent50 {
-                        @include breakpoint(pad) {
-                            width: 100% !important;
-                        }
-                    }
-                }
-                .comment-group-item {
-                    padding: 0 10px;
-                    input[type="text"] {
-                        @include custom_select;
-                        display: inline-block;
-                        width: calc(100% - 115px);
-                        padding: 5px;
-                        border: 1px solid $thirdcolor;
-                        margin-right: 5px;
-                        box-sizing: border-box;
-                        @include breakpoint(mobile) {
-                            width: 100%;
-                            margin-bottom: 10px;
-                        }
-                        &+button {
-                            padding: 5px 20px;
-                            @include breakpoint(mobile) {
-                                margin: 0 auto;
-                                display: block;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        // 團主回饋金管理
-        &.member-shop-feedback {
-            .current-feed {
-                overflow: auto;
-                h2 {
-                    display: inline;
-                    @include breakpoint(mobile) {
-                        display: block;
-                    }
-                }
-                button {
-                    float: right;
-                    margin-left: 10px;
-                    padding: 5px 20px;
-                }
-            }
-            .rg-container {
-                line-height: 200%;
-                margin: 0;
-                margin: 20px 0;
-            }
-            .rg-header {
-                margin-bottom: 1em;
-                text-align: left;
-            }
-            .rg-header>* {
-                display: block;
-            }
-            .rg-hed {
-                font-weight: bold;
-                font-size: 1.4em;
-            }
-            .rg-dek {
-                font-size: 1em;
-            }
-            .rg-source {
-                margin: 0;
-                font-size: 0.75em;
-                text-align: right;
-            }
-            .rg-source .pre-colon {
-                text-transform: uppercase;
-            }
-            .rg-source .post-colon {
-                font-weight: bold;
-            }
-            /* table */
-            table.rg-table {
-                width: 100%;
-                margin-bottom: 0.5em;
-                font-size: 1em;
-                border-collapse: collapse;
-                border-spacing: 0;
-                tr {
-                    -moz-box-sizing: border-box;
-                    box-sizing: border-box;
-                    margin: 0;
-                    padding: 0;
-                    border: 0;
-                    font-size: 100%;
-                    font: inherit;
-                    vertical-align: baseline;
-                    text-align: left;
-                    color: #333;
-                }
-                thead {
-                    background: $gray;
-                    tr {
-                        color: #fff;
-                    }
-                }
-                tr:nth-child(even) {
-                    background-color: #f6f6f6;
-                }
-                th {
-                    font-weight: bold;
-                    padding: 0.35em;
-                    font-size: 0.9em;
-                }
-                td {
-                    padding: 0.35em;
-                    font-size: 0.9em;
-                }
-            }
-            /* media queries */
-            @media screen and (max-width: 600px) {
-                .rg-container {
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-                table.rg-table {
-                    width: 100%;
-                }
-                table.rg-table tr.hide-mobile,
-                table.rg-table th.hide-mobile,
-                table.rg-table td.hide-mobile {
-                    display: none;
-                }
-                table.rg-table thead {
-                    display: none;
-                }
-                table.rg-table tbody {
-                    width: 100%;
-                }
-                table.rg-table tr,
-                table.rg-table th,
-                table.rg-table td {
-                    display: block;
-                    padding: 0;
-                }
-                table.rg-table tr {
-                    border-bottom: none;
-                    padding: 0.5em;
-                }
-                table.rg-table.zebra tr:nth-child(even) {
-                    background-color: none;
-                }
-                table.rg-table.zebra td:nth-child(even) {
-                    background-color: #f6f6f6;
-                }
-                table.rg-table tr:nth-child(even) {
-                    background-color: none;
-                }
-                table.rg-table td {
-                    text-align: right;
-                }
-                table.rg-table td[data-title]:before {
-                    content: attr(data-title);
-                    font-weight: bold;
-                    display: inline-block;
-                    content: attr(data-title);
-                    float: left;
-                    margin-right: 0.5em;
-                    font-size: 0.95em;
-                }
-                table.rg-table td:last-child {
-                    padding-right: 0;
-                }
-                table.rg-table td:empty {
-                    display: none;
-                }
-                table.rg-table .highlight td {
-                    background-color: inherit;
-                    font-weight: normal;
-                }
-            }
-        }
-        // 運送中bar class
-        .schedulebar {
-            ol {
-                display: inline-block;
-                vertical-align: middle;
-                background: $secondcolor;
-                height: 8px;
+            .date {
                 width: 150px;
-                margin-right: 20px;
-                @include breakpoint(mobile) {
-                    display: block;
-                    margin: 15px auto;
-                    +span {
-                        display: block;
-                        width: 100%;
-                        text-align: center;
-                    }
-                }
-                li {
-                    display: inline-block;
-                    width: 20px;
-                    height: 20px;
-                    padding: 0;
-                    background-color: $secondcolor;
-                    margin-bottom: 0;
-                    transform: translateY(-5px);
-                    @include border-radius(50%);
-                    &:nth-child(1) {
-                        transform: translateX(-5px) translateY(-6px);
-                    }
-                    &:nth-child(2) {
-                        transform: translateX(20px) translateY(-6px);
-                    }
-                    &:nth-child(3) {
-                        transform: translateX(85px) translateY(-6px);
-                    }
-                    &.now {
-                        background-color: $themecolor;
-                    }
+            }
+            .percent50 {
+                width: calc((100% - 330px) / 2);
+                @include breakpoint(pad) {
+                    width: 100%;
                 }
             }
         }
     }
-    
-    // 個人友善商店
-    // 我的商店
-    .member-store {
-        .my-info {
-            .inner-container {
-                .info {
-                    font-size: 0;
-                    padding: 10px 0;
-                    box-sizing: border-box;
-                    >img {
-                        width: 130px;
-                        height: 130px;
-                        border-radius: 50%;
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                    ul.info-content {
-                        vertical-align: middle;
-                        display: inline-block;
-                        width: calc(100% - 130px);
-                        >li {
-                            width: calc(100% / 3);
-                            display: inline-block;
-                            padding: 5px 20px;
-                            justify-content: space-around;
-                            box-sizing: border-box;
-                            vertical-align: top;
-                            h4 {
-                                color: $gray;
-                                i {
-                                    color: #000;
-                                    padding: 0 10px;
-                                    &+span {
-                                        color: #000;
-                                    }
-                                }
-                                ul {
-                                    display: inline-block;
-                                    vertical-align: middle;
-                                    li {
-                                        width: 30px;
-                                        height: 30px;
-                                        display: inline-block;
-                                        &:hover {
-                                            opacity: .6;
-                                        }
-                                    }
-                                }
-                            }
-                            @include breakpoint(pad) {
-                                width: 100%;
-                                padding: 0 20px;
-                                h4 {
-                                    padding-bottom: 0;
-                                    ul {
-                                        margin-top: 10px;
-                                    }
-                                }
-                            }
-                        }
-                        .store-name-input {
-                            width: 100%;
-                            input {
-                                width: 50%;
-                                min-width: 150px;
-                                @include custom_select;
-                                border: 1px solid $gray;
-                                padding: 5px 10px;
-                                @include border-radius(5px);
-                            }
-                        }
-                    }
+    // 運送中class
+    &.member-order-transport {
+        .percent50 {
+            width: calc((100% - 160px) / 2);
+            @include breakpoint(pad) {
+                width: 100%;
+            }
+        }
+    }
+    // 評論頁class
+    &.member-order-comment {
+        .date {
+            @include breakpoint(pad) {
+                width: 100%;
+            }
+            img {
+                @include breakpoint(pad) {
+                    width: 150px !important;
+                    height: 150px !important;
+                    margin: 0 auto;
+                    display: block;
                 }
             }
         }
-        //  面交選項設定
-        .my-settings {
-            font-size: 0;
-            h4 {
-                font-weight: bold;
+        .comment-form {
+            width: calc(100% - 150px);
+            @include breakpoint(pad) {
+                width: 100%;
+            }
+            >div {
+                display: inline-block;
             }
             .percent50 {
                 width: 50%;
-                display: inline-block;
-                @include breakpoint(mobile) {
+                @include breakpoint(pad) {
                     width: 100%;
                 }
-                li {
-                    padding: 5px 0;
-                    vertical-align: middle;
+                b {
+                    font-weight: bolder;
+                }
+            }
+            .my-comment {
+                width: calc(100% - 180px);
+                padding-right: 25px;
+                box-sizing: border-box;
+                @include breakpoint(pad) {
+                    width: 100%;
+                    padding-right: 0;
+                    margin-bottom: 10px;
+                }
+                input {
+                    width: 100%;
+                    padding: 10px;
                     box-sizing: border-box;
-                    h5 {
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                    input[type="checkbox"] {
-                        width: 20px;
-                        height: 20px;
-                        display: inline-block;
-                        vertical-align: middle;
-                        &:checked {
-                            &:before {
-                                content: '✓';
-                                text-align: center;
-                                display: block;
-                                font-family: Arial, Helvetica, sans-serif;
-                                font-size: 18px;
-                                line-height: 20px
-                            }
+                    @include border-radius(5px);
+                    @include custom_select;
+                    border: 1px solid $secondcolor;
+                    color: $secondcolor;
+                }
+            }
+        }
+    }
+    // 個人訂單記錄
+    &.member-order-history {
+        li {
+            position: relative;
+            .title {
+                border: 0;
+                &.active {
+                    border-bottom: 2px dashed $themecolor;
+                    .toggle {
+                        h4 {
+                            background: url('../img/toggle.svg')0px -30px no-repeat;
+                            background-size: cover;
                         }
                     }
-                    input {
-                        @include custom_select;
-                        border: 1px solid $gray;
-                        box-sizing: border-box;
-                        @include border-radius(5px);
-                        vertical-align: middle;
+                }
+            }
+            .content {
+                display: none;
+            }
+            .toggle {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+                &:hover {
+                    opacity: .6;
+                }
+                h4 {
+                    width: 30px;
+                    height: 30px;
+                    background: url('../img/toggle.svg')0px 0px no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    // 團主 訂單管理
+    &.member-shop-order {
+        ul {
+            li {
+                .title {
+                    .num,
+                    .name {
+                        width: 200px;
                     }
-                    input[type="text"] {
-                        padding: 5px;
-                        box-sizing: border-box;
-                        margin-left: 10px;
-                        width: 60%;
-                        display: none;
+                    .percent50 {
+                        width: calc(100% - 730px);
+                        min-width: 200px;
+                        @include breakpoint(pad) {
+                            width: 100%;
+                        }
+                    }
+                    .share {
+                        button {
+                            background: $secondcolor;
+                        }
+                    }
+                }
+                .date {
+                    @include breakpoint (mobile) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .content {
+                    .form-info {
+                        font-size: 0;
+                        width: calc(100% - 150px);
+                        .percent50 {
+                            width: calc(100% / 2);
+                            min-width: 200px;
+                            display: inline-block;
+                            @include breakpoint(pad) {
+                                width: 100%;
+                            }
+                            .goal {
+                                span:before {
+                                    content: '';
+                                    display: inline-block;
+                                    width: 1.2rem;
+                                    height: 1.2rem;
+                                    vertical-align: middle;
+                                    margin-right: 15px;
+                                }
+                                &.focus {
+                                    span {
+                                        &:before {
+                                            background: url('../img/icon_focus.svg') 50% 50% no-repeat;
+                                            opacity: .5;
+                                        }
+                                    }
+                                }
+                                &.ahead {
+                                    color: #E50000;
+                                    span {
+                                        &:before {
+                                            background: url('../img/icon_ahead.svg') 50% 50% no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        h5 {
+                            label {
+                                color: $secondcolor;
+                                @include breakpoint(mobile) {
+                                    display: block;
+                                }
+                            }
+                            input[type="number"] {
+                                display: inline-block;
+                            }
+                        }
+                        .save {
+                            float: right;
+                            @include breakpoint(pc) {
+                                margin-top: -42px;
+                            }
+                        }
+                        .close-num {
+                            display: none;
+                            label {
+                                @include breakpoint(mobile) {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        .edit-store-order {
+                            display: block;
+                            float: right;
+                            width: 30px;
+                            height: 30px;
+                            transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                            cursor: pointer;
+                            &:hover {
+                                opacity: .6;
+                                transform: rotate(540deg);
+                            }
+                        }
+                        @include breakpoint(mobile) {
+                            width: 100%;
+                        }
+                    }
+                }
+                &.edit {
+                    .title {
+                        .share {
+                            display: none;
+                        }
+                    }
+                    .content {
+                        .close-num {
+                            display: block;
+                        }
+                    }
+                }
+                &.fail {
+                    .title .share button {
+                        background: $themecolor;
                     }
                 }
             }
         }
-        //  個人已開商品
-        .my-store-list {
-            padding: 20px 0;
-            .title {
-                font-weight: bold;
-                padding-bottom: 5px;
-                border-bottom: 4px solid $gray;
-            }
-            .item-card {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                li {
-                    width: calc(100% / 4 - 10px * 3 / 4);
-                    margin-right: 10px;
-                    margin-bottom: 10px;
-                    background: $opacitycolor;
-                    padding: 10px;
-                    box-sizing: border-box;
-                    position: relative;
-                    @include border-radius(5px);
-                    &:nth-child(4n) {
-                        margin-right: 0;
-                    }
-                    @include breakpoint(pad) {
-                        width: calc(100% / 2 - 10px / 2);
-                        &:nth-child(even) {
-                            margin-right: 0;
+    }
+    // 團主收貨
+    &.member-shop-order-transport {
+        .disable {
+            background: $gray;
+            pointer-events: none;
+        }
+        ul {
+            li {
+                .content {
+                    &>div {
+                        vertical-align: top;
+                        &.date {
+                            @include breakpoint(mobile) {
+                                width: 100%;
+                                height: auto;
+                            }
                         }
                     }
-                    @include breakpoint(mobile) {
-                        width: 100%;
-                        margin-right: 0;
-                    }
-                    button {
-                        margin-top: 10px;
-                        width: 100%;
-                    }
-                    .remove {
-                        @extend %remove;
-                        position: absolute;
-                        right: 10px;
-                        top: 10px;
-                    }
-                    &.add {
-                        background-color: transparent;
-                        button {
-                            @include custom_select;
-                            @include border-radius(5px);
+                    .form-info {
+                        width: calc(100% - 150px);
+                        @include breakpoint(mobile) {
+                            display: block;
                             width: 100%;
-                            height: 100%;
-                            background-color: RGB(139, 175, 53);
-                            margin-top: 0;
-                            color: #fff;
-                            cursor: pointer;
-                            i {
-                                display: block;
-                                margin: 0 auto;
+                        }
+                        .percent50 {
+                            padding: 0 10px;
+                            box-sizing: border-box;
+                            width: 50%;
+                            display: inline-block;
+                            vertical-align: top;
+                            @include breakpoint(mobile) {
+                                width: 100%;
                             }
-                            &:hover {
-                                background-color: RGB(159, 200, 72);
+                        }
+                    }
+                    .group-list {
+                        background: #fff;
+                        border: 2px solid $thirdcolor;
+                        width: 100%;
+                        @include border-radius(5px);
+                        .group-list-title {
+                            padding: 5px 20px;
+                            box-sizing: border-box;
+                            background-color: $thirdcolor;
+                            color: #fff;
+                            i {
+                                float: right;
+                                line-height: 2rem;
+                                cursor: pointer;
+                            }
+                        }
+                        .group-list-content {
+                            display: none;
+                            max-height: 400px;
+                            overflow: scroll;
+                            margin: 0;
+                            @include border-radius(5px);
+                            ul {
+                                margin: 0;
+                                li {
+                                    background: #fff;
+                                    @include border-radius(0);
+                                    margin-bottom: 0;
+                                    border-bottom: 1px solid $opacitycolor;
+                                    p {
+                                        a {
+                                            color: gray;
+                                            &:hover {
+                                                color: $maincolor;
+                                            }
+                                        }
+                                        span {
+                                            display: inline-block;
+                                            width: calc(15%);
+                                            vertical-align: top;
+                                            &.ways {
+                                                width: calc(20%);
+                                            }
+                                            &.note {
+                                                width: calc(33%);
+                                            }
+                                            @include breakpoint(pad) {
+                                                width: 100%;
+                                                &.ways {
+                                                    width: 100%;
+                                                }
+                                                &.note {
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -985,181 +475,833 @@
             }
         }
     }
-    
-    //開集購
-    .member-store {
-        .form-title {
-            padding: 20px 0;
+    // 團主寄出
+    &.member-shop-order-pick {
+        ul li .content .group-list .group-list-content ul li p span {
+            &.note {
+                width: calc(20%);
+                @include breakpoint(pad) {
+                    width: 100%;
+                }
+            }
+            &.status {
+                width: calc(10%);
+                text-align: center;
+                @include breakpoint(pad) {
+                    width: 100%;
+                    text-align: left;
+                }
+                button {
+                    @include custom_select;
+                    border-radius: 20px;
+                    background: $themecolor;
+                    color: #fff;
+                    width: 100%;
+                }
+                i {
+                    padding-left: 5px;
+                    cursor: pointer;
+                }
+            }
+            &.none {
+                color: #ee0000;
+            }
+        }
+    }
+    // 團主訂單記錄
+    &.member-shop-order-history {
+        ul li .content .group-list .group-list-content ul li p span {
+            &.note {
+                width: calc(18%);
+                @include breakpoint(pad) {
+                    width: 100%;
+                }
+            }
+            &.get-comment {
+                width: calc(12%);
+                text-align: center;
+                @include breakpoint(pad) {
+                    width: 100%;
+                    text-align: left;
+                }
+                button {
+                    @include custom_select;
+                    border-radius: 20px;
+                    background: $themecolor;
+                    color: #fff;
+                    width: 100%;
+                }
+                i {
+                    padding-left: 5px;
+                    cursor: pointer;
+                }
+            }
+            &.none {
+                color: #ee0000;
+            }
+        }
+    }
+    // 團主評價
+    &.member-shop-order-comment {
+        form {
+            .feedback {
+                padding: 0 10px;
+                box-sizing: border-box;
+                color: $secondcolor;
+                label {
+                    display: block;
+                    input,
+                    p {
+                        display: inline-block;
+                        color: $secondcolor;
+                    }
+                }
+            }
+            .comment-group-list,
+            .comment-group-item {
+                p,
+                label {
+                    display: inline-block;
+                    font-size: 1rem;
+                }
+                label {
+                    color: $thirdcolor;
+                }
+                .percent50 {
+                    @include breakpoint(pad) {
+                        width: 100% !important;
+                    }
+                }
+            }
+            .comment-group-item {
+                padding: 0 10px;
+                input[type="text"] {
+                    @include custom_select;
+                    display: inline-block;
+                    width: calc(100% - 115px);
+                    padding: 5px;
+                    border: 1px solid $thirdcolor;
+                    margin-right: 5px;
+                    box-sizing: border-box;
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                    &+button {
+                        padding: 5px 20px;
+                        @include breakpoint(mobile) {
+                            margin: 0 auto;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 團主回饋金管理
+    &.member-shop-feedback {
+        .current-feed {
             overflow: auto;
             h2 {
                 display: inline;
+                @include breakpoint(mobile) {
+                    display: block;
+                }
             }
-            a {
-                display: inline-block;
+            button {
                 float: right;
+                margin-left: 10px;
+                padding: 5px 20px;
             }
         }
-        // 開團設定
-        .form-setting {
-            background: $opacitycolor;
-            box-sizing: border-box;
-            margin-bottom: 40px;
-            clear: both;
-            @include border-radius(5px);
-            // 區塊設定
-            .block {
-                padding: 20px;
+        .rg-container {
+            line-height: 200%;
+            margin: 0;
+            margin: 20px 0;
+        }
+        .rg-header {
+            margin-bottom: 1em;
+            text-align: left;
+        }
+        .rg-header>* {
+            display: block;
+        }
+        .rg-hed {
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        .rg-dek {
+            font-size: 1em;
+        }
+        .rg-source {
+            margin: 0;
+            font-size: 0.75em;
+            text-align: right;
+        }
+        .rg-source .pre-colon {
+            text-transform: uppercase;
+        }
+        .rg-source .post-colon {
+            font-weight: bold;
+        }
+        /* table */
+        table.rg-table {
+            width: 100%;
+            margin-bottom: 0.5em;
+            font-size: 1em;
+            border-collapse: collapse;
+            border-spacing: 0;
+            tr {
+                -moz-box-sizing: border-box;
                 box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                text-align: left;
+                color: #333;
+            }
+            thead {
+                background: $gray;
+                tr {
+                    color: #fff;
+                }
+            }
+            tr:nth-child(even) {
+                background-color: #f6f6f6;
+            }
+            th {
+                font-weight: bold;
+                padding: 0.35em;
+                font-size: 0.9em;
+            }
+            td {
+                padding: 0.35em;
+                font-size: 0.9em;
+            }
+        }
+        /* media queries */
+        @media screen and (max-width: 600px) {
+            .rg-container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            table.rg-table {
+                width: 100%;
+            }
+            table.rg-table tr.hide-mobile,
+            table.rg-table th.hide-mobile,
+            table.rg-table td.hide-mobile {
+                display: none;
+            }
+            table.rg-table thead {
+                display: none;
+            }
+            table.rg-table tbody {
+                width: 100%;
+            }
+            table.rg-table tr,
+            table.rg-table th,
+            table.rg-table td {
+                display: block;
+                padding: 0;
+            }
+            table.rg-table tr {
+                border-bottom: none;
+                padding: 0.5em;
+            }
+            table.rg-table.zebra tr:nth-child(even) {
+                background-color: none;
+            }
+            table.rg-table.zebra td:nth-child(even) {
+                background-color: #f6f6f6;
+            }
+            table.rg-table tr:nth-child(even) {
+                background-color: none;
+            }
+            table.rg-table td {
+                text-align: right;
+            }
+            table.rg-table td[data-title]:before {
+                content: attr(data-title);
+                font-weight: bold;
+                display: inline-block;
+                content: attr(data-title);
+                float: left;
+                margin-right: 0.5em;
+                font-size: 0.95em;
+            }
+            table.rg-table td:last-child {
+                padding-right: 0;
+            }
+            table.rg-table td:empty {
+                display: none;
+            }
+            table.rg-table .highlight td {
+                background-color: inherit;
+                font-weight: normal;
+            }
+        }
+    }
+    // 運送中bar class
+    .schedulebar {
+        ol {
+            display: inline-block;
+            vertical-align: middle;
+            background: $secondcolor;
+            height: 8px;
+            width: 150px;
+            margin-right: 20px;
+            @include breakpoint(mobile) {
+                display: block;
+                margin: 15px auto;
+                +span {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            li {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                padding: 0;
+                background-color: $secondcolor;
+                margin-bottom: 0;
+                transform: translateY(-5px);
+                @include border-radius(50%);
+                &:nth-child(1) {
+                    transform: translateX(-5px) translateY(-6px);
+                }
+                &:nth-child(2) {
+                    transform: translateX(20px) translateY(-6px);
+                }
+                &:nth-child(3) {
+                    transform: translateX(85px) translateY(-6px);
+                }
+                &.now {
+                    background-color: $themecolor;
+                }
+            }
+        }
+    }
+}
+
+// 個人友善商店
+// 我的商店
+.member-store {
+    .my-info {
+        .inner-container {
+            .info {
                 font-size: 0;
-                .percent50 {
-                    width: 50%;
+                padding: 10px 0;
+                box-sizing: border-box;
+                >img {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
                     display: inline-block;
-                    vertical-align: top;
-                    box-sizing: border-box;
-                    @include breakpoint(pad) {
-                        width: 100%;
-                    }
+                    vertical-align: middle;
                 }
-                label {
-                    font-size: 1rem;
-                }
-                .left {
+                ul.info-content {
+                    vertical-align: middle;
                     display: inline-block;
-                    vertical-align: top;
-                    width: calc(30% - 10px / 2);
-                    @include breakpoint(mobile) {
-                        width: 100%;
-                    }
-                }
-                .right {
-                    display: inline-block;
-                    vertical-align: top;
-                    width: calc(65% - 10px / 2);
-                    margin-left: 10px;
-                    @include breakpoint(mobile) {
-                        width: 100%;
-                        margin-left: 0;
-                    }
-                    font-size: 0;
-                    .percent50 {
-                        padding-right: 10px;
-                        @include breakpoint(mobile) {
-                            width: 100%;
-                            padding: 0 0 10px 0;
-                        }
-                        .goal {
-                            label {
-                                display: block;
-                                margin-bottom: 10px;
-                            }
-                        }
-                    }
-                    #title {
-                        width: 70%;
-                        margin: 5px 0;
-                        line-height: 150%;
-                        @include custom_select;
-                        border: 1px solid $gray;
-                        @include border-radius(5px);
-                    }
-                    .checkbox-group {
-                        padding: 10px;
-                        box-sizing: border-box;
-                        background-color: $gray;
-                        font-size: 0;
-                        @include border-radius(5px);
-                        li {
-                            color: #fff;
-                            display: inline-block;
-                            label {
-                                font-size: .8rem;
-                            }
-                        }
-                    }
-                }
-                .inner-container {
-                    width: 80%;
-                    @include breakpoint(mobile) {
-                        width: 100%;
-                        padding: 5px 0;
-                    }
-                    >div {
+                    width: calc(100% - 130px);
+                    >li {
+                        width: calc(100% / 3);
                         display: inline-block;
-                        margin-bottom: 20px;
-                        input[type="text"] {
+                        padding: 5px 20px;
+                        justify-content: space-around;
+                        box-sizing: border-box;
+                        vertical-align: top;
+                        h4 {
+                            color: $gray;
+                            i {
+                                color: #000;
+                                padding: 0 10px;
+                                &+span {
+                                    color: #000;
+                                }
+                            }
+                            ul {
+                                display: inline-block;
+                                vertical-align: middle;
+                                li {
+                                    width: 30px;
+                                    height: 30px;
+                                    display: inline-block;
+                                    &:hover {
+                                        opacity: .6;
+                                    }
+                                }
+                            }
+                        }
+                        @include breakpoint(pad) {
+                            width: 100%;
+                            padding: 0 20px;
+                            h4 {
+                                padding-bottom: 0;
+                                ul {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .store-name-input {
+                        width: 100%;
+                        input {
+                            width: 50%;
+                            min-width: 150px;
                             @include custom_select;
-                            max-width: 1.4rem;
-                            height: 1.4rem;
                             border: 1px solid $gray;
+                            padding: 5px 10px;
                             @include border-radius(5px);
                         }
                     }
-                    // 聯絡資訊
-                    .contact-form {
-                        display: block;
-                        width: 100%;
-                        ul li {
-                            display: flex;
-                            flex-wrap: wrap;
-                            >div {
-                                padding: 5px;
-                                box-sizing: border-box;
-                                vertical-align: middle;
-                                display: inline-block;
-                            }
-                            .contact-title {
-                                width: 15%;
-                                @include breakpoint(pad) {
-                                    width: 25%;
-                                }
-                                @include breakpoint(mobile) {
-                                    width: 100%;
-                                }
-                                h4 {
-                                    margin: 0;
-                                }
-                            }
-                            .contact-input {
-                                width: 85%;
-                                @include breakpoint(pad) {
-                                    width: 75%;
-                                }
-                                @include breakpoint(mobile) {
-                                    width: 100%;
-                                }
-                                input {
-                                    width: 100%;
-                                    max-width: 100%;
-                                    padding: 15px 20px;
-                                    box-sizing: border-box;
-                                    @include border-radius(5px);
-                                }
-                                select {
-                                    @include custom_select;
-                                    border: 1px solid $gray;
-                                    padding: 5px 30px 5px 15px;
-                                    box-sizing: border-box;
-                                    margin: 0 10px 5px 0;
-                                    @include border-radius(5px);
-                                }
-                            }
-                        }
-                        p,
-                        button {
+                }
+            }
+        }
+    }
+    //  面交選項設定
+    .my-settings {
+        font-size: 0;
+        h4 {
+            font-weight: bold;
+        }
+        .percent50 {
+            width: 50%;
+            display: inline-block;
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
+            li {
+                padding: 5px 0;
+                vertical-align: middle;
+                box-sizing: border-box;
+                h5 {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                input[type="checkbox"] {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    &:checked {
+                        &:before {
+                            content: '✓';
                             text-align: center;
+                            display: block;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 18px;
+                            line-height: 20px
+                        }
+                    }
+                }
+                input {
+                    @include custom_select;
+                    border: 1px solid $gray;
+                    box-sizing: border-box;
+                    @include border-radius(5px);
+                    vertical-align: middle;
+                }
+                input[type="text"] {
+                    padding: 5px;
+                    box-sizing: border-box;
+                    margin-left: 10px;
+                    width: 60%;
+                    display: none;
+                }
+            }
+        }
+    }
+    //  個人已開商品
+    .my-store-list {
+        padding: 20px 0;
+        .title {
+            font-weight: bold;
+            padding-bottom: 5px;
+            border-bottom: 4px solid $gray;
+        }
+        .item-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            li {
+                width: calc(100% / 4 - 10px * 3 / 4);
+                margin-right: 10px;
+                margin-bottom: 10px;
+                background: $opacitycolor;
+                padding: 10px;
+                box-sizing: border-box;
+                position: relative;
+                @include border-radius(5px);
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+                @include breakpoint(pad) {
+                    width: calc(100% / 2 - 10px / 2);
+                    &:nth-child(even) {
+                        margin-right: 0;
+                    }
+                }
+                @include breakpoint(mobile) {
+                    width: 100%;
+                    margin-right: 0;
+                }
+                button {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+                .remove {
+                    @extend %remove;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                }
+                &.add {
+                    background-color: transparent;
+                    button {
+                        @include custom_select;
+                        @include border-radius(5px);
+                        width: 100%;
+                        height: 100%;
+                        background-color: RGB(139, 175, 53);
+                        margin-top: 0;
+                        color: #fff;
+                        cursor: pointer;
+                        i {
+                            display: block;
                             margin: 0 auto;
+                        }
+                        &:hover {
+                            background-color: RGB(159, 200, 72);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//開集購
+.member-store {
+    .form-title {
+        padding: 20px 0;
+        overflow: auto;
+        h2 {
+            display: inline;
+        }
+        a {
+            display: inline-block;
+            float: right;
+        }
+    }
+    // 開團設定
+    .form-setting {
+        background: $opacitycolor;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        clear: both;
+        @include border-radius(5px);
+        // 區塊設定
+        .block {
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 0;
+            .percent50 {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+                box-sizing: border-box;
+                @include breakpoint(pad) {
+                    width: 100%;
+                }
+            }
+            label {
+                font-size: 1rem;
+            }
+            .left {
+                display: inline-block;
+                vertical-align: top;
+                width: calc(30% - 10px / 2);
+                @include breakpoint(mobile) {
+                    width: 100%;
+                }
+            }
+            .right {
+                display: inline-block;
+                vertical-align: top;
+                width: calc(65% - 10px / 2);
+                margin-left: 10px;
+                @include breakpoint(mobile) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                font-size: 0;
+                .percent50 {
+                    padding-right: 10px;
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                        padding: 0 0 10px 0;
+                    }
+                    .goal {
+                        label {
                             display: block;
                             margin-bottom: 10px;
                         }
                     }
                 }
+                #title {
+                    width: 70%;
+                    margin: 5px 0;
+                    line-height: 150%;
+                    @include custom_select;
+                    border: 1px solid $gray;
+                    @include border-radius(5px);
+                }
+                .checkbox-group {
+                    padding: 10px;
+                    box-sizing: border-box;
+                    background-color: $gray;
+                    font-size: 0;
+                    @include border-radius(5px);
+                    li {
+                        color: #fff;
+                        display: inline-block;
+                        label {
+                            font-size: .8rem;
+                        }
+                    }
+                }
             }
-            //  標題
-            .block-title {
-                background: $thirdcolor;
-                color: #fff;
-                text-align: center;
-                padding: 3px 0;
+            .inner-container {
+                width: 80%;
+                @include breakpoint(mobile) {
+                    width: 100%;
+                    padding: 5px 0;
+                }
+                >div {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    input[type="text"] {
+                        @include custom_select;
+                        max-width: 1.4rem;
+                        height: 1.4rem;
+                        border: 1px solid $gray;
+                        @include border-radius(5px);
+                    }
+                }
+                // 聯絡資訊
+                .contact-form {
+                    display: block;
+                    width: 100%;
+                    ul li {
+                        display: flex;
+                        flex-wrap: wrap;
+                        >div {
+                            padding: 5px;
+                            box-sizing: border-box;
+                            vertical-align: middle;
+                            display: inline-block;
+                        }
+                        .contact-title {
+                            width: 15%;
+                            @include breakpoint(pad) {
+                                width: 25%;
+                            }
+                            @include breakpoint(mobile) {
+                                width: 100%;
+                            }
+                            h4 {
+                                margin: 0;
+                            }
+                        }
+                        .contact-input {
+                            width: 85%;
+                            @include breakpoint(pad) {
+                                width: 75%;
+                            }
+                            @include breakpoint(mobile) {
+                                width: 100%;
+                            }
+                            input {
+                                width: 100%;
+                                max-width: 100%;
+                                padding: 15px 20px;
+                                box-sizing: border-box;
+                                @include border-radius(5px);
+                            }
+                            select {
+                                @include custom_select;
+                                border: 1px solid $gray;
+                                padding: 5px 30px 5px 15px;
+                                box-sizing: border-box;
+                                margin: 0 10px 5px 0;
+                                @include border-radius(5px);
+                            }
+                        }
+                    }
+                    p,
+                    button {
+                        text-align: center;
+                        margin: 0 auto;
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        //  標題
+        .block-title {
+            background: $thirdcolor;
+            color: #fff;
+            text-align: center;
+            padding: 3px 0;
+        }
+    }
+}
+
+.member-edit {
+    padding: 40px 0;
+    box-sizing: border-box;
+    .main-photo {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        a {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .5);
+            top: 70%;
+            left: 0;
+            text-align: center;
+            padding-top: 10px;
+            transition: .2s;
+            box-sizing: border-box;
+        }
+        &:hover {
+            a {
+                top: 0%;
+                border-radius: 35%;
+                color: #000;
+                padding-top: 50%;
             }
         }
     }
+    .member-edit-form {
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 600px;
+        margin: 20px auto;
+        ul {
+            li {
+                font-size: 0;
+                margin-bottom: 10px;
+                i {
+                    font-size: 1rem;
+                    padding: 0 5px;
+                }
+                &>span,
+                &>label {
+                    width: 80px;
+                    display: inline-block;
+                    font-size: 1rem;
+                    vertical-align: top;
+                    padding: 5px 0;
+                    &.comment {
+                        width: auto;
+                    }
+                }
+                &>input[type="text"],
+                &>input[type="password"],
+                &>textarea {
+                    width: calc(100% - 80px - 4px);
+                    display: inline-flex;
+                    box-sizing: border-box;
+                    line-height: 150%;
+                    @include custom_select;
+                    @include border-radius(5px);
+                    background-color: $opacitycolor;
+                    border: 1px solid $gray;
+                    padding-left: 10px;
+                    color: $gray;
+                    &:focus {
+                        outline: 0;
+                        background-color: #fff;
+                        color: $secondcolor;
+                    }
+                }
+                &>input[disabled] {
+                    background: #fff;
+                    border: 0;
+                }
+                &.social {
+                    input[type="text"] {
+                        width: calc(100% - 80px - 4px - 100px);
+                    }
+                    input[type=checkbox] {
+                        height: 0;
+                        width: 0;
+                        visibility: hidden;
+                        padding: 0;
+                        margin: 0;
+                        &+label {
+                            margin-top: 5px;
+                            box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, .3);
+                            cursor: pointer;
+                            text-indent: -9999px;
+                            width: 40px;
+                            height: 20px;
+                            background: $gray;
+                            display: inline-block;
+                            border-radius: 20px;
+                            position: relative;
+                            box-sizing: border-box;
+                            &:active:after {
+                                width: 30px;
+                            }
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                width: 20px;
+                                height: 20px;
+                                background: $secondcolor;
+                                border-radius: 20px;
+                                transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                                box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .3);
+                            }
+                            &+p {
+                                display: inline;
+                                padding-left: 10px;
+                            }
+                        }
+                        &:checked {
+                            &+label {
+                                background: $themecolor;
+                                &:after {
+                                    background: #fff;
+                                    left: 100%;
+                                    transform: translateX(-100%);
+                                    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                                }
+                                &:active:after {
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
