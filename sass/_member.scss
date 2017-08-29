@@ -604,6 +604,9 @@
             overflow: auto;
             h2 {
                 display: inline;
+                span {
+                    color: #ee0000;
+                }
                 @include breakpoint(mobile) {
                     display: block;
                 }
@@ -664,13 +667,16 @@
                 color: #333;
             }
             thead {
-                background: $gray;
                 tr {
-                    color: #fff;
+                    font-weight: bold;
+                    color: $secondcolor;
+                    font-size: 1.2em;
                 }
             }
-            tr:nth-child(even) {
-                background-color: #f6f6f6;
+            tbody {
+                tr:nth-child(odd) {
+                    background-color: #f6f6f6;
+                }
             }
             th {
                 font-weight: bold;
@@ -715,7 +721,7 @@
             table.rg-table.zebra tr:nth-child(even) {
                 background-color: none;
             }
-            table.rg-table.zebra td:nth-child(even) {
+            table.rg-table.zebra td:nth-child(odd) {
                 background-color: #f6f6f6;
             }
             table.rg-table tr:nth-child(even) {
@@ -1164,6 +1170,7 @@
     }
 }
 
+// 會員資料設定
 .member-edit {
     padding: 40px 0;
     box-sizing: border-box;
@@ -1300,6 +1307,91 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.member-edit-message {
+    .msgs {
+        .msg {
+            &>a {
+                display: inline-block;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                width: 120px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                vertical-align: middle;
+                @include breakpoint(mobile) {
+                    width: 100%;
+                }
+                span {
+                    background-color: $themecolor;
+                    color: #fff;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    padding: 5px;
+                    text-align: center;
+                    line-height: 20px;
+                    @include border-radius(50%);
+                }
+                &:last-child {
+                    width: calc(100% - 360px - 16px);
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                    }
+                }
+                &.time {
+                    @include breakpoint (mobile) {
+                        color: $gray;
+                        font-size: 0.8rem;
+                        padding-bottom: 15px;
+                    }
+                }
+                &.alert {
+                    width: 55px;
+                    padding-right: 0;
+                    @include breakpoint(mobile) {
+                        margin-top: -50px;
+                        width: 100%;
+                        text-align: right;
+                        span {
+                            box-sizing: border-box;
+                            font-size: 0.8rem;
+                            line-height: 1;
+                            width: 30px;
+                            margin-right: 10px;
+                            @include border-radius(10px);
+                        }
+                    }
+                }
+                &.msg-content {
+                    @include breakpoint (mobile) {
+                        color: $thirdcolor;
+                        margin-top: -30px;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            &:nth-child(odd) {
+                background: $opacitycolor;
+                @include breakpoint(mobile) {
+                    background: none;
+                }
+            }
+            @include breakpoint(mobile) {
+                padding: 10px 0;
+                border-bottom: 1px solid $opacitycolor;
+                &:hover,
+                &:active {
+                    background: $opacitycolor;
+                }
+                &:last-child {
+                    border-bottom: 0;
                 }
             }
         }
