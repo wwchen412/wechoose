@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>We choose</title>
-    <link rel="stylesheet" href="Content/css/index.css">
-    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Content/css/index.css">
+    <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
 
-    <script src="js/gobal.js"></script>
+
 </head>
 
 <body>
-
 
     <!--內容  -->
     <div id="wrap">
@@ -84,8 +83,8 @@
             <div class="bread">
                 <div class="container">
                     <ol>
-                        <li><a href="">首頁</a></li>
-                        <li><a href="">團購商品</a></li>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="shop.html">精選商品</a></li>
                     </ol>
                 </div>
             </div>
@@ -94,46 +93,6 @@
                 <div class="container">
                     <!--頁面主頁 左邊區塊  -->
                     <div class="shop-content shop-content-left">
-                        <!--團購商品才有的區塊  -->
-                        <div class="master-info">
-                            <h4>團購主：<span>XXX</span>
-                                <a href="" class="send-msg">
-                                    <img src="Content/img/icon-message-yellow.svg" alt="">
-                                </a>
-                            </h4>
-                            <h4>地區：<span>台北市</span></h4>
-                            <h4>評價：
-                                <i class="fa fa-thumbs-up"></i><span>87</span>
-                                <i class="fa fa-thumbs-down"></i><span>0</span>
-                            </h4>
-                            <h4>社群認證：
-                                <ul>
-                                    <li>
-                                        <a href="">
-                                            <img src="Content/img/social1.svg" alt="" class="rwd-img">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="Content/img/social2.svg" alt="" class="rwd-img">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="Content/img/social3.svg" alt="" class="rwd-img">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="Content/img/social4.svg" alt="" class="rwd-img">
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </h4>
-                        </div>
-
-
                         <!--商品圖片區域  -->
 
                         <div id="main-img">
@@ -146,31 +105,32 @@
                             </ul>
                         </div>
                         <!--圖片區域end  -->
-                        <!--團購訂購商品 與精選商品不同  -->
+                        <!--訂購商品  -->
                         <div class="shop-order">
                             <div class="left">
                                 <h2>商品名稱</h2>
                                 <h4>商品規格：100g</h4>
-                                <p>取件方式：<span>店到店</span><span>面交</span></p>
+                                <p>＊使用<a href="">找集購</a>可選擇零散組數喔！</p>
                             </div>
                             <div class="right">
-                                <h2>團購名稱</h2>
-                                <h3>
-                                    <b><span>50</span>盒</b> <b>平均單盒<span>75</span>元</b>
-                                </h3>
                                 <form action="">
-                                    <span class="input-number-decrement">–</span><input class="input-number addnum1" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
-                                    <button type="button" class="main-btn">加入購物車</button>
+                                    <label for="choose1">
+                                        <input type="radio" id="choose1" name="shop-num" value="5">
+                                        5盒 500元<span>平均單組100</span>
+                                    </label>
+
+                                    <label for="choose2">
+                                        <input type="radio" id="choose2" name="shop-num" value="15">
+                                        15盒 1270元<span>平均單組85</span>
+                                    </label>
+                                    <label for="choose3">
+                                        <input type="radio" id="choose3" name="shop-num" value="15">
+                                        30盒 2250元<span>平均單組75</span>
+                                    </label>
+                                    <button class="main-btn">加入購物車</button>
                                 </form>
 
                             </div>
-
-                        </div>
-                        <div class="goal">
-                            <h3>我們截止時間<span>1天5時20分12秒</span></h3>
-                            <h3>我們剩餘數量<span>12</span>組</h3>
-                            <h3>目前組數<span>38</span>組</h3>
-                            <button type="">Share</button>
                         </div>
                         <!--訂購商品 end  -->
                         <!--商品介紹及評價  -->
@@ -254,52 +214,46 @@
                     <!-- 相關商品 -->
                     <div class="shop-content shop-content-right">
                         <h2 class="relative-item-title">
-                            <a href="">
-                                個人商店名稱</a>
-                        </h2>
+                            <a href="">相關商品</a></h2>
                         <div class="shop-list">
                             <ul>
-                                <li class="focus-item">
+                                <!-- 普通商品  只顯示商品規格-->
+                                <li class="normal-item">
                                     <h2>商品名稱1</h2>
-                                    <a href="shop.html">
-                                        <img src="http://lorempixel.com/640/880/food" alt="">
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/400/400/food" alt="">
                                     </a>
-                                    <h3>平均單組 <span>75</span></h3>
-                                    <p>剩餘組數</p>
-                                    <p>團購名稱</p>
-                                    <button type="button">加入購物車</button>
+                                    <p>商品規格</p>
+
                                 </li>
-                                <li class="focus-item">
-                                    <h2>商品名稱1</h2>
-                                    <a href="shop.html">
-                                        <img src="http://lorempixel.com/640/880/food" alt="">
+                                <!-- 普通商品  只顯示商品規格-->
+                                <li class="normal-item">
+                                    <h2>商品名稱2</h2>
+                                    <a href="#">
+                                        <img src="http://lorempixel.com/400/400/food" alt="">
                                     </a>
-                                    <h3>平均單組 <span>75</span></h3>
-                                    <p>剩餘組數</p>
-                                    <p>團購名稱</p>
-                                    <button type="button">加入購物車</button>
+                                    <p>商品規格</p>
+
                                 </li>
-                                <!--已達標商品-->
-                                <li class="ahead-item">
+                                <!-- 普通商品  只顯示商品規格-->
+                                <li class="normal-item">
                                     <h2>商品名稱3</h2>
                                     <a href="#">
-                                        <img src="http://lorempixel.com/340/280/food" alt="">
+                                        <img src="http://lorempixel.com/400/400/food" alt="">
                                     </a>
-                                    <h3>平均單組</h3>
-                                    <p>剩餘組數</p>
-                                    <p>團購名稱</p>
-                                    <button type="button">加入購物車</button>
+                                    <p>商品規格</p>
+
                                 </li>
-                                <li class="ahead-item">
+                                <!-- 普通商品  只顯示商品規格-->
+                                <li class="normal-item">
                                     <h2>商品名稱3</h2>
                                     <a href="#">
-                                        <img src="http://lorempixel.com/340/280/food" alt="">
+                                        <img src="http://lorempixel.com/400/400/food" alt="">
                                     </a>
-                                    <h3>平均單組</h3>
-                                    <p>剩餘組數</p>
-                                    <p>團購名稱</p>
-                                    <button type="button">加入購物車</button>
+                                    <p>商品規格</p>
+
                                 </li>
+
 
                             </ul>
                         </div>
@@ -324,8 +278,8 @@
                             <li><a href="#">友善傢俱</a></li>
                             <li><a href="#">生鮮蔬果</a></li>
                             <li><a href="#">趣味食玩</a></li>
-                            <li><a href="#">常見問題</a></li>
-                            <li><a href="#">聯絡我們</a></li>
+                            <li><a href="help.html">常見問題</a></li>
+                            <li><a href="contactus.html">聯絡我們</a></li>
                         </ul>
                     </div>
                 </div>
@@ -335,13 +289,10 @@
             </div>
         </div>
     </div>
-    <!-- jQuery JS 1.12.4 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/gobal.js">
-    </script>
-    <script>
-        inputNumber($('.addnum1'));
-    </script>
 </body>
+<!-- jQuery JS 1.12.4 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/gobal.js"></script>
+
 
 </html>

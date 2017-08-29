@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>We choose</title>
-    <link rel="stylesheet" href="Content/css/index.css">
-    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Content/css/index.css">
+    <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
 
-    <script src="js/gobal.js"></script>
+    <script src="../../js/gobal.js"></script>
 </head>
 
 <body>
@@ -113,13 +113,13 @@
                             </li>
                         </ul>
                         <ul class="sub-tab">
-                            <li>
+                            <!-- 當前頁面ＴＡＢ加底線 class="active" -->
+                            <li class="active">
                                 <a href="member-order.html">跟團中</a>
                             </li>
                             <li>
                                 <!-- span裡的數量代表未讀的數量 不是筆數 -->
                                 <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
-                                <!-- class="redpoint" -->
                                 <a href="member-order-transport.html"><span class="redpoint">3</span>出貨中</a>
                             </li>
                             <li>
@@ -128,16 +128,16 @@
                             <li>
                                 <a href="member-order-comment.html"><span class="redpoint">5</span>待評分</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="member-order-history.html">訂單記錄</a>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="member-order member-order-history">
+                <div class="member-order">
                     <div class="container">
-
+                        <h5>開團成功的訂單將自動歸為出貨中喔！</h5>
                         <ul>
                             <li>
                                 <div class="title">
@@ -148,32 +148,36 @@
                                         <h4>團購名稱:</h4>
                                     </div>
                                     <div class="percent50">
-                                        <h4>
-                                            商品名稱:
+                                        <h4>截止時間<span class="days"><em>1</em>天5時20分12秒</span>
+                                            <!-- 小於10組的加上class alert -->
+                                            <span class="nums alert">剩餘組數：<em>2</em>組</span>
                                         </h4>
                                     </div>
-                                    <div class="toggle">
-                                        <h4></h4>
+                                    <div class="share">
+                                        <!-- 分享團購頁面或商品頁面 -->
+                                        <button type="button" class="main-btn">
+                                            Share
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <div class="date">
-                                        <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                                        <!-- 點擊連結要連到團購或商品頁面 -->
+                                        <a href="">
+                                            <img src="Content/img/big-item.png" alt="" class="rwd-img">
+                                        </a>
                                     </div>
                                     <div class="percent50">
                                         <h4>團主名稱：</h4>
+                                        <h4>商品名稱：</h4>
                                         <h4>認購組數：12</h4>
                                         <h4>取件方式：超商店到店</h4>
-                                        <h4>獲得評價：
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </h4>
                                     </div>
                                     <div class="percent50">
-
+                                        <h4>平均單組75</h4>
                                         <h4>金額：2000</h4>
                                         <h4>運費：85</h4>
                                         <h4>總計：2085</h4>
-                                        <h4>差額贈禮：500</h4>
                                     </div>
 
                             </li>
@@ -186,14 +190,15 @@
                                         <h4>團購名稱:</h4>
                                     </div>
                                     <div class="percent50">
-                                        <h4>
-                                            商品名稱:
+
+                                        <h4>截止時間 <span class="days alert"><em>0</em>天5時20分12秒</span>
+                                            <span class="nums">剩餘組數：<em>12</em>組</span>
                                         </h4>
                                     </div>
-                                    <div class="toggle">
-                                        <h4>
-
-                                        </h4>
+                                    <div class="share">
+                                        <button type="button" class="main-btn">
+                                                Share
+                                            </button>
                                     </div>
                                 </div>
                                 <div class="content">
@@ -202,16 +207,15 @@
                                     </div>
                                     <div class="percent50">
                                         <h4>團主名稱：</h4>
+                                        <h4>商品名稱：</h4>
                                         <h4>認購組數：12</h4>
                                         <h4>取件方式：超商店到店</h4>
-                                        <h4>獲得評價：<i class="fa fa-thumbs-down"></i></h4>
                                     </div>
                                     <div class="percent50">
-
+                                        <h4>平均單組75</h4>
                                         <h4>金額：2000</h4>
                                         <h4>運費：85</h4>
                                         <h4>總計：2085</h4>
-                                        <h4>差額贈禮：500</h4>
                                     </div>
 
                             </li>
@@ -224,12 +228,15 @@
                                         <h4>團購名稱:</h4>
                                     </div>
                                     <div class="percent50">
-                                        <h4>
-                                            商品名稱:
+
+                                        <h4> <span class="days alert">開團失敗 未達目標組數</span>
+                                            <span class="nums"></span>
                                         </h4>
                                     </div>
-                                    <div class="toggle">
-                                        <h4></h4>
+                                    <div class="share">
+                                        <button type="button" class="main-btn fail">
+                                                    確認退款
+                                                </button>
                                     </div>
                                 </div>
                                 <div class="content">
@@ -238,20 +245,18 @@
                                     </div>
                                     <div class="percent50">
                                         <h4>團主名稱：</h4>
+                                        <h4>商品名稱：</h4>
                                         <h4>認購組數：12</h4>
                                         <h4>取件方式：超商店到店</h4>
-                                        <h4>獲得評價：</h4>
                                     </div>
                                     <div class="percent50">
-
+                                        <h4>平均單組75</h4>
                                         <h4>金額：2000</h4>
                                         <h4>運費：85</h4>
                                         <h4>總計：2085</h4>
-                                        <h4>差額贈禮：500</h4>
                                     </div>
 
                             </li>
-
 
                         </ul>
                         </div>
@@ -285,16 +290,6 @@
                         copyright © 2017. All rights reserved.
                     </div>
                 </div>
-                <!-- jQuery JS 1.12.4 -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                <script>
-                    $(function() {
-                        $('.member-order-history .toggle').click(function() {
-                            $(this).parents('li').find('.content').slideToggle();
-                            $(this).parents('.title').toggleClass('active');
-                        })
-                    })
-                </script>
 </body>
 
 </html>

@@ -1018,10 +1018,10 @@ body.active, html.active, .container.active, .inner-container.active { height: 1
 #contact-form form button { display: block; margin: 0 auto; }
 
 /* line 78, ../../sass/_contact.scss */
-input[type="checkbox"] { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; box-sizing: border-box; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; vertical-align: middle; width: 20px; height: 20px; display: inline-block; vertical-align: middle; }
-/* line 89, ../../sass/_contact.scss */
+input[type="checkbox"] { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; box-sizing: border-box; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; vertical-align: middle; width: 20px; height: 20px; display: inline-block; vertical-align: middle; background: #fff; }
+/* line 90, ../../sass/_contact.scss */
 input[type="checkbox"]:checked:before { content: '✓'; text-align: center; display: block; font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; }
-/* line 98, ../../sass/_contact.scss */
+/* line 99, ../../sass/_contact.scss */
 input[type="checkbox"]:focus { outline: none; }
 
 /* line 1, ../../sass/_help.scss */
