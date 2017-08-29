@@ -1174,7 +1174,7 @@
         border-radius: 50%;
         overflow: hidden;
         position: relative;
-        a {
+        label {
             display: block;
             position: absolute;
             width: 100%;
@@ -1186,9 +1186,10 @@
             padding-top: 10px;
             transition: .2s;
             box-sizing: border-box;
+            cursor: pointer;
         }
         &:hover {
-            a {
+            label {
                 top: 0%;
                 border-radius: 35%;
                 color: #000;
@@ -1197,7 +1198,6 @@
         }
     }
     .member-edit-form {
-        padding: 20px;
         box-sizing: border-box;
         max-width: 600px;
         margin: 20px auto;
