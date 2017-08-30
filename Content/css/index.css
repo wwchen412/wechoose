@@ -200,7 +200,7 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 #footer .bottom { padding: 10px 0; background: #000; color: #fff; text-align: center; }
 
 /* line 2, ../../sass/_lightbox.scss */
-.member-sotre-lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; z-index: 1000; display: none; padding: 40px; box-sizing: border-box; overflow-y: scroll; text-align: center; }
+.member-sotre-lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; z-index: 1000; padding: 40px; box-sizing: border-box; overflow-y: scroll; text-align: center; }
 /* line 17, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.active { display: block; }
 /* line 22, ../../sass/_lightbox.scss */
@@ -263,11 +263,49 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 .member-sotre-lightbox .item-card li.selected img { opacity: .5; }
 /* line 176, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li.selected input { display: none; }
+@media only screen and (max-width: 467px) { /* line 182, ../../sass/_lightbox.scss */
+  .member-sotre-lightbox.message-center { padding: 20px; } }
+/* line 186, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner { min-width: 600px; box-sizing: border-box; position: relative; }
+@media only screen and (max-width: 768px) { /* line 186, ../../sass/_lightbox.scss */
+  .member-sotre-lightbox.message-center .lightbox-inner { min-width: 100%; } }
+/* line 193, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner a.remove { width: 1.2rem; height: 1.2rem; line-height: 1.2rem; padding: 5px; text-align: center; background-color: #000; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; color: #fff; cursor: pointer; display: inline-block; position: absolute; top: 20px; right: 20px; }
+/* line 210, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner hr { margin-bottom: 0; }
+/* line 213, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area { overflow: scroll; max-height: 600px; padding: 20px; box-sizing: border-box; background: #fafafa; }
+@media only screen and (max-width: 467px) { /* line 213, ../../sass/_lightbox.scss */
+  .member-sotre-lightbox.message-center .lightbox-inner .msg-area { max-height: 60vh; } }
+/* line 222, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li { clear: both; float: left; max-width: 40%; margin-bottom: 20px; }
+@media only screen and (max-width: 768px) { /* line 222, ../../sass/_lightbox.scss */
+  .member-sotre-lightbox.message-center .lightbox-inner .msg-area li { max-width: 90%; } }
+/* line 230, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li .time { margin: 10px 0 5px; color: #999; }
+/* line 234, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li .dailog { padding: 5px 10px; box-sizing: border-box; background-color: RGB(238, 238, 238); -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; box-shadow: 2px 2px 10px 0 lightgray; }
+/* line 240, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li .dailog p { line-height: 180%; }
+/* line 245, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me { float: right; }
+/* line 247, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .time { text-align: right; }
+/* line 250, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .dailog { background-color: RGB(229, 178, 61); }
+/* line 252, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .dailog p { color: #fff; }
+/* line 259, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .text-msg { padding: 20px 0 0; box-sizing: border-box; border-top: 1px solid rgba(170, 170, 170, 0.2); font-size: 0; }
+/* line 264, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .text-msg input { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; width: calc(100% - 72px - 5px); border: 1px solid #999; padding: 10px; box-sizing: border-box; display: inline-block; margin-right: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+/* line 274, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .text-msg button { display: inline-block; width: 72px; }
 
-/* line 185, ../../sass/_lightbox.scss */
+/* line 284, ../../sass/_lightbox.scss */
 body.active, html.active, .container.active, .inner-container.active { height: 100%; width: 100%; }
 
-/* line 193, ../../sass/_lightbox.scss */
+/* line 292, ../../sass/_lightbox.scss */
 #wrap.active { height: 100%; overflow: auto; }
 
 /* line 2, ../../sass/_shop.scss */
