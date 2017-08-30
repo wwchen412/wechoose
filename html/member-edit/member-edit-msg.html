@@ -228,7 +228,7 @@
         </div>
     </div>
 
-    <div class="member-sotre-lightbox message-center">
+    <div class="member-sotre-lightbox message-center active">
 
         <div class="lightbox-inner">
             <a href="">
@@ -236,7 +236,7 @@
                     柯p
                 </h2>
             </a>
-            <a href="" class="remove">X</a>
+            <a href="javascript:void(0);" class="remove">X</a>
             <hr>
             <div class="msg-area">
                 <ul>
@@ -291,6 +291,26 @@
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../js/gobal.js">
+    </script>
+    <script>
+        function msglightbox() {
+
+            // 訊息光箱 預設在訊息底部
+            var out = document.querySelector(".msg-area");
+            var out_height = out.scrollHeight - out.clientHeight;
+            var isScrolledToBottom = out_height <= out.scrollTop + 1;
+            out.scrollTop = out_height;
+
+            // 
+            var close = document.querySelector('.lightbox-inner a.remove');
+            close.addEventListener('click', function(e) {
+
+                var box = document.querySelector('.member-sotre-lightbox');
+                box.classList.remove("active");
+                console.log(box);
+            }, false);
+        }
+        msglightbox();
     </script>
 </body>
 
