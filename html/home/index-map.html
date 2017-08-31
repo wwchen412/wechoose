@@ -8,174 +8,188 @@
     <title>We choose</title>
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
-
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=256834864809662";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </head>
 
+
 <body>
-    <!-- 導覽列-->
-    <div id="header">
-        <div class="top">
-            <div class="container">
-                <form action="" class="search">
-                    <i class="fa-search fa"></i>
-                    <input type="text" name="" value="" placeholder="Search">
-                </form>
-                <!--會員功能導覽  -->
-                <div class="member">
-                    <ul>
-                        <li>
 
-                            <div class="buy">
-                                <!--購物車內數量  -->
-                                <a href="#">
-                                    <span>3</span>
-                                </a>
-                                <!--結帳  -->
-                                <a href="#">
-                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                </a>
-                            </div>
-
-                        </li>
-                        <li>
-
-                            <div class="login">
-                                <!--訊息數量  -->
-                                <a href="javascript:void(0);" class="message-show">
-                                    <span>90</span>
-                                </a>
-                                <a href="">Araon Lin</a>
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="sub">
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="../../Content/img/logo.svg" alt="">
-                    </a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">農業食材</a></li>
-                        <li><a href="#">友善傢俱</a></li>
-                        <li><a href="#">生鮮蔬果</a></li>
-                        <li><a href="#">趣味食玩</a></li>
-
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div id="message">
-            <h2>我的訊息</h2>
-            <!-- 訊息內容 -->
-            <!-- 最多顯示六則 -->
-            <ul>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>王大明</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>王大明</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>王大明</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>王大明</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>王大明</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>系統管理員</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="form">
-                        <a href="">
-                            <p>Araon Lin</p>
-                        </a>
-
-                    </div>
-                    <div class="message-content">
-                        <a href="">
-                            <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-            <div class="btn-close">
-                X
-            </div>
-        </div>
-
-    </div>
 
     <div id="wrap">
+        <!-- 導覽列-->
+        <div id="header">
+            <div class="top">
+                <div class="container">
+                    <form action="" class="search">
+                        <i class="fa-search fa"></i>
+                        <input type="text" name="" value="" placeholder="Search">
+                    </form>
+                    <!--會員功能導覽  -->
+                    <div class="member">
+                        <ul>
+                            <li>
+
+                                <div class="buy">
+                                    <!--購物車內數量  -->
+                                    <a href="#">
+                                        <span>3</span>
+                                    </a>
+                                    <!--結帳  -->
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </li>
+                            <li>
+
+                                <div class="login">
+                                    <!--訊息數量  -->
+                                    <a href="javascript:void(0);" class="message-show">
+                                        <span>90</span>
+                                    </a>
+                                    <a href="">
+                                        登入/註冊
+                                    </a>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sub">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="../../Content/img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">農業食材</a></li>
+                            <li><a href="#">友善傢俱</a></li>
+                            <li><a href="#">生鮮蔬果</a></li>
+                            <li><a href="#">趣味食玩</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div id="message">
+                <h2>我的訊息</h2>
+                <!-- 訊息內容 -->
+                <!-- 最多顯示六則 -->
+                <ul>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>系統管理員</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>Araon Lin</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn-close">
+                    X
+                </div>
+            </div>
+
+        </div>
         <!--內容-->
         <div id="content">
             <!--分類篩選-->
@@ -248,6 +262,25 @@
             </div>
         </div>
     </div>
+    <div id="login-modal">
+        <div class="modal-innner login">
+            <div class="logo">
+                <img src="../../Content/img/logo.svg" alt="" class="rwd-img">
+            </div>
+            <h2>會員登入</h2>
+            <form action="">
+                <input type="email" placeholder="請輸入電子信箱">
+                <input type="password" placeholder="請輸入密碼">
+                <button type="button" class="main-btn">登入</button>
+            </form>
+            <h5>或使用社群帳號登入</h5>
+            <a href="" class="fb-btn fb-login">
+
+            </a>
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+        </div>
+
+    </div>
     <!-- goole map API -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHNnpgYSvfNpmPwUhGHGFaAldiHmHVjA&callback=initMap" type="text/javascript"></script>
     <!-- jQuery JS 1.12.4 -->
@@ -264,6 +297,7 @@
     </script>
 
     <script>
+        // google map
         var map;
 
         function initMap() {
@@ -273,7 +307,7 @@
                 mapTypeId: 'roadmap'
             });
             // icon設定
-            var iconBase = 'Content/img/';
+            var iconBase = '../../Content/img/';
             var icons = {
                 item: {
                     icon: iconBase + 'map-item.png'

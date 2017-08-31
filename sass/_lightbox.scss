@@ -1,295 +1,324 @@
- // 新增商品光箱
- .member-sotre-lightbox {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: rgba(0, 0, 0, .7);
-     width: 100%;
-     height: 100%;
-     z-index: 1000;
-     display: none;
-     padding: 40px;
-     box-sizing: border-box;
-     overflow-y: scroll;
-     text-align: center;
-     &.active {
-         display: block;
-     }
-     //  捐贈光箱
-     &.donate {
-         .lightbox-inner {
-             max-width: 385px;
-             min-width: 280px;
-         }
-         h3 {
-             border-bottom: 2px dashed $themecolor;
-             text-align: center;
-             line-height: 2;
-         }
-         h4 {
-             padding: 20px 0;
-             text-align: center;
-         }
-         input {
-             width: 100%;
-             @include custom_select;
-             border: 1px solid $gray;
-             line-height: 1.5;
-             @include border-radius(5px);
-             padding-left: 10px;
-             box-sizing: border-box;
-         }
-     }
-     //  領取光箱
-     &.receive {
-         .lightbox-inner {
-             max-width: 385px;
-             min-width: 280px;
-         }
-         h3 {
-             border-bottom: 2px dashed $themecolor;
-             text-align: center;
-             line-height: 2;
-         }
-         h4 {
-             padding: 20px 0;
-             text-align: center;
-         }
-         label {
-             font-size: 0;
-             p {
-                 width: 80px;
-                 display: inline-block;
-                 font-size: 1rem;
-             }
-             input {
-                 width: calc(100% - 80px);
-             }
-         }
-         input {
-             width: calc(100%);
-             display: inline-block;
-             @include custom_select;
-             border: 1px solid $gray;
-             line-height: 1.5;
-             @include border-radius(5px);
-             padding-left: 10px;
-             box-sizing: border-box;
-             margin-bottom: 10px;
-         }
-     }
-     .lightbox-inner {
-         max-width: 984px;
-         padding: 20px;
-         display: inline-block;
-         vertical-align: middle;
-         margin: auto;
-         text-align: left;
-         position: relative;
-         border-radius: 10px;
-         background-color: #fff;
-         @include border-radius(5px);
-         h2 {
-             text-align: center;
-         }
-         h2+ul {
-             text-align: center;
-             margin: 10px 0 20px;
-             li {
-                 display: inline-block;
-                 padding: 5px 10px;
-                 border-right: 1px solid $secondcolor;
-                 &:last-child {
-                     border: 0;
-                 }
-             }
-         }
-         .main-btn {
-             margin: 10px auto;
-             display: block;
-         }
-     }
-     .item-card {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: flex-start;
-         // max-height: 55vh;
-         overflow: scroll;
-         li {
-             width: calc(100% / 4 - 10px * 3 / 4);
-             margin-right: 10px;
-             margin-bottom: 10px;
-             background: $opacitycolor;
-             padding: 10px;
-             box-sizing: border-box;
-             position: relative;
-             @include border-radius(5px);
-             &:nth-child(4n) {
-                 margin-right: 0;
-             }
-             @include breakpoint(pad) {
-                 width: calc(100% / 2 - 10px / 2);
-                 &:nth-child(even) {
-                     margin-right: 0;
-                 }
-             }
-             @include breakpoint(mobile) {
-                 width: 100%;
-                 margin-right: 0;
-             }
-             button {
-                 margin-top: 10px;
-                 width: 100%;
-             }
-             h4 {
-                 display: inline-block;
-             }
-             input[type="checkbox"] {
-                 width: 20px;
-                 height: 20px;
-                 display: inline-block;
-                 vertical-align: middle;
-                 &:checked {
-                     &:before {
-                         content: '✓';
-                         text-align: center;
-                         display: block;
-                         font-family: Arial, Helvetica, sans-serif;
-                         font-size: 18px;
-                         line-height: 20px
-                     }
-                 }
-             }
-             input {
-                 @include custom_select;
-                 border: 1px solid $gray;
-                 box-sizing: border-box;
-                 @include border-radius(5px);
-                 vertical-align: middle;
-             }
-             &.selected {
-                 img {
-                     opacity: .5;
-                 }
-                 input {
-                     display: none;
-                 }
-             }
-         }
-     }
-     &.message-center {
-         @include breakpoint(mobile) {
-             padding: 20px;
-         }
-         .lightbox-inner {
-             min-width: 600px;
-             box-sizing: border-box;
-             position: relative;
-             @include breakpoint(pad) {
-                 min-width: 100%;
-             }
-             a.remove {
-                 width: 1.2rem;
-                 height: 1.2rem;
-                 line-height: 1.2rem;
-                 padding: 5px;
-                 text-align: center;
-                 background-color: #000;
-                 -moz-border-radius: 50%;
-                 -webkit-border-radius: 50%;
-                 border-radius: 50%;
-                 color: #fff;
-                 cursor: pointer;
-                 display: inline-block;
-                 position: absolute;
-                 top: 20px;
-                 right: 20px;
-             }
-             hr {
-                 margin-bottom: 0;
-             }
-             .msg-area {
-                 overflow: scroll;
-                 max-height: 600px;
-                 padding: 20px;
-                 box-sizing: border-box;
-                 background: rgb(250, 250, 250);
-                 @include breakpoint(mobile) {
-                     max-height: 60vh;
-                 }
-                 li {
-                     clear: both;
-                     float: left;
-                     max-width: 40%;
-                     margin-bottom: 20px;
-                     @include breakpoint(pad) {
-                         max-width: 90%;
-                     }
-                     .time {
-                         margin: 10px 0 5px;
-                         color: $gray;
-                     }
-                     .dailog {
-                         padding: 5px 10px;
-                         box-sizing: border-box;
-                         background-color: RGB(238, 238, 238);
-                         @include border-radius(20px);
-                         box-shadow: 2px 2px 10px 0 rgb(211, 211, 211);
-                         p {
-                             line-height: 180%;
-                         }
-                     }
-                     &.others {}
-                     &.me {
-                         float: right;
-                         .time {
-                             text-align: right;
-                         }
-                         .dailog {
-                             background-color: $themecolor;
-                             p {
-                                 color: #fff;
-                             }
-                         }
-                     }
-                 }
-             }
-             .text-msg {
-                 padding: 20px 0 0;
-                 box-sizing: border-box;
-                 border-top: 1px solid $opacitycolor;
-                 font-size: 0;
-                 input {
-                     @include custom_select;
-                     width: calc(100% - 72px - 5px);
-                     border: 1px solid $gray;
-                     padding: 10px;
-                     box-sizing: border-box;
-                     display: inline-block;
-                     margin-right: 5px;
-                     @include border-radius(5px);
-                 }
-                 button {
-                     display: inline-block;
-                     width: 72px;
-                 }
-             }
-         }
-     }
- }
- 
- //  光箱點選以後的active
- body.active,
- html.active,
- .container.active,
- .inner-container.active {
-     height: 100%;
-     width: 100%;
- }
- 
- #wrap.active {
-     height: 100%;
-     overflow: auto;
- }
+// 登入
+#login-modal {
+    @include overlay;
+    padding: 20px;
+    .modal-innner {
+        width: 360px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        border-radius: 10px;
+        background-color: #fff;
+        @include border-radius(5px);
+        .logo {
+            img {
+                width: 160px;
+            }
+        }
+        h2 {
+            margin: 20px 0;
+        }
+        form {
+            input {
+                @include custom_select;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid $gray;
+                width: 100%;
+                margin-bottom: 10px;
+                @include border-radius(5px);
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 新增商品光箱
+.member-sotre-lightbox {
+    @include overlay;
+    padding: 40px;
+    text-align: center;
+    &.active {
+        display: block;
+    }
+    //  捐贈光箱
+    &.donate {
+        .lightbox-inner {
+            max-width: 385px;
+            min-width: 280px;
+        }
+        h3 {
+            border-bottom: 2px dashed $themecolor;
+            text-align: center;
+            line-height: 2;
+        }
+        h4 {
+            padding: 20px 0;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            @include custom_select;
+            border: 1px solid $gray;
+            line-height: 1.5;
+            @include border-radius(5px);
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+    }
+    //  領取光箱
+    &.receive {
+        .lightbox-inner {
+            max-width: 385px;
+            min-width: 280px;
+        }
+        h3 {
+            border-bottom: 2px dashed $themecolor;
+            text-align: center;
+            line-height: 2;
+        }
+        h4 {
+            padding: 20px 0;
+            text-align: center;
+        }
+        label {
+            font-size: 0;
+            p {
+                width: 80px;
+                display: inline-block;
+                font-size: 1rem;
+            }
+            input {
+                width: calc(100% - 80px);
+            }
+        }
+        input {
+            width: calc(100%);
+            display: inline-block;
+            @include custom_select;
+            border: 1px solid $gray;
+            line-height: 1.5;
+            @include border-radius(5px);
+            padding-left: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+    }
+    .lightbox-inner {
+        max-width: 984px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: auto;
+        text-align: left;
+        position: relative;
+        border-radius: 10px;
+        background-color: #fff;
+        @include border-radius(5px);
+        h2 {
+            text-align: center;
+        }
+        h2+ul {
+            text-align: center;
+            margin: 10px 0 20px;
+            li {
+                display: inline-block;
+                padding: 5px 10px;
+                border-right: 1px solid $secondcolor;
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
+        .main-btn {
+            margin: 10px auto;
+            display: block;
+        }
+    }
+    .item-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        // max-height: 55vh;
+        overflow: scroll;
+        li {
+            width: calc(100% / 4 - 10px * 3 / 4);
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background: $opacitycolor;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+            @include border-radius(5px);
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+            @include breakpoint(pad) {
+                width: calc(100% / 2 - 10px / 2);
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+            @include breakpoint(mobile) {
+                width: 100%;
+                margin-right: 0;
+            }
+            button {
+                margin-top: 10px;
+                width: 100%;
+            }
+            h4 {
+                display: inline-block;
+            }
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                &:checked {
+                    &:before {
+                        content: '✓';
+                        text-align: center;
+                        display: block;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 18px;
+                        line-height: 20px
+                    }
+                }
+            }
+            input {
+                @include custom_select;
+                border: 1px solid $gray;
+                box-sizing: border-box;
+                @include border-radius(5px);
+                vertical-align: middle;
+            }
+            &.selected {
+                img {
+                    opacity: .5;
+                }
+                input {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.message-center {
+        @include breakpoint(mobile) {
+            padding: 20px;
+        }
+        .lightbox-inner {
+            min-width: 600px;
+            box-sizing: border-box;
+            position: relative;
+            @include breakpoint(pad) {
+                min-width: 100%;
+            }
+            a.remove {
+                width: 1.2rem;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                padding: 5px;
+                text-align: center;
+                background-color: #000;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            hr {
+                margin-bottom: 0;
+            }
+            .msg-area {
+                overflow: scroll;
+                max-height: 600px;
+                padding: 20px;
+                box-sizing: border-box;
+                background: rgb(250, 250, 250);
+                @include breakpoint(mobile) {
+                    max-height: 60vh;
+                }
+                li {
+                    clear: both;
+                    float: left;
+                    max-width: 40%;
+                    margin-bottom: 20px;
+                    @include breakpoint(pad) {
+                        max-width: 90%;
+                    }
+                    .time {
+                        margin: 10px 0 5px;
+                        color: $gray;
+                    }
+                    .dailog {
+                        padding: 5px 10px;
+                        box-sizing: border-box;
+                        background-color: RGB(238, 238, 238);
+                        @include border-radius(20px);
+                        box-shadow: 2px 2px 10px 0 rgb(211, 211, 211);
+                        p {
+                            line-height: 180%;
+                        }
+                    }
+                    &.others {}
+                    &.me {
+                        float: right;
+                        .time {
+                            text-align: right;
+                        }
+                        .dailog {
+                            background-color: $themecolor;
+                            p {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .text-msg {
+                padding: 20px 0 0;
+                box-sizing: border-box;
+                border-top: 1px solid $opacitycolor;
+                font-size: 0;
+                input {
+                    @include custom_select;
+                    width: calc(100% - 72px - 5px);
+                    border: 1px solid $gray;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    margin-right: 5px;
+                    @include border-radius(5px);
+                }
+                button {
+                    display: inline-block;
+                    width: 72px;
+                }
+            }
+        }
+    }
+}
+
+//  光箱點選以後的active
+body.active,
+html.active,
+.container.active,
+.inner-container.active {
+    height: 100%;
+    width: 100%;
+}
+
+#wrap.active {
+    height: 100%;
+    overflow: auto;
+}
