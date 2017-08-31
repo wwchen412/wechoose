@@ -2,9 +2,12 @@
 #login-modal {
     @include overlay;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    .modal-innner {
+    display: none;
+    &.active {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .modal-inner {
         width: 360px;
         padding: 20px;
         display: inline-block;
@@ -54,6 +57,9 @@
                 width: calc(50% - 8px);
             }
         }
+    }
+    .modal-inner.unchoose {
+        display: none;
     }
 }
 

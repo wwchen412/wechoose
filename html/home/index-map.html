@@ -60,7 +60,7 @@
                                     <a href="javascript:void(0);" class="message-show">
                                         <span>90</span>
                                     </a>
-                                    <a href="">
+                                    <a href="" id="login">
                                         登入/註冊
                                     </a>
                                 </div>
@@ -265,7 +265,7 @@
         </div>
     </div>
     <div id="login-modal">
-        <div class="modal-innner login">
+        <div class="modal-inner login ">
             <div class="logo">
                 <img src="../../Content/img/logo.svg" alt="" class="rwd-img">
             </div>
@@ -279,25 +279,50 @@
             <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
             <div class="others-link">
-                <a href="">忘記密碼</a>
-                <a href="">會員登入</a>
+                <a href="" class="forgot_link">忘記密碼</a>
+                <a href="javascript:void(0);" class="signup_link">會員註冊</a>
             </div>
         </div>
+        <div class="modal-inner signup unchoose">
+            <div class="logo">
+                <img src="../../Content/img/logo.svg" alt="" class="rwd-img">
+            </div>
+            <h2>會員註冊</h2>
+            <form action="">
+                <input type="email" placeholder="輸入電子信箱">
+                <input type="password" placeholder="輸入密碼">
+                <input type="password" placeholder="密碼確認">
+                <button type="button" class="main-btn">確定註冊</button>
+            </form>
+            <h5>或使用社群帳號註冊</h5>
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
+            <div class="others-link">
+                <a href="" class="forgot_link">忘記密碼</a>
+                <a href="" class="login_link">會員登入</a>
+            </div>
+        </div>
+        <div class="modal-inner forgot unchoose">
+            <div class="logo">
+                <img src="../../Content/img/logo.svg" alt="" class="rwd-img">
+            </div>
+            <h2>會員註冊</h2>
+            <form action="">
+                <input type="email" placeholder="輸入電子信箱">
+                <button type="button" class="main-btn">確認送出</button>
+            </form>
+
+            <div class="others-link">
+                <a href="" class="login_link">會員登入</a>
+                <a href="" class="signup_link">會員註冊</a>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery JS 1.12.4 -->
     <script src="../../js/markerclusterer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $('.message-show').click(function() {
-            $('#message').toggleClass('active');
 
-        })
-        $('.btn-close').click(function() {
-            $('#message.active').removeClass('active');
-        })
-    </script>
 
     <script>
         // google map
@@ -347,6 +372,38 @@
     </script>
     <!-- goole map API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2RTxCY2WYxoHkPkeVE8RVLiK-sbqAzKM&callback=initMap" type="text/javascript" async defer></script>
+    <script>
+        //  登入光箱
+        $(function() {
+            $('#login').click(function() {
+                event.preventDefault();
+                $('#login-modal').addClass('active');
+            });
+            // 點擊會員註冊
+            $('.signup_link').click(function() {
+                event.preventDefault();
+
+                $('.modal-inner.signup').removeClass('unchoose').siblings().addClass('unchoose');
+            });
+            // 點擊會員登入
+            $('.login_link').click(function() {
+                event.preventDefault();
+                $('.modal-inner.login').removeClass('unchoose').siblings().addClass('unchoose');
+            });
+            // 點擊忘記密碼
+            $('.forgot_link').click(function() {
+                event.preventDefault();
+                $('.modal-inner.forgot').removeClass('unchoose').siblings().addClass('unchoose');
+            });
+            // 避免點擊內容關閉遮罩
+            $('.modal-inner').click(function() {
+                event.stopPropagation();
+            });
+            $('#login-modal').click(function() {
+                $(this).removeClass('active');
+            });
+        })
+    </script>
 </body>
 
 </html>
