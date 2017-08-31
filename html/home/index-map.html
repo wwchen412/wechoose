@@ -8,6 +8,8 @@
     <title>We choose</title>
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
+
+    <!-- fb login -->
     <div id="fb-root"></div>
     <script>
         (function(d, s, id) {
@@ -15,7 +17,7 @@
             if (d.getElementById(id)) return;
             js = d.createElement(s);
             js.id = id;
-            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=256834864809662";
+            js.src = "https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=256834864809662";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -274,17 +276,18 @@
                 <button type="button" class="main-btn">登入</button>
             </form>
             <h5>或使用社群帳號登入</h5>
-            <a href="" class="fb-btn fb-login">
-
-            </a>
             <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+            <div class="others-link">
+                <a href="">忘記密碼</a>
+                <a href="">會員登入</a>
+            </div>
         </div>
 
     </div>
-    <!-- goole map API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuHNnpgYSvfNpmPwUhGHGFaAldiHmHVjA&callback=initMap" type="text/javascript"></script>
+
     <!-- jQuery JS 1.12.4 -->
-    <script src="js/markerclusterer.js"></script>
+    <script src="../../js/markerclusterer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $('.message-show').click(function() {
@@ -342,6 +345,8 @@
             });
         }
     </script>
+    <!-- goole map API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2RTxCY2WYxoHkPkeVE8RVLiK-sbqAzKM&callback=initMap" type="text/javascript" async defer></script>
 </body>
 
 </html>
