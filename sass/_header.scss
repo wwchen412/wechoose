@@ -2,6 +2,12 @@
 @import "_color.scss";
 #header {
     position: relative;
+    // position: fixed;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+    // z-index: 10;
+    // background: #fff;
     .top {
         background: $maincolor;
         min-height: 40px;
@@ -15,7 +21,33 @@
             }
             .ham-menu {
                 padding: 10px 0;
-                @include breakpoint(mobile) {}
+                @include breakpoint(mobile) {
+                    .menu-bars {
+                        width: 20px;
+                        height: 20px;
+                        .bar {
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 2px;
+                            background: #fff;
+                            margin-top: (14px / 3);
+                            margin-bottom: (14px / 3);
+                            transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        }
+                        &.active {
+                            transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                            .bar:nth-child(1) {
+                                opacity: 0;
+                            }
+                            .bar:nth-child(2) {
+                                transform: rotate(45deg) translate3d(-1px, 4px, 0px);
+                            }
+                            .bar:nth-child(3) {
+                                transform: rotate(-45deg) translate3d(1px, -6px, 0px);
+                            }
+                        }
+                    }
+                }
                 i.fa-bars {
                     color: #fff;
                     display: none;
@@ -79,9 +111,9 @@
                         }
                     }
                     @include breakpoint(mobile) {
-                        // display: none;
+                        display: none;
                         position: absolute;
-                        top: 40px;
+                        top: 45px;
                         left: 0;
                         background-color: #f6f4f2;
                         width: 100%;
@@ -97,6 +129,10 @@
                             &:hover {
                                 background: #e8e6e4;
                             }
+                        }
+                        &.active {
+                            display: block;
+                            // opacity: 1;
                         }
                     }
                 }

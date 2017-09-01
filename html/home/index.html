@@ -20,7 +20,12 @@
                 <div class="container">
                     <!--搜尋框 -->
                     <div class="ham-menu">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <div class="menu-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
 
                         <div class="hamburger">
                             <form action="" class="search">
@@ -470,12 +475,18 @@
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $('.message-show').click(function() {
-            $('#message').toggleClass('active');
+        $(function() {
+            $('.menu-bars').click(function() {
+                $(this).toggleClass('active');
+                $('.hamburger').toggleClass('active');
+            });
+            $('.message-show').click(function() {
+                $('#message').toggleClass('active');
 
-        })
-        $('.btn-close').click(function() {
-            $('#message.active').removeClass('active');
+            })
+            $('.btn-close').click(function() {
+                $('#message.active').removeClass('active');
+            })
         })
     </script>
 </body>
