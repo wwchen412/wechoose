@@ -228,7 +228,7 @@
         </div>
     </div>
 
-    <div class="member-sotre-lightbox message-center active">
+    <div class="member-sotre-lightbox message-center">
 
         <div class="lightbox-inner">
             <a href="">
@@ -295,16 +295,21 @@
     <script>
         function msglightbox() {
 
-            // 訊息光箱 預設在訊息底部
-            var out = document.querySelector(".msg-area");
-            var out_height = out.scrollHeight - out.clientHeight;
-            var isScrolledToBottom = out_height <= out.scrollTop + 1;
-            out.scrollTop = out_height;
+            var msg_a = document.querySelector('.msg .msg-content');
+            msg_a.addEventListener('click', function() {
+                var box = document.querySelector('.member-sotre-lightbox');
+                box.classList.add('active');
+                // 訊息光箱 預設在訊息底部
+                var out = document.querySelector(".msg-area");
+                var out_height = out.scrollHeight - out.clientHeight;
+                var isScrolledToBottom = out_height <= out.scrollTop + 1;
+                out.scrollTop = out_height;
+            }, false);
 
-            // 
+
+            // 關閉訊息中心
             var close = document.querySelector('.lightbox-inner a.remove');
-            close.addEventListener('click', function(e) {
-
+            close.addEventListener('click', function() {
                 var box = document.querySelector('.member-sotre-lightbox');
                 box.classList.remove("active");
                 console.log(box);

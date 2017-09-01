@@ -377,7 +377,7 @@
         $(function() {
             $('#login').click(function() {
                 event.preventDefault();
-                $('#login-modal').addClass('active');
+                $('#login-modal').addClass('active').find('.modal-inner.login').removeClass('unchoose');
             });
             // 點擊會員註冊
             $('.signup_link').click(function() {
@@ -401,6 +401,7 @@
             });
             $('#login-modal').click(function() {
                 $(this).removeClass('active');
+                $(this).children().addClass('unchoose');
             });
         })
     </script>
