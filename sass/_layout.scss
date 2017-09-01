@@ -49,6 +49,17 @@ a:hover {
     color: lighten($maincolor, 50%);
 }
 
+input:focus {
+    outline: 0;
+}
+
+.hidden-md {
+    display: none !important;
+    @include breakpoint(mobile) {
+        display: inline-block !important;
+    }
+}
+
 // 主要按鈕
 .main-btn {
     @include custom_select;
