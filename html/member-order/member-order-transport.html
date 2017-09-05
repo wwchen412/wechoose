@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
 
-    <script src="../../js/gobal.js"></script>
 </head>
 
 <body>
@@ -151,9 +150,10 @@
                                         <h4 class="schedulebar">
                                             商品進度：
                                             <ol>
-                                                <li></li>
+                                                <li class="now"></li>
                                                 <li class="now"></li>
                                                 <li></li>
+                                                <li class="bar"></li>
                                             </ol>
                                             <span>貨物待確認</span>
                                         </h4>
@@ -195,6 +195,7 @@
                                                 <li class="now"></li>
                                                 <li></li>
                                                 <li></li>
+                                                <li class="bar"></li>
                                             </ol>
                                             <span>尚未取貨</span>
                                         </h4>
@@ -233,9 +234,10 @@
                                             商品進度：
                                             <!-- now 進度條的原點 -->
                                             <ol>
-                                                <li></li>
-                                                <li></li>
                                                 <li class="now"></li>
+                                                <li class="now"></li>
+                                                <li class="now"></li>
+                                                <li class="bar"></li>
                                             </ol>
                                             <span>商品寄送中</span>
                                         </h4>
@@ -295,6 +297,32 @@
             </div>
         </div>
     </div>
+
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/gobal.js"></script>
+    <script>
+        $(function() {
+
+            $('.schedulebar').each(function() {
+                var sch_len = $(this).find('.now').length;
+                console.log(sch_len);
+                if (sch_len == 1) {
+                    $(this).find('.bar').css('width', '0');
+                } else if (sch_len == 2) {
+                    $(this).find('.bar').css('width', '70px');
+
+                } else {
+                    $(this).find('.bar').css('width', '150px');
+                }
+            })
+        })
+
+        // var sch_len = document.querySelectorAll('.schedulebar');
+        // console.log(sch_len);
+    </script>
 </body>
+
+
 
 </html>
