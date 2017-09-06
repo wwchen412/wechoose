@@ -122,24 +122,41 @@ $(function() {
 
 
 });
+// 運送狀態
+$(function() {
+
+    $('.schedulebar').each(function() {
+        var sch_len = $(this).find('.now').length;
+        console.log(sch_len);
+        if (sch_len == 1) {
+            $(this).find('.bar').css('width', '0');
+        } else if (sch_len == 2) {
+            $(this).find('.bar').css('width', '70px');
+
+        } else {
+            $(this).find('.bar').css('width', '150px');
+        }
+    })
+})
 
 //  訂單管理 出貨中
 $(function() {
     // 團友名單展開
-    $('.group-list-title i').each(function() {
+    $('.group-list-title').each(function() {
+            var group_btn = $(this).find('i');
+            console.log(this);
             $(this).click(function() {
-                if ($(this).hasClass('fa-plus')) {
-                    $(this).addClass('fa-minus').removeClass('fa-plus');
+                if ($(group_btn).hasClass('fa-plus')) {
+                    $(group_btn).addClass('fa-minus').removeClass('fa-plus');
                 } else {
-                    $(this).addClass('fa-plus').removeClass('fa-minus');
+                    $(group_btn).addClass('fa-plus').removeClass('fa-minus');
                 }
-
-                $(this).parents('.group-list-title').siblings('.group-list-content').slideToggle();
+                $(this).siblings('.group-list-content').slideToggle('fast');
             })
         })
         // 如果進度是已到貨 則button可以使用
     $('.checkarrived').each(function() {
-        var schedulebar = $(this).parents('.share').siblings('.percent50').find('ol li:last-child');
+        var schedulebar = $(this).parents('.share').siblings('.percent50').find('ol li:nth-child(3)');
         if (schedulebar.hasClass('now')) {
             $(this).removeClass('disable').css('background', 'RGB(153, 195, 85)');
         }

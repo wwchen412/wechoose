@@ -18,10 +18,39 @@
         <div id="header">
             <div class="top">
                 <div class="container">
-                    <form action="" class="search">
-                        <i class="fa-search fa"></i>
-                        <input type="text" name="" value="" placeholder="Search">
-                    </form>
+                    <!--搜尋框 -->
+                    <div class="ham-menu">
+                        <div class="menu-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+
+                        <div class="hamburger">
+                            <form action="" class="search">
+                                <i class="fa-search fa"></i>
+                                <input type="text" name="" value="" placeholder="搜尋好物">
+                                <button class="main-btn hidden-md">GO</button>
+                            </form>
+                            <ul>
+                                <li>
+                                    <a href="">農業食材</a>
+                                </li>
+                                <li>
+                                    <a href="">友善傢俱</a>
+                                </li>
+                                <li>
+                                    <a href="">生鮮蔬果</a>
+                                </li>
+                                <li>
+                                    <a href="">趣味食玩</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
                     <!--會員功能導覽  -->
                     <div class="member">
                         <ul>
@@ -29,11 +58,11 @@
 
                                 <div class="buy">
                                     <!--購物車內數量  -->
-                                    <a href="#">
+                                    <a href="cart.html">
                                         <span>3</span>
                                     </a>
                                     <!--結帳  -->
-                                    <a href="#">
+                                    <a href="cart.html">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -43,10 +72,26 @@
 
                                 <div class="login">
                                     <!--訊息數量  -->
-                                    <a href="#">
+                                    <a href="javascript:void(0);" class="message-show">
                                         <span>90</span>
                                     </a>
-                                    <a href="">Araon Lin</a>
+
+                                    <div class="dropdown">
+                                        Araon Lin
+                                        <ul>
+                                            <li>
+                                                <a href="">會員中心</a>
+                                            </li>
+                                            <li>
+                                                <a href="">個人頁面</a>
+                                            </li>
+                                            <li>
+                                                <a href="">登出</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
                                 </div>
 
                             </li>
@@ -67,11 +112,111 @@
                             <li><a href="#">友善傢俱</a></li>
                             <li><a href="#">生鮮蔬果</a></li>
                             <li><a href="#">趣味食玩</a></li>
-
                         </ul>
                     </div>
                 </div>
 
+            </div>
+            <div id="message">
+                <h2>我的訊息</h2>
+                <!-- 訊息內容 -->
+                <!-- 最多顯示六則 -->
+                <ul>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>王大明</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>系統管理員</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form">
+                            <a href="">
+                                <p>Araon Lin</p>
+                            </a>
+
+                        </div>
+                        <div class="message-content">
+                            <a href="">
+                                <p>您的商品已經寄送至指定的門市請於指定的日期內</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn-close">
+                    X
+                </div>
             </div>
 
         </div>
@@ -160,6 +305,7 @@
                                                 <li class="now"></li>
                                                 <li></li>
                                                 <li></li>
+                                                <li class="bar"></li>
                                             </ol>
                                             <span>訂單確認</span>
 
@@ -314,9 +460,10 @@
                                         <h4 class="schedulebar">
                                             廠商進度：
                                             <ol>
-                                                <li></li>
+                                                <li class="now"></li>
                                                 <li class="now"></li>
                                                 <li></li>
+                                                <li class="bar"></li>
                                             </ol>
                                             <span>已出貨</span>
 
@@ -471,9 +618,10 @@
                                         <h4 class="schedulebar">
                                             廠商進度：
                                             <ol>
-                                                <li></li>
-                                                <li></li>
                                                 <li class="now"></li>
+                                                <li class="now"></li>
+                                                <li class="now"></li>
+                                                <li class="bar"></li>
                                             </ol>
                                             <span>已到貨</span>
 
@@ -649,8 +797,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../js/gobal.js">
     </script>
-    <script>
-    </script>
+
 </body>
 
 </html>
