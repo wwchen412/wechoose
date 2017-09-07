@@ -244,6 +244,7 @@
         @include box-shadow(2px 5px 10px 1px rgba(0, 0, 0, .3));
         @include breakpoint(pad) {
             max-width: 300px;
+            top: 45px;
         }
         h2 {
             text-align: center;

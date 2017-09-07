@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 串可刪 -->
+    <script>
+        $(function() {
+            $("#header").load("../../html/home/head.html");
+            $("#footer").load("../../html/home/footer.html");
+        });
+    </script>
 </head>
 
 <body>
@@ -17,64 +24,6 @@
     <div id="wrap">
         <!-- 導覽列-->
         <div id="header">
-            <div class="top">
-                <div class="container">
-                    <form action="" class="search">
-                        <i class="fa-search fa"></i>
-                        <input type="text" name="" value="" placeholder="Search">
-                    </form>
-                    <!--會員功能導覽  -->
-                    <div class="member">
-                        <ul>
-                            <li>
-
-                                <div class="buy">
-                                    <!--購物車內數量  -->
-                                    <a href="#">
-                                        <span>3</span>
-                                    </a>
-                                    <!--結帳  -->
-                                    <a href="#">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-
-                            </li>
-                            <li>
-
-                                <div class="login">
-                                    <!--訊息數量  -->
-                                    <a href="#">
-                                        <span>90</span>
-                                    </a>
-                                    <a href="">Araon Lin</a>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sub">
-                <div class="container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../Content/img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">農業食材</a></li>
-                            <li><a href="#">友善傢俱</a></li>
-                            <li><a href="#">生鮮蔬果</a></li>
-                            <li><a href="#">趣味食玩</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
         <div id="content">
             <div class="bread">
@@ -164,7 +113,8 @@
                                 <label for="discount">
                                        
                                     <input type="checkbox" name="discount" id="discount">
-                                    使用購物金折抵<span>1299</span>點
+                                    目前購物金<span>1299</span>
+                                    折抵<input type="text" id="discount-val" class="discount-val">元
                                     </label>
                                 <h4>金額：<span>2200</span>元</h4>
                                 <h4>運費：<span>85</span>元</h4>
@@ -200,37 +150,17 @@
                 </div>
 
             </div>
-            <div id="footer">
-                <div class="footer-menu">
-                    <div class="container">
-                        <div class="logo">
-                            <a href="#">
-                                <img src="../../Content/img/logo.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <ul>
-                                <li><a href="#">農業食材</a></li>
-                                <li><a href="#">友善傢俱</a></li>
-                                <li><a href="#">生鮮蔬果</a></li>
-                                <li><a href="#">趣味食玩</a></li>
-                                <li><a href="#">常見問題</a></li>
-                                <li><a href="#">聯絡我們</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    copyright © 2017. All rights reserved.
-                </div>
-            </div>
+
+        </div>
+        <div id="footer">
+
         </div>
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../js/gobal.js"></script>
     <script>
-        inputNumber($('.input-number'));
+        // inputNumber($('.input-number'));
     </script>
 </body>
 

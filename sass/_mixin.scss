@@ -38,6 +38,9 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     border: 0;
+    &:focus {
+        outline-offset: 0;
+    }
 }
 
 // 瀑布流隔線

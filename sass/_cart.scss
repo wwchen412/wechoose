@@ -109,6 +109,13 @@
                 button {
                     float: right;
                 }
+                .discount-val {
+                    max-width: 80px;
+                    @include custom_select;
+                    outline: 1px solid $gray;
+                    line-height: 150%;
+                    margin: 0 5px;
+                }
             }
         }
     }

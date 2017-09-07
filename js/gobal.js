@@ -37,7 +37,7 @@ $(function() {
                 $(fa_item).addClass('fa-plus').removeClass('fa-minus');
             }
 
-            $(fa_item).parents('.help-list-title').siblings('.help-list-content').slideToggle();
+            $(fa_item).parents('.help-list-title').siblings('.help-list-content').slideToggle('fast');
         })
     })
 
