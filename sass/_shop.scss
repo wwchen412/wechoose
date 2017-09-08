@@ -92,6 +92,49 @@
                                         text-align: right;
                                         &+p {
                                             text-align: right;
+                                            .fa-question-circle {
+                                                position: relative;
+                                                &:after {
+                                                    content: '若未達標,我們將會全額退款給您';
+                                                    text-align: left;
+                                                    display: none;
+                                                    position: absolute;
+                                                    padding: 5px;
+                                                    background-color: $thirdcolor;
+                                                    color: #fff;
+                                                    width: 120px;
+                                                    top: -50px;
+                                                    left: -60px;
+                                                    line-height: 150%;
+                                                    @include border-radius(3px);
+                                                }
+                                                &:hover:after {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .now-price {
+                                    p {
+                                        .fa-question-circle {
+                                            position: relative;
+                                            &:after {
+                                                content: '商品集購組數愈多,價格越便宜喔！';
+                                                display: none;
+                                                position: absolute;
+                                                padding: 5px;
+                                                background-color: $thirdcolor;
+                                                color: #fff;
+                                                width: 120px;
+                                                top: -50px;
+                                                left: -60px;
+                                                line-height: 150%;
+                                                @include border-radius(3px);
+                                            }
+                                            &:hover:after {
+                                                display: block;
+                                            }
                                         }
                                     }
                                 }
