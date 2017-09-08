@@ -25,8 +25,39 @@
                             flex-wrap: wrap;
                             padding: 20px 0;
                             justify-content: space-between;
+                            >div {
+                                border: 1px solid #CCCCCC;
+                                padding: 15px;
+                                @include border-radius(3px);
+                                &.left {
+                                    flex: 6;
+                                    margin-right: 15px;
+                                    @include breakpoint(mobile) {
+                                        flex: none;
+                                        width: 100%;
+                                        box-sizing: border-box;
+                                    }
+                                }
+                                &.right {
+                                    flex: 4;
+                                    @include breakpoint(mobile) {
+                                        flex: none;
+                                        width: 100%;
+                                        box-sizing: border-box;
+                                    }
+                                }
+                            }
+                            #times {
+                                letter-spacing: 2px;
+                                span {
+                                    color: $secondcolor;
+                                }
+                            }
                             h4 {
                                 color: $gray;
+                            }
+                            h5 {
+                                font-size: 13px;
                             }
                             a {
                                 color: #f00;
@@ -51,6 +82,71 @@
                                 }
                             }
                             .right {
+                                >div {
+                                    display: inline-block;
+                                    width: calc(100% / 2 - 8px / 2);
+                                    &>p {
+                                        font-size: 13px;
+                                    }
+                                    &.sold {
+                                        text-align: right;
+                                        &+p {
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                                .important-val {
+                                    font-size: 40px;
+                                    color: $secondcolor;
+                                    letter-spacing: 3px;
+                                }
+                                // 進度條
+                                .progress {
+                                    width: 100%;
+                                    height: 8px;
+                                    margin: 10px 0 20px;
+                                    background-color: #ccc;
+                                    @include border-radius(8px);
+                                    overflow: hidden;
+                                    .sold-bar {
+                                        background: $themecolor;
+                                        height: 8px;
+                                        @include border-radius(8px);
+                                    }
+                                }
+                                // 進度比較表
+                                .progress-num {
+                                    width: 100%;
+                                    margin-bottom: 20px;
+                                    ul {
+                                        display: flex;
+                                        li {
+                                            flex: 1;
+                                            background: $backcolor;
+                                            p {
+                                                text-align: center;
+                                            }
+                                            &.now {
+                                                border: 2px solid $themecolor;
+                                                position: relative;
+                                                p {
+                                                    color: $themecolor;
+                                                }
+                                                &:before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    width: 0;
+                                                    height: 0;
+                                                    border-style: solid;
+                                                    border-width: 0 10px 10px 10px;
+                                                    border-color: transparent transparent $themecolor transparent;
+                                                    top: -17px;
+                                                    left: calc(50% - 10px);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 .main-btn {
                                     width: 100%;
                                 }

@@ -8,7 +8,15 @@
     <title>We choose</title>
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 串可刪 -->
+    <script>
+        $(function() {
+            $("#header").load("../../html/home/head.html");
 
+        });
+    </script>
+    <!-- 可刪 -->
 </head>
 
 <body>
@@ -18,63 +26,7 @@
     <div id="wrap">
         <!-- 導覽列-->
         <div id="header">
-            <div class="top">
-                <div class="container">
-                    <form action="" class="search">
-                        <i class="fa-search fa"></i>
-                        <input type="text" name="" value="" placeholder="Search">
-                    </form>
-                    <!--會員功能導覽  -->
-                    <div class="member">
-                        <ul>
-                            <li>
 
-                                <div class="buy">
-                                    <!--購物車內數量  -->
-                                    <a href="#">
-                                        <span>3</span>
-                                    </a>
-                                    <!--結帳  -->
-                                    <a href="#">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-
-                            </li>
-                            <li>
-
-                                <div class="login">
-                                    <!--訊息數量  -->
-                                    <a href="#">
-                                        <span>90</span>
-                                    </a>
-                                    <a href="">Araon Lin</a>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sub">
-                <div class="container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../Content/img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">農業食材</a></li>
-                            <li><a href="#">友善傢俱</a></li>
-                            <li><a href="#">生鮮蔬果</a></li>
-                            <li><a href="#">趣味食玩</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
 
         </div>
 
@@ -149,28 +101,66 @@
                         <div class="shop-order">
                             <div class="left">
                                 <h2>商品名稱</h2>
-                                <h4>商品規格：100g</h4>
+                                <h3>團購名稱</h3>
+                                <p>商品規格：100g</p>
                                 <p>取件方式：<span>店到店</span><span>面交</span></p>
+
+                                <h5 style="margin-top:50px;">商品正在集購中！在集購結束前，至少達到50組便集購成功。 </h5>
+                                <h4 id="times"></h4>
+
                             </div>
                             <div class="right">
-                                <h2>團購名稱</h2>
-                                <h3>
-                                    <b><span>50</span>盒</b> <b>平均單盒<span>75</span>元</b>
-                                </h3>
+
+                                <div class="now-price">
+                                    <p>
+                                        <span class="important-val">$<em>90</em></span>單組
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                                <div class="sold">
+                                    <p>
+                                        <span class="important-val">23</span>目前組數
+
+                                    </p>
+                                </div>
+                                <p>目標組數<span>50</span>組 <i class="fa fa-question-circle" aria-hidden="true"></i></p>
+
+                                <div class="progress">
+                                    <!-- width由目標組數與目前組數的百分比來計算  -->
+                                    <div class="sold-bar" style="width:20%;"></div>
+                                </div>
+                                <div class="progress-num">
+                                    <ul>
+                                        <li>
+                                            <p>5</p>
+                                            <p>$<span>100</span></p>
+                                        </li>
+                                        <li class="now">
+                                            <p>15</p>
+                                            <p>$<span>90</span></p>
+                                        </li>
+                                        <li>
+                                            <p>30</p>
+                                            <p>$<span>75</span></p>
+                                        </li>
+                                        <li>
+                                            <p>50</p>
+                                            <p>$<span>65</span></p>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <form action="">
-                                    <span class="input-number-decrement">–</span><input class="input-number addnum1" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
-                                    <button type="button" class="main-btn">加入購物車</button>
+                                    <p>
+                                        <span style="margin-right:15px;">數量</span>
+                                        <span class="input-number-decrement">–</span><input class="input-number addnum1" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+                                        <button type="button" class="main-btn">加入購物車</button>
+                                    </p>
                                 </form>
 
                             </div>
 
                         </div>
-                        <div class="goal">
-                            <h3>我們截止時間<span>1天5時20分12秒</span></h3>
-                            <h3>我們剩餘數量<span>12</span>組</h3>
-                            <h3>目前組數<span>38</span>組</h3>
-                            <button type="">Share</button>
-                        </div>
+
                         <!--訂購商品 end  -->
                         <!--商品介紹及評價  -->
                         <div class="shop-item-content">
@@ -339,7 +329,45 @@
     <script src="../../js/gobal.js">
     </script>
     <script>
+        // 加數字 input
         inputNumber($('.addnum1'));
+        // 控制進度BAR
+        $(function() {
+            var a = $('.sold .important-val').text();
+            var b = $('.sold + p span').text();
+            var c = (a / b * 100);
+            $('.sold-bar').css('width', c + "%");
+        })
+
+
+
+        // 設定要倒數的日期
+        function times() {
+
+            var goal_date = new Date("Sep 10,2017").getTime();
+
+            var days, hours, minutes, seconds;
+            var countdown = document.getElementById("times");
+            // 每秒倒數一次
+            setInterval(function() {
+                var current_date = new Date().getTime();
+                var seconds_left = (goal_date - current_date) / 1000;
+
+                days = parseInt(seconds_left / (60 * 60 * 24));
+
+                seconds_left = seconds_left % (60 * 60 * 24);
+
+                hours = parseInt(seconds_left / (60 * 60));
+                seconds_left = seconds_left % (60 * 60);
+
+                minutes = parseInt(seconds_left / 60);
+                seconds = parseInt(seconds_left % 60);
+
+                countdown.innerHTML = "<i class='fa fa-clock-o' aria-hidden='true'></i>剩餘<span>" + days + "</span>天<span>" + hours + "</span>時<span>" + minutes + "</span>分<span>" + seconds + "</span>秒";
+            }, 1000)
+        }
+
+        times();
     </script>
 </body>
 
