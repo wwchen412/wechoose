@@ -200,7 +200,7 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 /* line 173, ../../sass/_header.scss */
 #header .top .container .member li .login .dropdown { display: inline-block; }
 /* line 175, ../../sass/_header.scss */
-#header .top .container .member li .login .dropdown ul { display: none; position: absolute; top: calc(100% + 10px); left: 0; background-color: #000; width: 120%; z-index: 2; }
+#header .top .container .member li .login .dropdown ul { display: none; position: absolute; top: calc(100% + 10px); left: 0; background-color: #000; width: calc(100% + 25px); z-index: 2; }
 /* line 183, ../../sass/_header.scss */
 #header .top .container .member li .login .dropdown ul li { text-align: center; display: block; padding: 20px 10px; border: 0; }
 /* line 196, ../../sass/_header.scss */

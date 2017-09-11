@@ -178,7 +178,7 @@
                                 top: calc(100% + 10px);
                                 left: 0;
                                 background-color: #000;
-                                width: 120%;
+                                width: calc(100% + 25px);
                                 z-index: 2;
                                 li {
                                     text-align: center;
