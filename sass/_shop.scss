@@ -305,6 +305,10 @@
                                     @include flex-colum(1,
                                     10px);
                                 }
+                                li {
+                                    flex-basis: 100%;
+                                    margin-right: 0;
+                                }
                             }
                         }
                     }

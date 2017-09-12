@@ -106,14 +106,9 @@
     ul {
         // 瀑布流隔線 _mixin.scss
         @include flex-colum(4, 10px);
-        @include breakpoint(pad) {
-            @include flex-colum(2, 10px);
-        }
-        @include breakpoint(mobile) {
-            @include flex-colum(1, 10px);
-        }
+        display: flex;
+        flex-wrap: wrap;
         li {
-            // width: calc(100% - 5px);
             font-size: 12px;
             overflow: hidden;
             display: inline-block;
@@ -123,7 +118,20 @@
             margin-bottom: 10px;
             border-radius: 5px;
             transition: .2s;
-            min-width: 100%;
+            flex-basis: calc(100% / 4 - 10px * 3 / 4);
+            margin-right: 10px;
+            &:nth-child(4n) {
+                margin-right: 0px;
+            }
+            @include breakpoint(pad) {
+                &:nth-child(even) {
+                    margin-right: 0px;
+                }
+                flex-basis: calc(100% / 2 - 10px);
+            }
+            @include breakpoint(mobile) {
+                flex-basis: calc(100%);
+            }
             &:hover {
                 box-shadow: 0px 0px 8px 1px rgba(100, 100, 100, 0.3);
             }

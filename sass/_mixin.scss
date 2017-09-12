@@ -44,10 +44,11 @@
 }
 
 // 瀑布流隔線
-@mixin flex-colum($column, $gap) {
-    -ms-flex-direction: column;
+@mixin flex-colum($row, $gap) {
+    flex-direction: row;
+    -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
-    @include column-count($column);
+    @include column-count($row);
     @include column-gap($gap);
 }
 
