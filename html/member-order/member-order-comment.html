@@ -8,74 +8,24 @@
     <title>We choose</title>
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
-
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../js/gobal.js"></script>
+    </script>
+    <script>
+        $(function() {
+            $("#header").load("../../html/home/head.html");
+            $("#footer").load("../../html/home/footer.html");
+
+        });
+    </script>
 </head>
 
 <body>
 
     <div id="wrap">
         <!-- 導覽列-->
-        <div id="header">
-            <div class="top">
-                <div class="container">
-                    <form action="" class="search">
-                        <i class="fa-search fa"></i>
-                        <input type="text" name="" value="" placeholder="Search">
-                    </form>
-                    <!--會員功能導覽  -->
-                    <div class="member">
-                        <ul>
-                            <li>
-
-                                <div class="buy">
-                                    <!--購物車內數量  -->
-                                    <a href="#">
-                                        <span>3</span>
-                                    </a>
-                                    <!--結帳  -->
-                                    <a href="#">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-
-                            </li>
-                            <li>
-
-                                <div class="login">
-                                    <!--訊息數量  -->
-                                    <a href="#">
-                                        <span>90</span>
-                                    </a>
-                                    <a href="">Araon Lin</a>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sub">
-                <div class="container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../Content/img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">農業食材</a></li>
-                            <li><a href="#">友善傢俱</a></li>
-                            <li><a href="#">生鮮蔬果</a></li>
-                            <li><a href="#">趣味食玩</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+        <div id="header"></div>
         <div id="content">
             <div class="bread">
                 <!--麵包屑  -->
@@ -92,44 +42,44 @@
                     <div class="container">
                         <ul class="tab">
                             <li>
-                                <a href="#">
+                                <a href="../../html/member-edit/member-edit-index.html">
                                 會員資料管理
                             </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="../../html/member-store/member-store.html">
                                 個人友善商店
                             </a>
                             </li>
                             <li class="active">
-                                <a href="#">
+                                <a href="../../html/member-order/member-order.html">
                                 訂單管理
                             </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="../../html/member-store/member-coupon.html">
                                 購物金管理
                             </a>
                             </li>
                         </ul>
                         <ul class="sub-tab">
                             <li>
-                                <a href="member-order.html">跟團中</a>
+                                <a href="../../html/member-order/member-order.html">跟團中</a>
                             </li>
                             <li>
                                 <!-- span裡的數量代表未讀的數量 不是筆數 -->
                                 <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
                                 <!-- class="redpoint" -->
-                                <a href="member-order-transport.html"><span class="redpoint">3</span>出貨中</a>
+                                <a href="../../html/member-order/member-order-transport.html"><span class="redpoint">3</span>出貨中</a>
                             </li>
                             <li>
-                                <a href="member-order-pick.html"><span class="redpoint">4</span>待取貨</a>
+                                <a href="../../html/member-order/member-order-pick.html"><span class="redpoint">4</span>待取貨</a>
                             </li>
                             <li class="active">
-                                <a href="member-order-comment.html"><span class="">0</span>待評分</a>
+                                <a href="../../html/member-order/member-order-comment.html"><span class="">0</span>待評分</a>
                             </li>
                             <li>
-                                <a href="member-order-history.html">訂單記錄</a>
+                                <a href="../../html/member-order/member-order-history.html">訂單記錄</a>
                             </li>
 
                         </ul>
@@ -291,30 +241,7 @@
         </div>
 
         <!--底部 footer  -->
-        <div id="footer">
-            <div class="footer-menu">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="../../Content/img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">農業食材</a></li>
-                            <li><a href="#">友善傢俱</a></li>
-                            <li><a href="#">生鮮蔬果</a></li>
-                            <li><a href="#">趣味食玩</a></li>
-                            <li><a href="#">常見問題</a></li>
-                            <li><a href="#">聯絡我們</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom">
-                copyright © 2017. All rights reserved.
-            </div>
-        </div>
+        <div id="footer"></div>
     </div>
 </body>
 
