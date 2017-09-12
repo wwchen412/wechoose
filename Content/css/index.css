@@ -1,28 +1,28 @@
 @charset "UTF-8";
-/* line 5, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
-/* line 22, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html { line-height: 1; }
 
-/* line 24, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul { list-style: none; }
 
-/* line 26, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table { border-collapse: collapse; border-spacing: 0; }
 
-/* line 28, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
 
-/* line 30, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote { quotes: none; }
-/* line 103, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
 
-/* line 32, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img { border: none; }
 
-/* line 116, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
 /* line 2, ../../sass/_reset.scss */
@@ -291,126 +291,129 @@ a.send-msg img { width: 20px; vertical-align: middle; }
 #login-modal .modal-inner.unchoose { display: none; }
 
 /* line 69, ../../sass/_lightbox.scss */
-input.error { border-color: #f00 !important; background: #FFEEEE !important; }
+input.error { border-color: #f00 !important; }
 
-/* line 74, ../../sass/_lightbox.scss */
+/* line 73, ../../sass/_lightbox.scss */
 label.error { color: #f00 !important; }
 
-/* line 79, ../../sass/_lightbox.scss */
+/* line 77, ../../sass/_lightbox.scss */
+.input-wrap.error { border-color: #f00; }
+
+/* line 82, ../../sass/_lightbox.scss */
 .member-sotre-lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4); width: 100%; height: 100%; z-index: 1000; display: none; box-sizing: border-box; overflow-y: scroll; text-align: center; padding: 40px; text-align: center; }
-/* line 83, ../../sass/_lightbox.scss */
+/* line 86, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.active { display: block; }
-/* line 88, ../../sass/_lightbox.scss */
+/* line 91, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.donate .lightbox-inner { max-width: 385px; min-width: 280px; }
-/* line 92, ../../sass/_lightbox.scss */
+/* line 95, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.donate h3 { border-bottom: 2px dashed RGB(229, 178, 61); text-align: center; line-height: 2; }
-/* line 97, ../../sass/_lightbox.scss */
+/* line 100, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.donate h4 { padding: 20px 0; text-align: center; }
-/* line 101, ../../sass/_lightbox.scss */
+/* line 104, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.donate input { width: 100%; appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; line-height: 1.5; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding-left: 10px; box-sizing: border-box; }
 /* line 41, ../../sass/_mixin.scss */
 .member-sotre-lightbox.donate input:focus { outline-offset: 0; }
-/* line 113, ../../sass/_lightbox.scss */
+/* line 116, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive .lightbox-inner { max-width: 385px; min-width: 280px; }
-/* line 117, ../../sass/_lightbox.scss */
+/* line 120, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive h3 { border-bottom: 2px dashed RGB(229, 178, 61); text-align: center; line-height: 2; }
-/* line 122, ../../sass/_lightbox.scss */
+/* line 125, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive h4 { padding: 20px 0; text-align: center; }
-/* line 126, ../../sass/_lightbox.scss */
+/* line 129, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive label { font-size: 0; }
-/* line 128, ../../sass/_lightbox.scss */
+/* line 131, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive label p { width: 80px; display: inline-block; font-size: 1rem; }
-/* line 133, ../../sass/_lightbox.scss */
+/* line 136, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive label input { width: calc(100% - 80px); }
-/* line 137, ../../sass/_lightbox.scss */
+/* line 140, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.receive input { width: calc(100%); display: inline-block; appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; line-height: 1.5; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding-left: 10px; box-sizing: border-box; margin-bottom: 10px; }
 /* line 41, ../../sass/_mixin.scss */
 .member-sotre-lightbox.receive input:focus { outline-offset: 0; }
-/* line 149, ../../sass/_lightbox.scss */
+/* line 152, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .lightbox-inner { max-width: 984px; padding: 20px; display: inline-block; vertical-align: middle; margin: auto; text-align: left; position: relative; border-radius: 10px; background-color: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-/* line 160, ../../sass/_lightbox.scss */
-.member-sotre-lightbox .lightbox-inner h2 { text-align: center; }
 /* line 163, ../../sass/_lightbox.scss */
-.member-sotre-lightbox .lightbox-inner h2 + ul { text-align: center; margin: 10px 0 20px; }
+.member-sotre-lightbox .lightbox-inner h2 { text-align: center; }
 /* line 166, ../../sass/_lightbox.scss */
+.member-sotre-lightbox .lightbox-inner h2 + ul { text-align: center; margin: 10px 0 20px; }
+/* line 169, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .lightbox-inner h2 + ul li { display: inline-block; padding: 5px 10px; border-right: 1px solid RGB(51, 51, 51); }
-/* line 170, ../../sass/_lightbox.scss */
+/* line 173, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .lightbox-inner h2 + ul li:last-child { border: 0; }
-/* line 175, ../../sass/_lightbox.scss */
+/* line 178, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .lightbox-inner .main-btn { margin: 10px auto; display: block; }
-/* line 180, ../../sass/_lightbox.scss */
+/* line 183, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card { display: flex; flex-wrap: wrap; justify-content: flex-start; overflow: scroll; }
-/* line 186, ../../sass/_lightbox.scss */
+/* line 189, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li { width: calc(100% / 4 - 10px * 3 / 4); margin-right: 10px; margin-bottom: 10px; background: rgba(170, 170, 170, 0.2); padding: 10px; box-sizing: border-box; position: relative; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-/* line 195, ../../sass/_lightbox.scss */
+/* line 198, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li:nth-child(4n) { margin-right: 0; }
-@media only screen and (max-width: 768px) { /* line 186, ../../sass/_lightbox.scss */
+@media only screen and (max-width: 768px) { /* line 189, ../../sass/_lightbox.scss */
   .member-sotre-lightbox .item-card li { width: calc(100% / 2 - 10px / 2); }
-  /* line 200, ../../sass/_lightbox.scss */
+  /* line 203, ../../sass/_lightbox.scss */
   .member-sotre-lightbox .item-card li:nth-child(even) { margin-right: 0; } }
-@media only screen and (max-width: 467px) { /* line 186, ../../sass/_lightbox.scss */
+@media only screen and (max-width: 467px) { /* line 189, ../../sass/_lightbox.scss */
   .member-sotre-lightbox .item-card li { width: 100%; margin-right: 0; } }
-/* line 208, ../../sass/_lightbox.scss */
+/* line 211, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li button { margin-top: 10px; width: 100%; }
-/* line 212, ../../sass/_lightbox.scss */
-.member-sotre-lightbox .item-card li h4 { display: inline-block; }
 /* line 215, ../../sass/_lightbox.scss */
+.member-sotre-lightbox .item-card li h4 { display: inline-block; }
+/* line 218, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li input[type="checkbox"] { width: 20px; height: 20px; display: inline-block; vertical-align: middle; }
-/* line 221, ../../sass/_lightbox.scss */
+/* line 224, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li input[type="checkbox"]:checked:before { content: '✓'; text-align: center; display: block; font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; }
-/* line 231, ../../sass/_lightbox.scss */
+/* line 234, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li input { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; box-sizing: border-box; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; vertical-align: middle; }
 /* line 41, ../../sass/_mixin.scss */
 .member-sotre-lightbox .item-card li input:focus { outline-offset: 0; }
-/* line 239, ../../sass/_lightbox.scss */
-.member-sotre-lightbox .item-card li.selected img { opacity: .5; }
 /* line 242, ../../sass/_lightbox.scss */
+.member-sotre-lightbox .item-card li.selected img { opacity: .5; }
+/* line 245, ../../sass/_lightbox.scss */
 .member-sotre-lightbox .item-card li.selected input { display: none; }
-@media only screen and (max-width: 467px) { /* line 248, ../../sass/_lightbox.scss */
+@media only screen and (max-width: 467px) { /* line 251, ../../sass/_lightbox.scss */
   .member-sotre-lightbox.message-center { padding: 20px; } }
-/* line 252, ../../sass/_lightbox.scss */
+/* line 255, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner { min-width: 600px; box-sizing: border-box; position: relative; }
-@media only screen and (max-width: 768px) { /* line 252, ../../sass/_lightbox.scss */
+@media only screen and (max-width: 768px) { /* line 255, ../../sass/_lightbox.scss */
   .member-sotre-lightbox.message-center .lightbox-inner { min-width: 100%; } }
-/* line 259, ../../sass/_lightbox.scss */
+/* line 262, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner a.remove { width: 1.2rem; height: 1.2rem; line-height: 1.2rem; padding: 5px; text-align: center; background-color: #000; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; color: #fff; cursor: pointer; display: inline-block; position: absolute; top: 20px; right: 20px; }
-/* line 276, ../../sass/_lightbox.scss */
-.member-sotre-lightbox.message-center .lightbox-inner hr { margin-bottom: 0; }
 /* line 279, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner hr { margin-bottom: 0; }
+/* line 282, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area { overflow: scroll; max-height: 600px; padding: 20px; box-sizing: border-box; background: #fafafa; }
-@media only screen and (max-width: 467px) { /* line 279, ../../sass/_lightbox.scss */
+@media only screen and (max-width: 467px) { /* line 282, ../../sass/_lightbox.scss */
   .member-sotre-lightbox.message-center .lightbox-inner .msg-area { max-height: 60vh; } }
-/* line 288, ../../sass/_lightbox.scss */
+/* line 291, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li { clear: both; float: left; max-width: 40%; margin-bottom: 20px; }
-@media only screen and (max-width: 768px) { /* line 288, ../../sass/_lightbox.scss */
+@media only screen and (max-width: 768px) { /* line 291, ../../sass/_lightbox.scss */
   .member-sotre-lightbox.message-center .lightbox-inner .msg-area li { max-width: 90%; } }
-/* line 296, ../../sass/_lightbox.scss */
+/* line 299, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li .time { margin: 10px 0 5px; color: #999; }
-/* line 300, ../../sass/_lightbox.scss */
+/* line 303, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li .dailog { padding: 5px 10px; box-sizing: border-box; background-color: RGB(238, 238, 238); -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; box-shadow: 2px 2px 10px 0 lightgray; }
-/* line 306, ../../sass/_lightbox.scss */
+/* line 309, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li .dailog p { line-height: 180%; }
-/* line 310, ../../sass/_lightbox.scss */
+/* line 313, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me { float: right; }
-/* line 312, ../../sass/_lightbox.scss */
-.member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .time { text-align: right; }
 /* line 315, ../../sass/_lightbox.scss */
+.member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .time { text-align: right; }
+/* line 318, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .dailog { background-color: RGB(229, 178, 61); }
-/* line 317, ../../sass/_lightbox.scss */
+/* line 320, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .msg-area li.me .dailog p { color: #fff; }
-/* line 324, ../../sass/_lightbox.scss */
+/* line 327, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .text-msg { padding: 20px 0 0; box-sizing: border-box; border-top: 1px solid rgba(170, 170, 170, 0.2); font-size: 0; }
-/* line 329, ../../sass/_lightbox.scss */
+/* line 332, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .text-msg input { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; width: calc(100% - 72px - 5px); border: 1px solid #999; padding: 10px; box-sizing: border-box; display: inline-block; margin-right: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
 /* line 41, ../../sass/_mixin.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .text-msg input:focus { outline-offset: 0; }
-/* line 339, ../../sass/_lightbox.scss */
+/* line 342, ../../sass/_lightbox.scss */
 .member-sotre-lightbox.message-center .lightbox-inner .text-msg button { display: inline-block; width: 72px; }
 
-/* line 349, ../../sass/_lightbox.scss */
+/* line 352, ../../sass/_lightbox.scss */
 body.active, html.active, .container.active, .inner-container.active { height: 100%; width: 100%; }
 
-/* line 357, ../../sass/_lightbox.scss */
+/* line 360, ../../sass/_lightbox.scss */
 #wrap.active { height: 100%; overflow: auto; }
 
 /* line 2, ../../sass/_shop.scss */
@@ -1308,33 +1311,33 @@ body.active, html.active, .container.active, .inner-container.active { height: 1
 /* line 34, ../../sass/_contact.scss */
 #contact-form form .form-tag .input-wrap label { margin-bottom: 20px; display: block; }
 /* line 38, ../../sass/_contact.scss */
-#contact-form form .form-tag .input-wrap input[type="text"], #contact-form form .form-tag .input-wrap textarea { width: 100%; appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; padding: 10px 0; }
+#contact-form form .form-tag .input-wrap input[type="text"], #contact-form form .form-tag .input-wrap input[type="email"], #contact-form form .form-tag .input-wrap textarea { width: 100%; appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; padding: 10px 0; }
 /* line 41, ../../sass/_mixin.scss */
-#contact-form form .form-tag .input-wrap input[type="text"]:focus, #contact-form form .form-tag .input-wrap textarea:focus { outline-offset: 0; }
-/* line 43, ../../sass/_contact.scss */
-#contact-form form .form-tag .input-wrap input[type="text"]:focus, #contact-form form .form-tag .input-wrap textarea:focus { outline: none; }
-/* line 46, ../../sass/_contact.scss */
-#contact-form form .form-tag .input-wrap input[type="text"].onfocus, #contact-form form .form-tag .input-wrap textarea.onfocus { border: 1px solid RGB(229, 178, 61); color: RGB(229, 178, 61); }
-/* line 51, ../../sass/_contact.scss */
+#contact-form form .form-tag .input-wrap input[type="text"]:focus, #contact-form form .form-tag .input-wrap input[type="email"]:focus, #contact-form form .form-tag .input-wrap textarea:focus { outline-offset: 0; }
+/* line 44, ../../sass/_contact.scss */
+#contact-form form .form-tag .input-wrap input[type="text"]:focus, #contact-form form .form-tag .input-wrap input[type="email"]:focus, #contact-form form .form-tag .input-wrap textarea:focus { outline: none; }
+/* line 47, ../../sass/_contact.scss */
+#contact-form form .form-tag .input-wrap input[type="text"].onfocus, #contact-form form .form-tag .input-wrap input[type="email"].onfocus, #contact-form form .form-tag .input-wrap textarea.onfocus { border: 1px solid RGB(229, 178, 61); color: RGB(229, 178, 61); }
+/* line 52, ../../sass/_contact.scss */
 #contact-form form .form-tag .input-wrap .check-control { display: inline-block; width: calc(100% / 5 - 4px); }
-@media only screen and (max-width: 467px) { /* line 51, ../../sass/_contact.scss */
+@media only screen and (max-width: 467px) { /* line 52, ../../sass/_contact.scss */
   #contact-form form .form-tag .input-wrap .check-control { width: 100%; } }
-/* line 58, ../../sass/_contact.scss */
+/* line 59, ../../sass/_contact.scss */
 #contact-form form .form-tag .input-wrap input[type="checkbox"] { overflow: hidden; }
-/* line 60, ../../sass/_contact.scss */
+/* line 61, ../../sass/_contact.scss */
 #contact-form form .form-tag .input-wrap input[type="checkbox"]:checked { border: 0; }
-/* line 62, ../../sass/_contact.scss */
+/* line 63, ../../sass/_contact.scss */
 #contact-form form .form-tag .input-wrap input[type="checkbox"]:checked:before { background: RGB(229, 178, 61); color: #fff; }
-/* line 70, ../../sass/_contact.scss */
+/* line 71, ../../sass/_contact.scss */
 #contact-form form button { display: block; margin: 0 auto; }
 
-/* line 78, ../../sass/_contact.scss */
+/* line 79, ../../sass/_contact.scss */
 input[type="checkbox"] { appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; border: 1px solid #999; box-sizing: border-box; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; vertical-align: middle; width: 20px; height: 20px; display: inline-block; vertical-align: middle; background: #fff; }
 /* line 41, ../../sass/_mixin.scss */
 input[type="checkbox"]:focus { outline-offset: 0; }
-/* line 90, ../../sass/_contact.scss */
+/* line 91, ../../sass/_contact.scss */
 input[type="checkbox"]:checked:before { content: '✓'; text-align: center; display: block; font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; }
-/* line 99, ../../sass/_contact.scss */
+/* line 100, ../../sass/_contact.scss */
 input[type="checkbox"]:focus { outline: none; }
 
 /* line 1, ../../sass/_help.scss */
