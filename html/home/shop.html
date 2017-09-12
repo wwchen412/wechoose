@@ -8,7 +8,17 @@
     <title>We choose</title>
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/gobal.js"></script>
+    </script>
+    <script>
+        $(function() {
+            $("#header").load("../home/head.html");
+            $("#footer").load("../home/footer.html");
 
+        });
+    </script>
 
 </head>
 
@@ -18,63 +28,7 @@
     <div id="wrap">
         <!-- 導覽列-->
         <div id="header">
-            <div class="top">
-                <div class="container">
-                    <form action="" class="search">
-                        <i class="fa-search fa"></i>
-                        <input type="text" name="" value="" placeholder="Search">
-                    </form>
-                    <!--會員功能導覽  -->
-                    <div class="member">
-                        <ul>
-                            <li>
 
-                                <div class="buy">
-                                    <!--購物車內數量  -->
-                                    <a href="#">
-                                        <span>3</span>
-                                    </a>
-                                    <!--結帳  -->
-                                    <a href="#">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-
-                            </li>
-                            <li>
-
-                                <div class="login">
-                                    <!--訊息數量  -->
-                                    <a href="#">
-                                        <span>90</span>
-                                    </a>
-                                    <a href="">Araon Lin</a>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sub">
-                <div class="container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="../../Content/img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">農業食材</a></li>
-                            <li><a href="#">友善傢俱</a></li>
-                            <li><a href="#">生鮮蔬果</a></li>
-                            <li><a href="#">趣味食玩</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
 
         </div>
 
@@ -113,7 +67,7 @@
                                 <p>＊使用<a href="">找集購</a>可選擇零散組數喔！</p>
                             </div>
                             <div class="right">
-                                <form action="">
+                                <form action="../../html/cart/cart.html">
                                     <label for="choose1">
                                         <input type="radio" id="choose1" name="shop-num" value="5">
                                         5盒 500元<span>平均單組100</span>
@@ -127,7 +81,8 @@
                                         <input type="radio" id="choose3" name="shop-num" value="15">
                                         30盒 2250元<span>平均單組75</span>
                                     </label>
-                                    <button class="main-btn">加入購物車</button>
+                                    <!-- 加入購物車後轉跳頁面 -->
+                                    <button class="main-btn" type="submit">加入購物車</button>
                                 </form>
 
                             </div>
@@ -264,30 +219,7 @@
             </div>
 
         </div>
-        <div id="footer">
-            <div class="footer-menu">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="../../Content/img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">農業食材</a></li>
-                            <li><a href="#">友善傢俱</a></li>
-                            <li><a href="#">生鮮蔬果</a></li>
-                            <li><a href="#">趣味食玩</a></li>
-                            <li><a href="help.html">常見問題</a></li>
-                            <li><a href="contactus.html">聯絡我們</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom">
-                copyright © 2017. All rights reserved.
-            </div>
-        </div>
+        <div id="footer"></div>
     </div>
 </body>
 <!-- jQuery JS 1.12.4 -->
