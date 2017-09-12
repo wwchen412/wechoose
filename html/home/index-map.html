@@ -8,9 +8,9 @@
     <title>We choose</title>
     <link rel="stylesheet" href="../../Content/css/index.css">
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
-
-    <!-- fb login -->
-    <div id="fb-root"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+    <script src="../../js/markerclusterer.js"></script>
     <script>
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -25,7 +25,8 @@
 
 
 <body>
-
+    <!-- fb login -->
+    <div id="fb-root"></div>
 
     <div id="wrap">
         <!-- 導覽列-->
@@ -300,10 +301,13 @@
                 <img src="../../Content/img/logo.svg" alt="" class="rwd-img">
             </div>
             <h2>會員登入</h2>
-            <form action="">
-                <input type="email" placeholder="請輸入電子信箱">
-                <input type="password" placeholder="請輸入密碼">
-                <button type="button" class="main-btn">登入</button>
+            <form action="" method="get" id="signin" enctype="multipart/form-data" name="signin">
+                <div class="form-group">
+                    <input type="email" placeholder="請輸入電子信箱" name="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="請輸入密碼" name="password"></div>
+                <button type="submit" class="main-btn">登入</button>
             </form>
             <h5>或使用社群帳號登入</h5>
             <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
@@ -318,11 +322,20 @@
                 <img src="../../Content/img/logo.svg" alt="" class="rwd-img">
             </div>
             <h2>會員註冊</h2>
-            <form action="">
-                <input type="email" placeholder="輸入電子信箱">
-                <input type="password" placeholder="輸入密碼">
-                <input type="password" placeholder="密碼確認">
-                <button type="button" class="main-btn">確定註冊</button>
+            <form action="" method="get" id="signup" enctype="multipart/form-data" name="signup">
+                <div class="form-group">
+                    <input type="email" placeholder="輸入電子信箱" name="email">
+                </div>
+
+                <div class="form-group">
+
+                    <input type="password" name="user_pwd" id="user-pwd-input" placeholder="輸入密碼">
+                </div>
+                <div class="form-group">
+
+                    <input type="password" name="user_pwd_again" placeholder="密碼確認">
+                </div>
+                <button type="submit" class="main-btn">確定註冊</button>
             </form>
             <h5>或使用社群帳號註冊</h5>
             <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
@@ -338,8 +351,8 @@
             </div>
             <h2>會員註冊</h2>
             <form action="">
-                <input type="email" placeholder="輸入電子信箱">
-                <button type="button" class="main-btn">確認送出</button>
+                <input type="email" placeholder="輸入電子信箱" required>
+                <button type="submit" class="main-btn">確認送出</button>
             </form>
 
             <div class="others-link">
@@ -349,11 +362,10 @@
         </div>
     </div>
 
-    <!-- jQuery JS 1.12.4 -->
-    <script src="../../js/markerclusterer.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
+    <!-- goole map API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2RTxCY2WYxoHkPkeVE8RVLiK-sbqAzKM&callback=initMap" type="text/javascript" async defer></script>
     <script>
         // google map
         var map;
@@ -400,8 +412,6 @@
             });
         }
     </script>
-    <!-- goole map API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2RTxCY2WYxoHkPkeVE8RVLiK-sbqAzKM&callback=initMap" type="text/javascript" async defer></script>
     <script>
         //  登入光箱
         $(function() {
@@ -434,6 +444,79 @@
                 $(this).children().addClass('unchoose');
             });
         })
+    </script>
+    <!-- 表單驗證 -->
+    <script>
+        $(document).ready(function() {
+            // 登入表單
+            $('#signin').validate({
+                errorPlacement: function(error, element) {
+                    element.closest('.form-group').append(error);
+                },
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+
+                    }
+                },
+                // rules end
+                messages: {
+                    email: {
+                        required: "請輸入註冊時使用之信箱",
+                        email: "請輸入正確的信箱格式"
+
+                    },
+                    password: {
+                        required: "請輸入密碼",
+
+                    }
+                }
+            });
+            // end #signin validate
+            // 註冊表單
+            $('#signup').validate({
+                errorPlacement: function(error, element) {
+                    element.closest('.form-group').append(error);
+                },
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    user_pwd: {
+                        required: true,
+                        minlength: 6
+
+                    },
+                    user_pwd_again: {
+                        required: true,
+                        equalTo: '#user-pwd-input'
+                    }
+                },
+                // rules end
+                messages: {
+                    email: {
+                        required: "請輸入信箱",
+                        email: "請輸入正確的信箱格式"
+
+                    },
+                    user_pwd: {
+                        required: "請輸入密碼",
+                        minlength: "請至少輸入6個字元"
+                    },
+                    user_pwd_again: {
+                        required: "請再一次輸入密碼",
+                        minlength: "請至少輸入6個字元",
+                        equalTo: "輸入的密碼不相符"
+                    }
+                } //end message
+            });
+            // end #signin validate
+        });
     </script>
 </body>
 

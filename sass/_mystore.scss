@@ -68,6 +68,8 @@
             .intro {
                 background: $opacitycolor;
                 min-height: 300px;
+                padding: 15px;
+                box-sizing: border-box;
             }
         }
         .my-store-list {
