@@ -820,6 +820,7 @@
 // 個人友善商店
 // 我的商店
 .member-store {
+    padding: 10px 0;
     .my-info {
         .inner-container {
             .info {
@@ -1058,11 +1059,26 @@
                 @include breakpoint(mobile) {
                     width: 100%;
                 }
+                .item-img {
+                    width: 100%;
+                    padding-bottom: 100%;
+                    height: 0;
+                    position: relative;
+                    z-index: 2;
+                    @include border-radius(10px);
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                    }
+                }
             }
             .right {
                 display: inline-block;
                 vertical-align: top;
-                width: calc(65% - 10px / 2);
+                width: calc(70% - 10px / 2);
                 margin-left: 10px;
                 @include breakpoint(mobile) {
                     width: 100%;
@@ -1099,6 +1115,7 @@
                     li {
                         color: #fff;
                         display: inline-block;
+                        width: 50%;
                         label {
                             font-size: .8rem;
                         }
@@ -1169,6 +1186,7 @@
                                 box-sizing: border-box;
                                 margin: 0 10px 5px 0;
                                 @include border-radius(5px);
+                                @include appearance(menulist);
                             }
                         }
                     }
@@ -1188,6 +1206,38 @@
             color: #fff;
             text-align: center;
             padding: 3px 0;
+        }
+    }
+    // 開團成功
+    .form-share {
+        max-width: 500px;
+        margin: 50px auto 0;
+        input {
+            @include custom_select;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            background-color: $opacitycolor;
+            width: calc(100% - 110px);
+            display: inline-block;
+            @include border-radius(5px);
+            &+button {
+                display: inline-block;
+            }
+        }
+        .share-btns {
+            margin: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &>* {
+                vertical-align: middle;
+            }
+            .scoail-btn-share {
+                width: 40px;
+                &:hover {
+                    opacity: .8;
+                }
+            }
         }
     }
 }
