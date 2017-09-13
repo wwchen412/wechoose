@@ -74,6 +74,20 @@ input:focus {
     }
 }
 
+.cancel-btn {
+    @include custom_select;
+    @include border-radius(5px);
+    background: transparent;
+    color: $gray;
+    padding: 10px 20px;
+    border: 1px solid $gray;
+    cursor: pointer;
+    &:hover {
+        background: $opacitycolor;
+        color: $gray;
+    }
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
