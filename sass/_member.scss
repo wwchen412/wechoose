@@ -1249,8 +1249,17 @@
             }
             .scoail-btn-share {
                 width: 40px;
+                position: relative;
                 &:hover {
                     opacity: .8;
+                }
+                &.line {
+                    iframe {
+                        opacity: 0;
+                        position: absolute !important;
+                        top: 0;
+                        left: 0;
+                    }
                 }
             }
         }

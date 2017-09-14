@@ -22,6 +22,27 @@
 </head>
 
 <body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '256834864809662',
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div id="wrap">
         <!-- 導覽列-->
@@ -101,30 +122,33 @@
                             <p>可將連結分享給團友及朋友加速集購速度喔！</p>
                         </div>
                         <div class="form-share">
-                            <input type="text" value="http://localhost:8080/html/home/shop.html">
+                            <input type="text" value="http://localhost:8080/html/home/shop.html" id="sharelink">
                             <button class="main-btn copylink">複製連結</button>
                             <div class="share-btns">
                                 <h4>分享給朋友</h4>
-                                <div class="scoail-btn-share">
-                                    <a href="">
-                                        <img src="../../Content/img/share01.svg" alt="">
-                                    </a>
+                                <div class="scoail-btn-share" id="shareBtn">
+
+                                    <img src="../../Content/img/share01.svg" alt="">
+
                                 </div>
-                                <div class="scoail-btn-share">
-                                    <a href="">
-                                        <img src="../../Content/img/share02.svg" alt="">
-                                    </a>
+                                <div class="scoail-btn-share" id="sendBtn">
+
+                                    <img src="../../Content/img/share02.svg" alt="">
+
                                 </div>
 
-                                <div class="scoail-btn-share">
-                                    <a href="">
-                                        <img src="../../Content/img/share03.svg" alt="">
-                                    </a>
+                                <div class="scoail-btn-share line">
+                                    <img src="../../Content/img/share03.svg" alt="">
+                                    <!-- data-url 要改成input 裡的連結 -->
+                                    <div class="line-it-button" data-lang="zh_Hant" data-type="share-d" data-url="http://localhost:8080/html/home/shop.html" style="display: none;"></div>
+
+
                                 </div>
                                 <div class="scoail-btn-share">
-                                    <a href="">
-                                        <img src="../../Content/img/share04.svg" alt="">
-                                    </a>
+                                    <!-- url{} 要改成input 裡的連結 -->
+                                    <a href="https://plus.google.com/share?url={http://localhost:8080/html/home/shop.html}" onclick="javascript:window.open(this.href,
+                                        '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="../../Content/img/share04.svg" alt=""></a>
+
                                 </div>
                             </div>
                             <div class="center" style="margin-bottom:40px;">
@@ -148,10 +172,28 @@
 
         </div>
     </div>
-    <!-- jQuery JS 1.12.4 -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/gobal.js">
-    </script> -->
+    <!-- line cdn -->
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+    <!-- fb cdn -->
+    <script>
+        // input 裡面的連結
+        var share_link = document.getElementById("sharelink").value;
+
+
+        document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: share_link,
+            }, function(response) {});
+        }
+        document.getElementById('sendBtn').onclick = function() {
+            FB.ui({
+                method: 'send',
+                link: share_link,
+            });
+        }
+    </script>
 </body>
 
 </html>
