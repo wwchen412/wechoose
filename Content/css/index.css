@@ -875,10 +875,6 @@ body.active, html.active, .container.active, .inner-container.active { height: 1
 .member-order.member-shop-order ul li .content .form-info .edit-store-order:hover { opacity: .6; transform: rotate(540deg); }
 @media only screen and (max-width: 467px) { /* line 279, ../../sass/_member.scss */
   .member-order.member-shop-order ul li .content .form-info { width: 100%; } }
-/* line 360, ../../sass/_member.scss */
-.member-order.member-shop-order ul li.edit .title .share { display: none; }
-/* line 365, ../../sass/_member.scss */
-.member-order.member-shop-order ul li.edit .content .close-num { display: block; }
 /* line 371, ../../sass/_member.scss */
 .member-order.member-shop-order ul li.fail .title .share button { background: RGB(229, 178, 61); }
 /* line 380, ../../sass/_member.scss */

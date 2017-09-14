@@ -355,18 +355,6 @@
                         }
                     }
                 }
-                &.edit {
-                    .title {
-                        .share {
-                            display: none;
-                        }
-                    }
-                    .content {
-                        .close-num {
-                            display: block;
-                        }
-                    }
-                }
                 &.fail {
                     .title .share button {
                         background: $themecolor;
