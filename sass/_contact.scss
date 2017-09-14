@@ -102,6 +102,39 @@ input[type="checkbox"] {
     }
 }
 
+input[type="radio"] {
+    @include custom_select;
+    border: 1px solid $gray;
+    box-sizing: border-box;
+    @include border-radius(50%);
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    &:checked {
+        &:before {
+            content: '';
+            text-align: center;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 10px;
+            height: 10px;
+            background: $themecolor;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+        }
+    }
+}
+
 input[type="checkbox"]:disabled {
     background: #aaa;
 }
