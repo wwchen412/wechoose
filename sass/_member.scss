@@ -1150,9 +1150,9 @@
                         border: 1px solid $gray;
                         @include border-radius(5px);
                     }
-                    &.form-group {
-                        display: block;
-                    }
+                    // &.form-group {
+                    //     display: block;
+                    // }
                 }
                 // 聯絡資訊
                 .contact-form {

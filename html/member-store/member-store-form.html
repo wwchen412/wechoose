@@ -72,20 +72,23 @@
                                 <!-- span裡的數量代表未讀的數量 不是筆數 -->
                                 <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
                                 <!-- class="redpoint" -->
-                                <a href="../../html/member-store/member-order-transport.html"><span class="redpoint">3</span>開團中</a>
+                                <a href="../../html/member-store/member-store-order.html"><span class="redpoint">3</span>開團中</a>
                             </li>
                             <li>
 
-                                <a href="../../html/member-store/member-order-transport.html"><span class="redpoint">3</span>出貨中</a>
+                                <a href="../../html/member-store/member-store-transport.html"><span class="redpoint">3</span>出貨中</a>
                             </li>
                             <li>
-                                <a href="../../html/member-store/member-order-pick.html"><span class="redpoint">4</span>待取貨</a>
+                                <a href="../../html/member-store/member-store-pick.html"><span class="redpoint">4</span>待取貨</a>
                             </li>
                             <li>
-                                <a href="../../html/member-store/member-order-comment.html"><span class="">0</span>待評分</a>
+                                <a href="../../html/member-store/member-store-comment.html"><span class="">0</span>待評分</a>
                             </li>
                             <li>
-                                <a href="../../html/member-store/member-order-history.html">已完成訂單</a>
+                                <a href="../../html/member-store/member-store-history.html">已完成訂單</a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-store/member-store-money.html">回饋金管理</a>
                             </li>
 
                         </ul>
@@ -167,15 +170,16 @@
                                                 <h4>請選擇團購目標組數</h4>
                                                 <div class="form-group">
                                                     <label for="goal1">
-                                                       <input type="radio" id="goal1" name="goal">
+                                                        <!-- 最小的目標數 -->
+                                                       <input type="radio" id="goal1" name="goal" id="mingoal1" value="5">
                                                        5盒 500元 平均單組100
                                                     </label>
                                                     <label for="goal2">
-                                                            <input type="radio" id="goal2" name="goal">
+                                                            <input type="radio" id="goal2" name="goal" value="15">
                                                             15盒 1270元 平均單組85
                                                          </label>
                                                     <label for="goal3">
-                                                     <input type="radio" id="goal3" name="goal">
+                                                     <input type="radio" id="goal3" name="goal" value="30">
                                                      30盒 2250元 平均單組75
                                                     </label>
                                                 </div>
@@ -190,27 +194,26 @@
                                 <!-- 表單第二部分 -->
                                 <div class="block">
                                     <div class="inner-container ">
-                                        <div class="form-group">
-                                            <!-- 截止時間設定 -->
-                                            <div class="time percent50">
-                                                <label for="">
-                                                    <input type="checkbox" name="goal2"> 截止時間</label>
-                                                <label for="">
+
+                                        <!-- 截止時間設定 -->
+                                        <div class="time percent50 form-group">
+                                            <label for="">截止時間
+                                               
                                                      <input type="text" max="7"> 天
                                                     </label>
-                                                <label for="">
-                                                    <input type="text" max="23"> 小時
+                                            <label for="">
+                                                    <input type="text" max="24"> 小時
                                                     </label>
-                                            </div>
-                                            <!-- 達標數量設定 -->
-                                            <div class="goal-num percent50">
-                                                <label for="">
-                                                    <input type="checkbox" name="goal2"> 我們結單組數
-                                                    </label>
-                                                <label for=""> 
-                                                    <input type="text" max="7"> 天</label>
-                                            </div>
                                         </div>
+                                        <!-- 達標數量設定 -->
+                                        <div class="goal-num percent50 form-group">
+                                            <label for="">
+                                                    <input type="checkbox"> 我們結單組數
+                                                    </label>
+                                            <label for=""> 
+                                                    <input type="text" max="50" name="goal2" max="50" min="5">組</label>
+                                        </div>
+
                                         <p>＊可同時設定截止時間及最高結單數(以時間為優先)
                                         </p>
                                         <p>＊結單數無法小於目標組數</p>
@@ -254,15 +257,15 @@
                                                     </div>
 
                                                     <div class="contact-input form-group">
-                                                        <select name="" id="">
-                                                                    <option value="" selected>縣市</option>
-                                                                    <option value="">台北市</option>
-                                                                    <option value="">台北市</option>
-                                                                    <option value="">台北市</option>
+                                                        <select name="select1" id="" required="">
+                                                                    <option value="縣市" disabled selected >縣市</option>
+                                                                    <option value="台北市">台北市</option>
+                                                                    <option value="台北市">台北市</option>
+                                                                    <option value="台北市">台北市</option>
                                                                 </select>
-                                                        <select name="" id="">
-                                                                    <option value="">區域</option>
-                                                                        <option value="">中山區</option>
+                                                        <select name="select2" id="">
+                                                                    <option value="區域" disabled selected >區域</option>
+                                                                    <option value="中山區">中山區</option>
                                                                     </select>
                                                         <input type="text" placeholder="請輸入地址" name="address">
                                                     </div>
@@ -301,6 +304,19 @@
 
     <!-- 開集購表單驗證 -->
     <script>
+        jQuery.extend(jQuery.validator.messages, {
+
+            maxlength: $.validator.format("至多輸入 {0} 個字."),
+            minlength: $.validator.format("至少輸入 {0} 個字."),
+            rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
+            range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
+            max: $.validator.format("請輸入小於等於 {0} 的值."),
+            min: $.validator.format("請輸入大於等於 {0} 的值.")
+        });
+
+
+
+
         $(document).ready(function() {
 
             $('#set-form').validate({
@@ -327,13 +343,15 @@
                         required: true,
                         minlength: 1
                     },
-                    goal2: {
-                        required: true,
-                        minlength: 1
-                    },
                     goal: {
-                        required: true,
+                        required: true
 
+                    },
+                    select1: {
+                        required: true
+                    },
+                    select2: {
+                        required: true
                     }
                 },
                 messages: {
@@ -356,15 +374,15 @@
                         required: "請至少選擇一種運送方式"
 
                     },
-
                     goal: {
                         required: "請至少選擇一種結標目標",
                         minlength: "請至少選擇一種結標目標"
                     },
-                    goal2: {
-                        required: "請至少選擇一種結標目標",
-                        minlength: "請至少選擇一種結標目標"
-
+                    select1: {
+                        required: "請選擇縣市",
+                    },
+                    select2: {
+                        required: "請選擇地區",
                     }
                 }
             });
