@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>We choose</title>
+    <link rel="stylesheet" href="../../Content/css/index.css">
+    <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
+    <!-- jQuery JS 1.12.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+    <script src="../../js/gobal.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("../../html/home/head.html");
+            $("#footer").load("../../html/home/footer.html");
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- 導覽列-->
+        <div id="header"></div>
+        <div id="content">
+            <div class="bread">
+                <!--麵包屑  -->
+                <div class="container">
+                    <ol>
+                        <li><a href="">首頁</a></li>
+                        <li><a href="">個人友善商店</a></li>
+                        <li><a href="">我的商店</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <!-- 會員頁面 -->
+            <div class="member">
+                <div class="member-tab">
+                    <div class="container">
+                        <ul class="tab">
+                            <li>
+                                <a href="../../html/member-edit/member-edit-index.html">
+                                                會員資料管理
+                                                 </a>
+                            </li>
+                            <li class="active">
+                                <a href="../../html/member-store/member-store.html">
+                                                個人友善商店
+                                                </a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-order/member-order.html">
+                                                訂單管理
+                                                </a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-store/member-coupon.html">
+                                                購物金管理
+                                                 </a>
+                            </li>
+                        </ul>
+                        <ul class="sub-tab">
+                            <li class="active">
+                                <a href="../../html/member-store/member-store.html">我的商店</a>
+                            </li>
+                            <li>
+                                <!-- span裡的數量代表未讀的數量 不是筆數 -->
+                                <!-- 一但點了連結的頁面後 數字就會歸零 紅圈消失 -->
+                                <!-- class="redpoint" -->
+                                <a href="../../html/member-store/member-store-order.html"><span class="redpoint">3</span>開團中</a>
+                            </li>
+                            <li>
+
+                                <a href="../../html/member-store/member-store-transport.html"><span class="redpoint">3</span>出貨中</a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-store/member-store-pick.html"><span class="redpoint">4</span>待取貨</a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-store/member-store-comment.html"><span class="">0</span>待評分</a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-store/member-store-history.html">已完成訂單</a>
+                            </li>
+                            <li>
+                                <a href="../../html/member-store/member-store-money.html">回饋金管理</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- 開集購設定 -->
+                <div class="member-store">
+                    <div class="inner-container">
+                        <div class="form-title">
+                            <h2>開集購編輯</h2>
+
+                        </div>
+                        <!-- 開集購設定 -->
+                        <div class="form-setting">
+                            <form action="../../html/member-store/member-store-order.html" method="post" id="set-form">
+                                <!-- 表單第一部分 -->
+                                <div class="block">
+                                    <div class="left">
+                                        <div class="item-img">
+                                            <img src="../../Content/img/big-item.png" alt="" class="rwd-img">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+
+
+
+
+                                        <div class="percent50">
+                                            <h4>集購名稱：<span>XXXXX</span></h4>
+                                            <h4>商品名稱：<span>ＸＸＸＸ</span></h4>
+                                            <h4>商品規格：<span>100g/包</span></h4>
+                                            <h4>勾選團員可以的購買方式</h4>
+                                            <!-- 勾選運送方式 -->
+                                            <ul class="checkbox-group form-group">
+                                                <li>
+                                                    <label for="711">
+                                                     <input type="checkbox" id="711" name="transway" checked>
+                                                        7-11店到店
+                                                </label>
+                                                </li>
+
+                                                <li>
+                                                    <label for="area">
+                                                 <input type="checkbox" id="area" name="transway">
+                                                 地區面交
+                                                </label>
+                                                </li>
+                                                <li>
+                                                    <label for="buyer">
+                                                     <input type="checkbox" id="buyer" disabled name="transway">
+                                                     賣家宅配
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="family-mart">
+                                                         <input type="checkbox" id="family-mart" name="transway">
+                                                         全家店到店
+                                                        </label>
+                                                </li>
+                                                <li>
+                                                    <label for="black-cat">
+                                                             <input type="checkbox" id="black-cat" disabled name="transway">
+                                                             黑貓宅急便
+                                                            </label>
+                                                </li>
+                                                <li>
+                                                    <label for="ch-post">
+                                                    <input type="checkbox" id="ch-post" disabled name="transway">
+                                                    中華郵政
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- 選擇目標組數 -->
+                                        <div class="percent50">
+                                            <div class="goal">
+                                                <h4>請選擇團購目標組數</h4>
+                                                <div class="form-group">
+                                                    <label for="goal1">
+                                                         <!-- 不可以 把目標往下調-->
+                                                        <!-- 最小的目標數 -->
+                                                       <input type="radio" id="goal1" name="goal" id="mingoal1" value="5" disabled>
+                                                       5盒 500元 平均單組100
+                                                    </label>
+                                                    <label for="goal2">
+                                                            <input type="radio" id="goal2" name="goal" value="15" checked>
+                                                            15盒 1270元 平均單組85
+                                                         </label>
+                                                    <label for="goal3">
+                                                     <input type="radio" id="goal3" name="goal" value="30">
+                                                     30盒 2250元 平均單組75
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-title">
+                                    <h3>請指定截止時間或最高結單組數</h3>
+                                </div>
+                                <!-- 表單第二部分 -->
+                                <div class="block">
+                                    <div class="inner-container ">
+
+                                        <!-- 截止時間設定 -->
+                                        <!-- 帶入剩餘的時間 -->
+                                        <div class="time percent50 form-group">
+                                            <label for="">截止時間
+                                                    <!-- 截止時間不能大於目前 max>= value-->
+                                                     <input type="text" max="5" value="5" min="0" class="center"> 天
+                                                    </label>
+                                            <label for="">
+                                                    <input type="text" max="24" value="2" class="center"> 小時
+                                                    </label>
+                                        </div>
+                                        <!-- 達標數量設定 -->
+                                        <div class="goal-num percent50 form-group">
+                                            <label for="">
+                                                    <input type="checkbox"> 我們結單組數
+                                                    </label>
+                                            <label for=""> 
+                                                    <!-- min 不能小於目前目標組數 -->
+                                                    <input type="text" max="50" name="goal2" max="50" min="15" class="center">組</label>
+                                        </div>
+
+                                        <p>＊截止時間不得大於現在剩餘的時間
+                                        </p>
+                                        <p>＊結單數不得小於目標組數以及已集購組數</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="block-title">
+                                    <h3>收件資訊</h3>
+
+                                </div>
+                                <div class="block">
+                                    <div class="inner-container">
+                                        <div class="contact-form">
+                                            <ul>
+                                                <li>
+                                                    <div class="contact-title">
+                                                        <h4>
+                                                            連絡電話：
+                                                        </h4>
+                                                    </div>
+                                                    <div class="contact-input form-group">
+                                                        <input type="tel" class="mobileTaiwan" name="tephone" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="091111111">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="contact-title">
+                                                        <h4>
+                                                            電子郵件：
+                                                        </h4>
+                                                    </div>
+                                                    <div class="contact-input form-group">
+                                                        <input type="email" name="email" value="xxx@mail.com">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="contact-title">
+                                                        <h4>
+                                                            收件地址：
+                                                        </h4>
+                                                    </div>
+
+                                                    <div class="contact-input form-group">
+                                                        <select name="select1" id="" required="">
+                                                                    <option value="縣市" disabled >縣市</option>
+                                                                    <option value="台北市">台北市</option>
+                                                                    <option value="新北市"  selected> 新北市</option>
+                                                                 
+                                                                </select>
+                                                        <select name="select2" id="">
+                                                                    <option value="區域" disabled  >區域</option>
+                                                                    <option value="中山區"  selected>中山區</option>
+                                                                    </select>
+                                                        <input type="text" placeholder="請輸入地址" name="address" value="三和路四段16號">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="contact-title">
+                                                        <h4>
+                                                            備註：
+                                                        </h4>
+                                                    </div>
+                                                    <div class="contact-input">
+                                                        <input type="text" placeholder="請輸入備註" value="請在平日晚上寄送">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p>請確認資訊是否正確 集購成團後將不能修改資料</p>
+                                            <div class="btn-group">
+                                                <button type="submit" class="cancel-btn">取消修改</button>
+                                                <button type="submit" class="main-btn" style="margin-left:10px;">確定修改</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <!--底部 footer  -->
+        <div id="footer"> </div>
+    </div>
+
+    <!-- 開集購表單驗證 -->
+    <script>
+        jQuery.extend(jQuery.validator.messages, {
+
+            maxlength: $.validator.format("至多輸入 {0} 個字."),
+            minlength: $.validator.format("至少輸入 {0} 個字."),
+            rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
+            range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
+            max: $.validator.format("請輸入小於等於 {0} 的值."),
+            min: $.validator.format("請輸入大於等於 {0} 的值.")
+        });
+
+
+
+
+        $(document).ready(function() {
+
+            $('#set-form').validate({
+                errorPlacement: function(error, element) {
+                    element.closest('.form-group').append(error);
+                },
+                rules: {
+                    title: {
+                        required: true
+                    },
+                    tephone: {
+                        required: true,
+                        rangelength: [7, 10],
+                        number: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    address: {
+                        required: true
+                    },
+                    transway: {
+                        required: true,
+                        minlength: 1
+                    },
+                    goal: {
+                        required: true
+
+                    },
+                    select1: {
+                        required: true
+                    },
+                    select2: {
+                        required: true
+                    }
+                },
+                messages: {
+                    title: {
+                        required: "請輸入集購團名"
+                    },
+                    tephone: {
+                        required: "請輸入手機或市話",
+                        rangelength: "號碼不符合長度",
+                        number: "請輸入正確的電話格式"
+                    },
+                    email: {
+                        required: "請輸入聯絡用電子郵件信箱",
+                        email: "請輸入正確的信箱格式"
+                    },
+                    address: {
+                        required: "請輸入地址"
+                    },
+                    transway: {
+                        required: "請至少選擇一種運送方式"
+
+                    },
+                    goal: {
+                        required: "請至少選擇一種結標目標",
+                        minlength: "請至少選擇一種結標目標"
+                    },
+                    select1: {
+                        required: "請選擇縣市",
+                    },
+                    select2: {
+                        required: "請選擇地區",
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

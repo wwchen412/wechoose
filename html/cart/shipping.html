@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../Content/css/font-awesome.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/gobal.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
     <!-- 串可刪 -->
     <script>
         $(function() {
@@ -48,99 +50,87 @@
                 </div>
                 <div class="shipping-content">
                     <div class="container">
-                        <form action="">
+                        <form action="" id="shipping-form">
                             <div class="left">
 
                                 <h4>團購名稱：<span>xxXXXXXXX</span></h4>
                                 <h4>商品名稱：<span>全佑動物福利蛋</span></h4>
                                 <h4>商品規格：<span>XXX 六入組</span></h4>
                                 <h4>認購組數：<span>12組</span></h4>
-                                <h4>聯絡電話：<input type="tel" maxlength="10"></h4>
-                                <h4>電子郵件：<input type="email"></h4>
-                                <h4>備&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;註：<input type="text"></h4>
-
+                                <div class="form-group">
+                                    <h4>聯絡電話：<input type="tel" maxlength="10" name="tel"></h4>
+                                </div>
+                                <div class="form-group">
+                                    <h4>電子郵件：<input type="email" name="email"></h4>
+                                </div>
+                                <div class="form-group">
+                                    <h4>備&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;註：<input type="text"></h4>
+                                </div>
                                 <!--僅限團主開放的方式  -->
-                                <div class="transport-select">
+                                <div class="transport-select form-group">
                                     <h4>取件方式：</h4>
+
                                     <h5>
                                         <label for="transport">
                                        
-                                         <input type="radio" name="transport" id="transport">
+                                         <input type="radio" name="transway" id="transport">
                                             711超商店到店
                                         </label>
-                                        <!-- 串711 ＡＰＩ -->
+                                        <!-- 串711 ＡＰＩ（？ -->
                                         <a href="" class="main-btn">門市選擇</a>
+                                        <!-- 選擇完門市以後才出現 -->
+                                        <p style="padding-left:35px;font-size:.9rem;margin-top:10px;">取貨門市：三重/三和門市</p>
                                     </h5>
-
-
 
                                     <label for="transport2">
                                        
-                                         <input type="radio" name="transport" id="transport2">
+                                         <input type="radio" name="transway" id="transport2" value="meet">
                                             面交
-                                        </label>
+                                    </label>
 
-                                    <ul>
-                                        <li>
-                                            <label for="time1">
-                                       
-                                                <input type="radio" name="time" id="time1">
-                                                 平日中   12:15-12:40 請事先告知
-                                                </label>
+                                    <ul class="transport2-content">
 
-                                        </li>
-                                        <li>
-                                            <label for="time2">
-                                       
-                                                <input type="radio" name="time" id="time2">
-                                                 平日中   12:15-12:40 請事先告知
-                                                </label>
-
-                                        </li>
-                                        <li>
-                                            <label for="time3">
-                                       
-                                                <input type="radio" name="time" id="time3">
-                                                 平日中   12:15-12:40 盡量於此時間  電話09xxxxxxxx
-                                                </label>
-
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="right">
                                 <!-- 金額計算 -->
                                 <label for="discount">
-                                       
+                                    <div class="form-group">
                                     <input type="checkbox" name="discount" id="discount">
                                     目前購物金<span>1299</span>
-                                    折抵<input type="text" id="discount-val" class="discount-val">元
+                                    <div class="show-discount">
+                                    <!-- 折抵 -->
+                                    <!-- 可輸入折抵的金額最大值為1299 --> 
+                                    <!-- <input type="text" id="discount-val" class="discount-val" max="1299">元 -->
+                                    </div>
+                                </div>
                                     </label>
-                                <h4>金額：<span>2200</span>元</h4>
-                                <h4>運費：<span>85</span>元</h4>
-                                <h4>總額：<span>1615</span>元</h4>
+                                <h4>金額：<span id="original_val">2200</span></h4>
+                                <h4>運費：<span id="transport_val">85</span></h4>
+                                <h4>總額：<span id="total">1615</span></h4>
 
                                 <!-- 選擇結帳平台 -->
                                 <!-- 還沒確定 -->
-                                <form action="">
-                                    <ul>
-                                        <li>
-                                            <label for="pay1">
+
+                                <ul>
+                                    <li>
+                                        <label for="pay1">
                                                 <input type="radio" name="pay" id="pay1">
                                                 信用卡結帳
                                              </label>
-                                        </li>
-                                        <li>
-                                            <label for="pay2">
+                                    </li>
+                                    <li>
+                                        <label for="pay2">
                                                 <input type="radio" name="pay" id="pay2">
                                                 Applepay
                                             </label>
-                                        </li>
-                                    </ul>
+                                    </li>
+                                </ul>
 
-                                    <button type="button" class="main-btn">前往結帳</button>
+                                <button type="submit" class="main-btn">前往結帳</button>
 
-                                </form>
+
 
 
                             </div>
@@ -157,11 +147,148 @@
         </div>
     </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/gobal.js"></script>
+
     <script>
-        // inputNumber($('.input-number'));
+        jQuery.extend(jQuery.validator.messages, {
+
+            maxlength: $.validator.format("至多輸入 {0} 個字."),
+            minlength: $.validator.format("至少輸入 {0} 個字."),
+            rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
+            range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
+            max: $.validator.format("請輸入小於等於 {0} 的值."),
+            min: $.validator.format("請輸入大於等於 {0} 的值.")
+        });
+
+
+
+
+        $(document).ready(function() {
+
+            $('#shipping-form').validate({
+                errorPlacement: function(error, element) {
+                    element.closest('.form-group').append(error);
+                },
+                rules: {
+                    title: {
+                        required: true
+                    },
+                    tel: {
+                        required: true,
+                        rangelength: [7, 10],
+                        number: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    transway: {
+                        required: true,
+                        minlength: 1
+                    },
+                    time: {
+                        required: true
+
+                    },
+                    discount_val: {
+                        required: true
+                    },
+                    select2: {
+                        required: true
+                    }
+                },
+                messages: {
+                    title: {
+                        required: "請輸入集購團名"
+                    },
+                    tel: {
+                        required: "請輸入手機或市話",
+                        rangelength: "號碼不符合長度",
+                        number: "請輸入正確的電話格式"
+                    },
+                    email: {
+                        required: "請輸入聯絡用電子郵件信箱",
+                        email: "請輸入正確的信箱格式"
+                    },
+                    address: {
+                        required: "請輸入地址"
+                    },
+                    transway: {
+                        required: "請至少選擇一種運送方式"
+
+                    },
+                    time: {
+                        required: "請選擇面交時間",
+
+                    },
+                    discount_val: {
+                        required: "請輸入折抵金額",
+                    },
+                    select2: {
+                        required: "請選擇地區",
+                    }
+                }
+            })
+            $('input:radio[name="transway"]').change(function() {
+
+                if (this.checked && this.value == "meet") {
+                    // 選到面交以後 去load出自己設定的可面交時間
+                    $('.transport2-content').html(' <li><label for="time1"><input type="radio" name="time" id="time1">平日中   12:15-12:40 請事先告知</label</li><li><label for="time2"><input type="radio" name="time" id="time2">平日中   12:15-12:40 請事先告知</label></li><li><label for="time3"><input type="radio" name="time" id="time3">平日中   12:15-12:40 盡量於此時間  電話09xxxxxxxx</label> </li>');
+                } else {
+                    $('.transport2-content').html('');
+                }
+            })
+
+            // 即時顯示結帳金額
+
+            //取得原始售價
+            var original_val = parseInt(document.getElementById('original_val').innerHTML);
+            // 取得運費
+            var transport_val = parseInt(document.getElementById('transport_val').innerHTML);
+            // 總價 ＝ 原價＋運費
+            var total = document.getElementById('total');
+            var total_val = original_val + transport_val;
+            total.innerHTML = total_val + '元';
+
+            // 勾選購物金後計算
+            $('input:checkbox[name="discount"]').change(function() {
+
+                if (this.checked) {
+                    $("#discount-val").attr('name', 'discount_val');
+                    $('.show-discount').html('折抵<input type="text" id="discount-val" class="discount-val" max="1299">元');
+                    // 購物金折抵運算
+
+                    // 使用個購物金多少
+                    var discount = document.getElementById('discount-val');
+
+                    function change_val() {
+                        var discount_val = discount.value;
+                        var original_val = parseInt(document.getElementById('original_val').innerHTML);
+                        var transport_val = parseInt(document.getElementById('transport_val').innerHTML);
+                        var total_val = original_val + transport_val - discount_val;
+
+                        if (total_val < 0) {
+                            $(total).css('color', 'red');
+                            total.innerHTML = '折抵的金額超過商品價格,請重新輸入';
+                        } else {
+                            $(total).css('color', '#000');
+                            total.innerHTML = total_val + '元';
+                        }
+
+                    }
+
+                    discount.addEventListener('change', change_val, false);
+                } else {
+                    var discount = document.getElementById('discount-val');
+                    var total_val = original_val + transport_val;
+                    $('.show-discount').html('');
+                    total.innerHTML = total_val + '元';
+                }
+            })
+
+
+        })
     </script>
+
 </body>
 
 </html>

@@ -94,6 +94,16 @@ input:focus {
     }
 }
 
+.btn-group {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    &>button {
+        display: inline-block !important;
+    }
+}
+
+// 取消用按鈕
 .cancel-btn {
     @include custom_select;
     @include border-radius(5px);
@@ -113,8 +123,9 @@ input:focus {
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
+    padding: 0 15px;
     @include breakpoint(pad) {
-        padding: 5px 20px;
+        padding: 5px 15px;
     }
 }
 

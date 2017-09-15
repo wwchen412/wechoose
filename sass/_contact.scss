@@ -135,6 +135,7 @@ input[type="radio"] {
     }
 }
 
-input[type="checkbox"]:disabled {
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
     background: #aaa;
 }
